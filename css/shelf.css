@@ -289,6 +289,27 @@ body {
 
 /* Cloth stamped in gilt, the way a hardcover binding is lettered: caps, wide
    letterspacing, and the type raised off the cloth rather than printed on it. */
+/* A real cover image fills the boards; its own aspect sets the width, so the
+   scan is never stretched to fit. */
+.face-out--art {
+  width: auto;
+  aspect-ratio: var(--cover-aspect, 0.657);
+  padding: 0;
+  overflow: hidden;
+  background: #0d0c0b;
+}
+/* Positioned out of flow so the image's natural width cannot drive the box —
+   the aspect ratio does, against the height the shelf gives it. */
+.face-out__art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+}
+
 .face-out--stamped {
   justify-content: flex-start;
   padding: 30px 16px 22px;

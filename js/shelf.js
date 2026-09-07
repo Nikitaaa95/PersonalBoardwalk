@@ -136,8 +136,14 @@
       var p = palette(item.palette);
       btn.classList.add("face-out--stamped");
       if (item.device) btn.classList.add("face-out--device");
-      btn.style.width = (item.faceWidth || 150) + "px";
       btn.style.height = ((item.height || 0.92) * 100) + "%";
+      if (item.cover) {
+        /* The scan's own proportions decide the width, so the boards are not
+           stretched. Height still comes from the shelf. */
+        btn.style.setProperty("--cover-aspect", item.coverAspect || "0.657");
+      } else {
+        btn.style.width = (item.faceWidth || 150) + "px";
+      }
       btn.style.background =
         "linear-gradient(100deg," + shade(p.cloth, -12) + " 0 7px," + p.cloth + " 7px 100%)";
       btn.style.color = p.ink;

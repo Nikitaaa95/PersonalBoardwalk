@@ -593,10 +593,10 @@ window.SHELF = {
           title: "The Prophet",
           author: "Kahlil Gibran",
           palette: "gilt", face: "garamond",
-          height: 0.90, faceWidth: 152,
-          /* The 1923 binding: gilt caps at the head, Gibran's device below. */
-          device: "assets/prophet-device.svg",
-          quote: "Your children are not your children. They are the sons and daughters of Life’s longing for itself.",
+          height: 0.92,
+          cover: "assets/the-prophet-1923.jpg",
+          coverAspect: 0.657,
+          quote: "Your children are not your children. They are the sons and daughters of Life's longing for itself.",
           source: "Kahlil Gibran, The Prophet (Knopf, 1923), 'On Children'",
           scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week.]`
         },
@@ -732,6 +732,16 @@ window.SHELF = {
           title: "[THE TALL ONE]",
           author: "[Author]",
           palette: "olive", face: "oswald", height: 1.0, width: 41,
+          quote: "[The pull quote. Let this half be the abstract one.]",
+          source: "[Author, Title, p. —]",
+          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
+        },
+
+        { kind: "book", invented: false,
+          id: "real-13",
+          title: "[REAL BOOK THIRTEEN]",
+          author: "[Author]",
+          palette: "tan", face: "garamond", height: 0.84, width: 29,
           quote: "[The pull quote. Let this half be the abstract one.]",
           source: "[Author, Title, p. —]",
           scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`

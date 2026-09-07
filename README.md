@@ -63,12 +63,15 @@ between paragraphs.
 - **Face-out books work on any shelf.** A volume you wrote uses the standard
   binding; a book you've read is stamped instead — caps, wide letterspacing and
   a ruled frame in its palette's `rule` colour, the way a hardcover is lettered.
-  *The Prophet* uses the `gilt` palette: black cloth stamped in gilt, which is
-  what the 1923 Knopf first edition actually was. Gibran's own drawings were the
-  frontispiece and plates inside, not on the binding — except the gilt device
-  stamped on the front board, drawn here as `assets/prophet-device.svg`. Set
-  `device: "assets/….svg"` for a stamped emblem below the lettering, or
-  `cover: "assets/….jpg"` to replace the whole face with a real cover image.
+- **A real cover image wins over lettering.** *The Prophet* uses a scan of the
+  1923 Knopf first edition — black cloth stamped in gilt, with Gibran's own
+  device on the front board — in `assets/the-prophet-1923.jpg`. Published 1923,
+  so it is public domain; the scan is Internet Archive item `prophet00kahi`.
+  `coverAspect` is the scan's width ÷ height: the shelf sets the book's height
+  and that ratio sets its width, so the boards are never stretched. Set
+  `cover:` + `coverAspect:` on any face-out book to do the same. Without a
+  cover, `device: "assets/….svg"` stamps an emblem under the lettering
+  instead.
 - **The journals are not openable.** They carry the same binding as the books I
   wrote, so they read as the next volumes in that run rather than as decoration,
   and the years are the whole statement — no placard explains them. There is
