@@ -283,47 +283,7 @@ Nothing here is behind glass. Pull anything down.`
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-        { kind: "book", invented: true,
-          id: "inv-13",
-          title: "[SPINE TITLE THIRTEEN]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
-        { kind: "book", invented: true,
-          id: "inv-14",
-          title: "[SPINE TITLE FOURTEEN]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
-      ]
+        ]
     },
 
     /* =====================================================================
@@ -503,46 +463,6 @@ Nothing here is behind glass. Pull anything down.`
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-        { kind: "book", invented: true,
-          id: "inv-23",
-          title: "[SPINE TITLE TWENTY-THREE]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
-        { kind: "book", invented: true,
-          id: "inv-24",
-          title: "[SPINE TITLE TWENTY-FOUR]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
         /* The volumes not written yet. Same binding as the books above, so they
            read as the next ones in the run rather than as decoration. Not
            openable — there is nothing inside them to read yet. */
@@ -657,30 +577,10 @@ Nothing here is behind glass. Pull anything down.`
         },
 
         { kind: "book", invented: false,
-          id: "real-09",
-          title: "[REAL BOOK NINE]",
-          author: "[Author]",
-          palette: "plum", face: "cormorant", height: 0.99, width: 40,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week.]`
-        },
-
-        { kind: "book", invented: false,
           id: "real-10",
           title: "[THE THIN ONE]",
           author: "[Author]",
           palette: "rust", face: "oswald", height: 0.83, width: 28,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week.]`
-        },
-
-        { kind: "book", invented: false,
-          id: "real-11",
-          title: "[REAL BOOK ELEVEN]",
-          author: "[Author]",
-          palette: "navy", face: "garamond", height: 0.92, width: 44,
           quote: "[The pull quote. Let this half be the abstract one.]",
           source: "[Author, Title, p. —]",
           scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week.]`
@@ -736,15 +636,16 @@ Nothing here is behind glass. Pull anything down.`
         },
 
         { kind: "book", invented: false,
-          id: "real-alice",
-          title: "Alice in Wonderland",
-          author: "Lewis Carroll",
-          /* Photographed spine: the Raphael Tuck & Sons edition, blocked in gilt. */
-          spineImage: "assets/spine-alice.jpg",
-          spineAspect: 0.108, height: 0.93,
-          quote: "I can't go back to yesterday, because I was a different person then.",
-          source: "Lewis Carroll, Alice's Adventures in Wonderland",
-          scene: `[Where you were. How old. Who handed it to you.]`
+          id: "real-horse",
+          title: "The Horse and His Boy",
+          author: "C. S. Lewis",
+          /* Photographed spine: the boxed-set Chronicles of Narnia, book 3,
+             maroon board with the pink block at the foot. */
+          spineImage: "assets/spine-horse-and-his-boy.jpg",
+          spineAspect: 0.067, height: 0.90,
+          quote: "[Your pull quote.]",
+          source: "C. S. Lewis, The Horse and His Boy",
+          scene: `[Where you were. How old. Whether you read the seven in order.]`
         },
 
         { kind: "book", invented: false,

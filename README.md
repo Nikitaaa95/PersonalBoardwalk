@@ -90,7 +90,7 @@ are filled; the handwriting on their backs is still placeholder.
   into marks that read as lettering.
 - **A photograph of the spine beats a drawing of one.** Three books carry
   pictures of their actual spines — *The Return of the King* (Houghton Mifflin),
-  *Peter Pan and Wendy* (Folio), *Alice in Wonderland* (Raphael Tuck) — set with
+  *Peter Pan and Wendy* (Folio), *The Horse and His Boy* (Narnia set) — set with
   `spineImage`. `spineAspect` is the photograph's width ÷ height: the shelf gives
   the book its height and that ratio gives its width, so the picture is never
   stretched. Photographed spines skip the drawn furniture entirely — no cloth,
@@ -98,6 +98,10 @@ are filled; the handwriting on their backs is still placeholder.
   still read as curved boards standing on a shelf rather than flat cut-outs.
   Real spines are thinner than the drawn ones, so swapping several in shortens
   a run noticeably; see the note on levelling below.
+- **A real book replaces a placeholder; it does not join them.** The read shelf
+  is a fixed number of slots being filled in, not a pile being added to. When a
+  real book arrives, a `[REAL BOOK …]` entry comes out, and the other two shelves
+  are trimmed to keep the three runs level. Right now: 7 real, 9 placeholders.
 - **A drawn spine has a budget.** The title takes what the bands, the author
   line and the imprint leave it. A long title on a short spine can end up with
   40px to live in, which clips it — if that happens, widen the book and raise
