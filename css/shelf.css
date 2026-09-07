@@ -450,6 +450,7 @@ body {
 /* Not openable, on purpose — there is nothing inside them to read. The years
    are the whole statement, so they carry no placard explaining themselves. */
 .journals {
+  position: relative;
   flex: 0 0 auto;
   align-self: flex-end;
   display: flex;
@@ -503,6 +504,17 @@ body {
   align-self: flex-end;
   line-height: 0;
 }
+/* Standing on the stack of journals rather than on the plank: out of flow, so
+   it costs the run no width, and sized off the standard so it scales with
+   everything else. Its vines fall down over the journals. */
+.journals__plant {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  width: calc(var(--inv-width) * 2.1);
+  transform: translateX(-50%);
+}
+
 .plant__art {
   display: block;
   width: 100%;

@@ -235,6 +235,16 @@
       j.appendChild(el("span", "journal__year", year));
       stack.appendChild(j);
     });
+
+    /* Something can stand on the stack. It is positioned out of flow, so it
+       costs the run no width and the packing never sees it. */
+    if (item.plant) {
+      var pot = buildPlant(item.plant);
+      pot.classList.add("journals__plant");
+      pot.style.width = "";          /* sized off --inv-width instead, since it
+                                        is not one of the objects on the plank */
+      stack.appendChild(pot);
+    }
     return stack;
   }
 

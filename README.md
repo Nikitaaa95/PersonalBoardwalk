@@ -33,7 +33,7 @@ Three object types, matching the brief:
 | `book` with `invented: false` | quote + scene | `title, author, palette, face, height, width, quote, source, scene` |
 | either, plus `faceOut: true` | as above | stands face out; add `faceWidth`, or `cover` for a real cover image |
 | `photo` | flips in place | `image, aspect, width, alt, tilt, back: {date, place, note}` |
-| `journals` | not openable | `years` — e.g. `["2027", "2028", "2029"]` |
+| `journals` | not openable | `years` — e.g. `["2027", "2028", "2029"]`; optional `plant` |
 | `plant` | not openable | `width`, `drape` — how far the vines hang past the pot |
 | `end` | — | `volumes` — how many volumes of room to leave |
 
@@ -85,9 +85,14 @@ are filled; the handwriting on their backs is still placeholder.
   it and the sides of the case (`--stile`) are visible edge-on. Narrow the
   window and that margin closes up until the case is the whole page again.
 - **The plant is the one thing allowed over the edge.** Its vines are drawn
-  past the bottom of its own box, so they hang over the front of the plank
-  while every other object stands squarely on it. `drape` is in the same units
-  as the drawing; much past 28 and the vines are cut off by the shelf below.
+  past the bottom of its own box, so they fall over whatever it is standing on
+  while every other object stands squarely on its plank. `drape` is in the same
+  units as the drawing: standing on the journals it wants about 56, so the
+  strands reach the plank; standing on a plank itself it wants about 28, past
+  which the shelf below cuts them off.
+- **A plant on the journals costs the run nothing.** Give the `journals` object
+  a `plant` and it stands on the stack, positioned out of flow — so it takes no
+  width on the plank and the packing never sees it.
 - **The journals are not openable.** They carry the same binding as the books I
   wrote, so they read as the next volumes in that run rather than as decoration,
   and the years are the whole statement — no placard explains them. There is

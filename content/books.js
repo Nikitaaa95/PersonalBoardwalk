@@ -591,7 +591,10 @@ window.SHELF = {
         /* The volumes not written yet. Same binding as the books above, so they
            read as the next ones in the run rather than as decoration. Not
            openable — there is nothing inside them to read yet. */
-        { kind: "journals", years: ["2027", "2028", "2029"] },
+        /* The plant stands on the journals, and its vines fall down over
+           them. `plant` is optional; drop it and the stack is just a stack. */
+        { kind: "journals", years: ["2027", "2028", "2029"],
+          plant: { drape: 56 } },
 
         /* Room at the end: a full shelf reads as finished, a shelf with room
            reads as still going. `volumes` is measured in book widths. */
@@ -745,11 +748,7 @@ window.SHELF = {
           aspect: 0.989, width: 112,
           alt: "A black dog on grass, looking straight at the camera.",
           back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
-        },
-
-        /* The one living thing on the case. Its vines are the only shape here
-           allowed over the front edge of a plank. */
-        { kind: "plant", id: "plant-01", width: 104, drape: 28 }
+        }
       ]
     }
   ]
