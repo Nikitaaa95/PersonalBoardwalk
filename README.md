@@ -30,7 +30,7 @@ Three object types, matching the brief:
 | `kind` | Opens to | Fields |
 |---|---|---|
 | `book` with `invented: true` | plate + poem | `title, author, press, year, poem, image, imageAlt`; `intro` instead of `poem` for prose |
-| `book` with `invented: false` | quote + scene | `title, author, palette, face, height, width, quote, source, scene` |
+| `book` with `invented: false` | quote + scene | `title, author, palette, face, height, width, quote, source, scene`; optional `imprint` (publisher at the foot) and `spineAuthor` (a shorter name for the spine) |
 | …with `spineImage` | quote + scene | a photograph of the real spine: `spineImage, spineAspect, height` — replaces the cloth and lettering entirely |
 | either, plus `faceOut: true` | as above | stands face out; add `faceWidth`, `cover` for a real cover image, or `portrait` for a plated photograph |
 | `photo` | flips in place | `image, aspect, width, alt, tilt, back: {date, place, note}` |
@@ -98,6 +98,12 @@ are filled; the handwriting on their backs is still placeholder.
   still read as curved boards standing on a shelf rather than flat cut-outs.
   Real spines are thinner than the drawn ones, so swapping several in shortens
   a run noticeably; see the note on levelling below.
+- **A drawn spine has a budget.** The title takes what the bands, the author
+  line and the imprint leave it. A long title on a short spine can end up with
+  40px to live in, which clips it — if that happens, widen the book and raise
+  its `height` rather than fighting the type. The fitter shrinks to 10px on one
+  line, then wraps; and if the board is too narrow to wrap into, it goes back to
+  one line and down to 6px, which is what a real spine does with a long title.
 - **A real cover image wins over lettering.** *The Prophet* uses a scan of the
   1923 Knopf first edition — black cloth stamped in gilt, with Gibran's own
   device on the front board — in `assets/the-prophet-1923.jpg`. Published 1923,

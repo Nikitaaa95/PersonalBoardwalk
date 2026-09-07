@@ -72,7 +72,8 @@
     var wrap    = el("span", "spine__titlewrap");
     var title   = el("span", "spine__title", item.title || "");
     var bandBot = el("span", "spine__band spine__band--bottom");
-    var author  = el("span", "spine__author", item.author || "");
+    /* A long name will not fit a spine; real ones shorten it too. */
+    var author  = el("span", "spine__author", item.spineAuthor || item.author || "");
 
     if (!item.invented) {
       var pr = palette(item.palette).rule;
@@ -85,6 +86,9 @@
     btn.appendChild(wrap);
     btn.appendChild(bandBot);
     btn.appendChild(author);
+
+    /* The publisher blocked at the foot, the way a series spine carries it. */
+    if (item.imprint) btn.appendChild(el("span", "spine__imprint", item.imprint));
 
     btn.setAttribute("aria-label", "Open " + (item.title || "book") +
       (item.author ? ", " + item.author : ""));
@@ -134,6 +138,16 @@
     if (h() > availH) {
       t.style.whiteSpace = "normal";
       while ((h() > availH || wd() > availW) && size > 8) { size -= 0.5; set(size); }
+
+      /* A long title on a narrow spine cannot wrap: two lines need horizontal
+         room the board does not have. Go back to one line and set it smaller —
+         which is what a real spine does with a long title. */
+      if (wd() > availW) {
+        t.style.whiteSpace = "nowrap";
+        size = btn.classList.contains("spine--invented") ? 18 : 20;
+        set(size);
+        while (h() > availH && size > 6) { size -= 0.5; set(size); }
+      }
     }
   }
 

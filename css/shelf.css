@@ -254,6 +254,20 @@ body {
 }
 .spine__band--bottom { margin: 8px 0 0; }
 
+/* The publisher at the foot of a series spine. */
+.spine__imprint {
+  flex: 0 0 auto;
+  writing-mode: vertical-rl;
+  white-space: nowrap;
+  overflow: hidden;
+  max-height: 58px;
+  margin-top: 6px;
+  font-size: 6px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  opacity: .68;
+}
+
 /* A photographed spine: the picture is the book. Its own aspect sets the
    width against the shelf's height, so it is never stretched, and the cloth
    shading is lifted above it so the print still reads as a curved surface

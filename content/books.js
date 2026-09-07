@@ -38,7 +38,11 @@ window.SHELF = {
     slate:   { cloth: "#3f4750", ink: "#e2e5e8", rule: "#95a0aa" },
     rust:    { cloth: "#8a4426", ink: "#f0dcc6", rule: "#c98f5e" },
     /* Black cloth stamped in gilt — the 1923 Knopf binding of The Prophet. */
-    gilt:    { cloth: "#100f0e", ink: "#c9a961", rule: "#c9a961" }
+    gilt:    { cloth: "#100f0e", ink: "#c9a961", rule: "#c9a961" },
+
+    /* The black livery of a classics paperback: off-white lettering, and the
+       series orange kept for the rules only. */
+    classic: { cloth: "#141518", ink: "#f2efe6", rule: "#dd5f2c" }
   },
 
   /* --- Typefaces for the books I've read. Books I wrote never use these. --- */
@@ -693,13 +697,42 @@ Nothing here is behind glass. Pull anything down.`
         },
 
         { kind: "book", invented: false,
-          id: "real-13",
-          title: "[REAL BOOK THIRTEEN]",
-          author: "[Author]",
-          palette: "slate", face: "cormorant", height: 0.86, width: 30,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week.]`
+          id: "real-las-casas",
+          title: "A Short Account of the Destruction of the Indies",
+          author: "Bartolomé de las Casas",
+          /* No photograph of this one, so the spine is drawn: black classics
+             livery, the series orange kept to the rules, publisher at the foot. */
+          spineAuthor: "Las Casas",
+          palette: "classic", face: "garamond", height: 0.99, width: 44,
+          imprint: "Penguin Classics",
+          quote: "[Your pull quote — I left this blank rather than risk misquoting a translation.]",
+          source: "Bartolomé de las Casas, A Short Account of the Destruction of the Indies (1552)",
+          scene: `[Where you were. How old. Whether it was assigned. What you did with it afterwards.]`
+        },
+
+        { kind: "book", invented: false,
+          id: "real-pride",
+          title: "Pride and Prejudice",
+          author: "Jane Austen",
+          /* Photographed spine: the George Allen "Peacock" edition of 1894,
+             gilt feathers on dark cloth, illustrated by Hugh Thomson. */
+          spineImage: "assets/spine-pride-and-prejudice.jpg",
+          spineAspect: 0.230, height: 0.99,
+          quote: "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
+          source: "Jane Austen, Pride and Prejudice, opening line",
+          scene: `[Where you were. How old. Whether you got past the first fifty pages the first time.]`
+        },
+
+        { kind: "book", invented: false,
+          id: "real-chosen",
+          title: "The Chosen",
+          author: "Chaim Potok",
+          /* Photographed spine: the Simon and Schuster jacket, worn pale. */
+          spineImage: "assets/spine-the-chosen.jpg",
+          spineAspect: 0.104, height: 0.94,
+          quote: "[Your pull quote.]",
+          source: "Chaim Potok, The Chosen",
+          scene: `[Where you were. How old. Who handed it to you.]`
         },
 
         { kind: "book", invented: false,
