@@ -231,6 +231,26 @@ body {
   text-align: center;
 }
 
+/* Turned with the lettering, since the whole spine reads sideways. */
+.spine__device {
+  flex: 0 0 auto;
+  width: 84%;
+  height: auto;
+  margin-top: 9px;
+  transform: rotate(90deg);
+  opacity: .9;
+}
+.spine__imprint {
+  flex: 0 0 auto;
+  writing-mode: vertical-rl;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: 9px;
+  font-size: 7px;
+  letter-spacing: .09em;
+  opacity: .85;
+}
+
 .spine__author {
   flex: 0 0 auto;
   writing-mode: vertical-rl;

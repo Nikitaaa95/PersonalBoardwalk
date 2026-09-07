@@ -30,7 +30,7 @@ Three object types, matching the brief:
 | `kind` | Opens to | Fields |
 |---|---|---|
 | `book` with `invented: true` | plate + poem | `title, author, press, year, poem, image, imageAlt`; `intro` instead of `poem` for prose |
-| `book` with `invented: false` | quote + scene | `title, author, palette, face, height, width, quote, source, scene` |
+| `book` with `invented: false` | quote + scene | `title, author, palette, face, height, width, quote, source, scene`; optional `titleInk`, `authorInk`, `device`, `imprint` |
 | either, plus `faceOut: true` | as above | stands face out; add `faceWidth`, `cover` for a real cover image, or `portrait` for a plated photograph |
 | `photo` | flips in place | `image, aspect, width, alt, tilt, back: {date, place, note}` |
 | `journals` | not openable | `years` — e.g. `["2027", "2028", "2029"]`; optional `plant` |
@@ -79,6 +79,14 @@ are filled; the handwriting on their backs is still placeholder.
   an author plate, with the standard title and name under it. If the file is
   missing the plate simply does not appear and the binding is the standard
   one — no broken image.
+- **A spine can carry its real furniture.** `titleInk` and `authorInk` letter
+  the two lines in different colours, `imprint` blocks the publisher at the
+  foot, and `device` draws a mark above it — *The Return of the King* uses all
+  four for the Houghton Mifflin jacket. The device is drawn rather than
+  scanned: unlike *The Prophet*, those jackets are not out of copyright, and a
+  drawn mark takes the shelf's scale factor anyway. Keep such a drawing coarse
+  — at a spine's width it renders about 34px across, and fine detail turns
+  into marks that read as lettering.
 - **A real cover image wins over lettering.** *The Prophet* uses a scan of the
   1923 Knopf first edition — black cloth stamped in gilt, with Gibran's own
   device on the front board — in `assets/the-prophet-1923.jpg`. Published 1923,

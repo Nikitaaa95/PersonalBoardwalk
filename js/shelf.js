@@ -68,6 +68,19 @@
     btn.appendChild(bandBot);
     btn.appendChild(author);
 
+    /* A spine can carry more of its real furniture: the publisher's name
+       blocked at the foot, a device above it, and the title and author in
+       different inks — which on some jackets is most of what you recognise
+       from across a room. */
+    if (item.device === "hm-eye") btn.appendChild(spineDevice(item));
+    if (item.imprint) {
+      var imp = el("span", "spine__imprint", item.imprint);
+      if (item.authorInk) imp.style.color = item.authorInk;
+      btn.appendChild(imp);
+    }
+    if (item.titleInk)  title.style.color  = item.titleInk;
+    if (item.authorInk) author.style.color = item.authorInk;
+
     btn.setAttribute("aria-label", "Open " + (item.title || "book") +
       (item.author ? ", " + item.author : ""));
     btn.addEventListener("click", function () { openReader(item); });
@@ -75,6 +88,42 @@
     btn._title = title;
     btn._wrap = wrap;
     return btn;
+  }
+
+  /* The little drawing on the Houghton Mifflin Tolkien jackets: an eye over a
+     line of grass. Drawn, not scanned — those jackets are still in copyright,
+     and the shelf draws all of its own bindings anyway. */
+  function spineDevice(item) {
+    var NS = "http://www.w3.org/2000/svg";
+    var ink = item.deviceInk || "#23201c";
+    function n(name, attrs) {
+      var e = document.createElementNS(NS, name);
+      for (var k in attrs) e.setAttribute(k, attrs[k]);
+      return e;
+    }
+    var svg = n("svg", { viewBox: "0 0 44 30", class: "spine__device", focusable: "false" });
+    svg.setAttribute("aria-hidden", "true");
+
+    /* the eye */
+    svg.appendChild(n("path", {
+      d: "M6,13 Q22,2 38,13 Q22,24 6,13 Z",
+      fill: "none", stroke: ink, "stroke-width": "1.1"
+    }));
+    svg.appendChild(n("ellipse", { cx: "22", cy: "13", rx: "4.6", ry: "5.6", fill: ink }));
+    svg.appendChild(n("circle", { cx: "20.4", cy: "11.2", r: "1.15", fill: "#ece5d9" }));
+
+    /* The grass under it. Few and long: at a spine's width this drawing is
+       about 34px across, and eleven fine strokes turned into a row of marks
+       that read as lettering rather than as grass. */
+    [[7, 3.5], [13, -2.5], [19, 2], [25, -3], [31, 2.8], [37, -2]].forEach(function (g, i) {
+      var x = g[0], lean = g[1], top = 20 - (i % 2) * 3;
+      svg.appendChild(n("path", {
+        d: "M" + x + ",30 Q" + (x + lean * 0.4) + "," + ((30 + top) / 2) +
+           " " + (x + lean) + "," + top,
+        fill: "none", stroke: ink, "stroke-width": "1.25", "stroke-linecap": "round"
+      }));
+    });
+    return svg;
   }
 
   /* Darken/lighten a hex colour for the spine's curvature shading. */

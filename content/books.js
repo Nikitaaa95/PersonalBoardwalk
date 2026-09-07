@@ -717,7 +717,14 @@ Nothing here is behind glass. Pull anything down.`
           id: "real-return",
           title: "The Return of the King",
           author: "J. R. R. Tolkien",
-          palette: "chalk", face: "cormorant", height: 0.93, width: 38,
+          palette: "chalk", face: "cormorant", height: 0.95, width: 44,
+          /* The furniture of the Houghton Mifflin jacket: red title, the
+             author in black, the eye over the grass, and the publisher
+             blocked at the foot. */
+          authorInk: "#23201c",
+          device: "hm-eye",
+          deviceInk: "#23201c",
+          imprint: "Houghton Mifflin Co.",
           quote: "I will not say: do not weep; for not all tears are an evil.",
           source: "J. R. R. Tolkien, The Return of the King",
           scene: `[Where you were standing when it ended.]`
