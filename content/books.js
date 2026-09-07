@@ -168,7 +168,7 @@ window.SHELF = {
           id: "ph-01",
           tilt: -3,
           image: "assets/photo-family-three.jpg",
-          aspect: 1.333, width: 132,
+          aspect: 1.333, width: 106,
           alt: "A young family of three.",
           back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
         },
@@ -278,7 +278,7 @@ Nothing here is behind glass. Pull anything down.`
           id: "ph-02",
           tilt: 4,
           image: "assets/photo-turban.jpg",
-          aspect: 0.754, width: 98,
+          aspect: 0.754, width: 78,
           alt: "A small child in a red turban, tongue out, with a drawn-on moustache.",
           back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
         },
@@ -392,7 +392,7 @@ Nothing here is behind glass. Pull anything down.`
           id: "ph-03",
           tilt: -5,
           image: "assets/photo-family-five.jpg",
-          aspect: 1.507, width: 142,
+          aspect: 1.507, width: 114,
           alt: "A family of five, dressed for a celebration.",
           back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
         },
@@ -572,7 +572,7 @@ Nothing here is behind glass. Pull anything down.`
           id: "ph-04",
           tilt: 3,
           image: "assets/photo-dog.jpg",
-          aspect: 0.989, width: 112,
+          aspect: 0.989, width: 90,
           alt: "A black dog on grass, looking straight at the camera.",
           back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
         }
