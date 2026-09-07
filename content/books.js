@@ -498,16 +498,6 @@ Nothing here is behind glass. Pull anything down.`
         },
 
         { kind: "book", invented: false,
-          id: "real-02",
-          title: "[SHORT ONE]",
-          author: "[Author]",
-          palette: "navy", face: "playfair", height: 0.8, width: 30,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
-        },
-
-        { kind: "book", invented: false,
           id: "real-03",
           title: "[THE ONE I'D NEVER RECOMMEND]",
           author: "[Author]",
