@@ -35,7 +35,7 @@
 
   --plank-h:     26px;
   --stile:       22px;   /* the thickness of the case's own sides */
-  --case-max:    1500px; /* past this the room shows either side of it */
+  --case-max:    1200px; /* past this the room shows either side of it */
 }
 
 * { box-sizing: border-box; }

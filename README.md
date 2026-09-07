@@ -81,8 +81,10 @@ are filled; the handwriting on their backs is still placeholder.
   cover, `device: "assets/….svg"` stamps an emblem under the lettering
   instead.
 - **The case is a piece of furniture in a room.** It stops growing at
-  `--case-max` and centres, so on a wide window the room shows either side of
-  it and the sides of the case (`--stile`) are visible edge-on. Narrow the
+  `--case-max` (1200px) and centres, so on any window wider than that the room
+  shows either side of it and the sides of the case (`--stile`) are visible
+  edge-on. Raise `--case-max` and the room only appears on wider screens;
+  lower it and the case gets smaller but stands further from the walls. Narrow the
   window and that margin closes up until the case is the whole page again.
 - **The plant is the one thing allowed over the edge.** Its vines are drawn
   past the bottom of its own box, so they fall over whatever it is standing on

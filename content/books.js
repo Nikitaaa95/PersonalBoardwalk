@@ -160,26 +160,6 @@ window.SHELF = {
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-        { kind: "book", invented: true,
-          id: "inv-07",
-          title: "[SPINE TITLE SEVEN]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
         { kind: "photo",
           id: "ph-01",
           tilt: -3,
@@ -187,26 +167,6 @@ window.SHELF = {
           aspect: 1.333, width: 132,
           alt: "A young family of three.",
           back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
-        },
-
-        { kind: "book", invented: true,
-          id: "inv-08",
-          title: "[SPINE TITLE EIGHT]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
         },
 
         { kind: "book", invented: true,
