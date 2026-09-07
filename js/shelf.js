@@ -180,7 +180,6 @@
       var j = el("div", "journal");
       j.style.transform = "translateX(" + (i % 2 ? 4 : -3) + "px)";
       j.style.width = "calc(var(--inv-width) * " + (3.4 - i * 0.12).toFixed(2) + ")";
-      j.appendChild(el("span", "journal__rule"));
       j.appendChild(el("span", "journal__year", year));
       stack.appendChild(j);
     });
@@ -191,7 +190,6 @@
   function buildEnd(item) {
     var wrap = el("div", "shelf-end");
     wrap.setAttribute("aria-hidden", "true");
-    wrap.appendChild(el("div", "bookend"));
     var room = el("div", "shelf-room");
     room.style.width = "calc(var(--inv-width) * " + (item.volumes || 4) + " + 12px)";
     wrap.appendChild(room);
@@ -265,6 +263,7 @@
 
   /* --- render ----------------------------------------------------------- */
   var spines = [];
+  var racks  = [];
 
   (data.shelves || []).forEach(function (shelf) {
     var unit = el("section", "shelf-unit");
@@ -289,12 +288,34 @@
 
     rack.appendChild(board);
     rack.appendChild(plank);
+    racks.push(rack);
     scroll.appendChild(rack);
     unit.appendChild(scroll);
     mount.appendChild(unit);
   });
 
-  function fitAll() { spines.forEach(fitTitle); }
+  /* Size the case to its longest run, so shelves fill the furniture instead of
+     trailing off into empty plank on the right. The deliberate room at the end
+     of a run still shows, because it is part of that run's measured width. */
+  function fitCase() {
+    if (!racks.length) return;
+
+    var pad = 0;
+    var cs = window.getComputedStyle(mount);
+    pad = parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight);
+
+    /* Measure each run at its natural width, not the width it was stretched to. */
+    racks.forEach(function (r) { r.style.width = "max-content"; r.style.minWidth = "0"; });
+    var widest = 0;
+    racks.forEach(function (r) { widest = Math.max(widest, r.getBoundingClientRect().width); });
+    racks.forEach(function (r) { r.style.width = ""; r.style.minWidth = ""; });
+
+    var maxAllowed = parseFloat(cs.getPropertyValue("--case-max")) || Infinity;
+    var target = Math.min(widest + pad, maxAllowed, document.documentElement.clientWidth - 48);
+    mount.style.width = Math.round(target) + "px";
+  }
+
+  function fitAll() { fitCase(); spines.forEach(fitTitle); }
 
   fitAll();
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitAll);

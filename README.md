@@ -63,10 +63,12 @@ between paragraphs.
   wrote, so they read as the next volumes in that run rather than as decoration,
   and the years are the whole statement — no placard explains them. There is
   nothing inside them to read yet.
-- **How full a shelf looks is one number.** `--case-max` in `css/shelf.css` caps
-  the case width. Narrow it and fewer volumes fill a shelf; widen it and you need
-  more. That is the lever between "the case fills the page" and the brief's
-  "fewer, better".
+- **The case sizes itself to its longest run.** Add or delete books and the
+  furniture narrows or widens to match, so there is no empty plank trailing off
+  on the right. Keep the three runs roughly the same length and all three
+  shelves reach the edge. `--case-max` in `css/shelf.css` is only an upper cap.
+  This means cutting volumes costs nothing visually — it just makes a narrower
+  bookcase, which is the brief's "fewer, better" for free.
 
 ## Still to do (from the brief)
 

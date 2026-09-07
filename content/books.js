@@ -12,9 +12,8 @@
 
    ON THE NUMBER OF VOLUMES: two full shelves of books I wrote is a lot of
    poems, and the brief argued the opposite ("4–5 revised invented books beats
-   10 first drafts"). If you want fewer, delete entries and narrow `--case-max`
-   in css/shelf.css to match — that is the lever between "the case fills the
-   page" and "fewer, better". Nothing else needs to change.
+   10 first drafts"). The case sizes itself to its longest run, so deleting
+   entries narrows the furniture instead of leaving empty plank — cut freely. Nothing else needs to change.
 
    THE SPINE STANDARD is enforced in code, not by you: every book with
    `invented: true` renders at the same width, height, cloth, type, author line
@@ -183,14 +182,6 @@ window.SHELF = {
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-        { kind: "photo",
-          id: "ph-01",
-          tilt: -3,
-          image: "assets/placeholder-photo.svg",
-          alt: "[Describe the photograph.]",
-          back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
-        },
-
         { kind: "book", invented: true,
           id: "inv-07",
           title: "[SPINE TITLE SEVEN]",
@@ -209,6 +200,14 @@ window.SHELF = {
 [Line 10.]`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "photo",
+          id: "ph-01",
+          tilt: -3,
+          image: "assets/placeholder-photo.svg",
+          alt: "[Describe the photograph.]",
+          back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
         },
 
         { kind: "book", invented: true,
@@ -355,8 +354,7 @@ window.SHELF = {
 
     /* =====================================================================
        SHELF TWO — the same run, continued. No label, on purpose. It ends
-       with the journals and then room: a full shelf reads as finished, a
-       shelf with room reads as still going.
+       with the journals and then room.
     ===================================================================== */
     {
       id: "wrote-2",
@@ -442,14 +440,6 @@ window.SHELF = {
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-        { kind: "photo",
-          id: "ph-02",
-          tilt: 4,
-          image: "assets/placeholder-photo.svg",
-          alt: "[Describe the photograph.]",
-          back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
-        },
-
         { kind: "book", invented: true,
           id: "inv-19",
           title: "[SPINE TITLE NINETEEN]",
@@ -468,6 +458,14 @@ window.SHELF = {
 [Line 10.]`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "photo",
+          id: "ph-02",
+          tilt: 4,
+          image: "assets/placeholder-photo.svg",
+          alt: "[Describe the photograph.]",
+          back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
         },
 
         { kind: "book", invented: true,
@@ -530,12 +528,53 @@ window.SHELF = {
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
+        { kind: "book", invented: true,
+          id: "inv-23",
+          title: "[SPINE TITLE TWENTY-THREE]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-24",
+          title: "[SPINE TITLE TWENTY-FOUR]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
         /* The volumes not written yet. Same binding as the books above, so they
            read as the next ones in the run rather than as decoration. Not
            openable — there is nothing inside them to read yet. */
         { kind: "journals", years: ["2027", "2028", "2029"] },
 
-        /* A bookend, then room. `volumes` is measured in book widths. */
+        /* Room at the end: a full shelf reads as finished, a shelf with room
+           reads as still going. `volumes` is measured in book widths. */
         { kind: "end", volumes: 3 }
       ]
     },
@@ -718,26 +757,6 @@ window.SHELF = {
           title: "[REAL BOOK SIXTEEN]",
           author: "[Author]",
           palette: "rust", face: "oswald", height: 0.96, width: 39,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
-        },
-
-        { kind: "book", invented: false,
-          id: "real-17",
-          title: "[REAL BOOK SEVENTEEN]",
-          author: "[Author]",
-          palette: "oxblood", face: "garamond", height: 0.82, width: 31,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
-        },
-
-        { kind: "book", invented: false,
-          id: "real-18",
-          title: "[REAL BOOK EIGHTEEN]",
-          author: "[Author]",
-          palette: "navy", face: "playfair", height: 0.93, width: 45,
           quote: "[The pull quote. Let this half be the abstract one.]",
           source: "[Author, Title, p. —]",
           scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
