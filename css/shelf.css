@@ -509,7 +509,9 @@ body {
    everything else. Its vines fall down over the journals. */
 .journals__plant {
   position: absolute;
-  left: 50%;
+  /* Off to the right, so the vines fall past the years rather than across
+     them. The years are the whole statement the journals make. */
+  left: 72%;
   bottom: 100%;
   /* What it would like to be. A plant cannot be taller than the gap it stands
      in, so the shelf trims this to what fits under the plank above. */
