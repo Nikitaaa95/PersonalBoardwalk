@@ -558,7 +558,7 @@ window.SHELF = {
 
         /* Room at the end: a full shelf reads as finished, a shelf with room
            reads as still going. `volumes` is measured in book widths. */
-        { kind: "end", volumes: 3 }
+        { kind: "end", volumes: 1 }
       ]
     },
 

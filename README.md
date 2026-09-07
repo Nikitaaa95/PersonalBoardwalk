@@ -65,9 +65,10 @@ are filled; the handwriting on their backs is still placeholder.
   a title shrunk to 8px does not.
 - **The shelf is never left.** Books open in a dialog over the shelf and closing
   returns focus to the spine you clicked. No page navigation anywhere.
-- **The room at the end stays.** The `end` object draws a bookend and then leaves
-  `volumes` × one book-width of empty plank. The case is one piece of furniture
-  with a back and sides, so unfilled plank reads as shelf rather than as a bug.
+- **The room at the end is what sets the right margin.** The `end` object leaves
+  `volumes` × one book-width of empty plank, and because the scale follows the
+  longest run, that room is subtracted from every shelf's right-hand end, not
+  just its own. Raise `volumes` and the case stands further off all three runs.
 - **Face-out books work on any shelf.** A volume you wrote uses the standard
   binding; a book you've read is stamped instead — caps, wide letterspacing and
   a ruled frame in its palette's `rule` colour, the way a hardcover is lettered.
@@ -81,7 +82,7 @@ are filled; the handwriting on their backs is still placeholder.
   cover, `device: "assets/….svg"` stamps an emblem under the lettering
   instead.
 - **The case is a piece of furniture in a room.** It stops growing at
-  `--case-max` (1200px) and centres, so on any window wider than that the room
+  `--case-max` (1040px) and centres, so on any window wider than that the room
   shows either side of it and the sides of the case (`--stile`) are visible
   edge-on. Raise `--case-max` and the room only appears on wider screens;
   lower it and the case gets smaller but stands further from the walls. Narrow the
