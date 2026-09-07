@@ -65,9 +65,10 @@ between paragraphs.
   a ruled frame in its palette's `rule` colour, the way a hardcover is lettered.
   *The Prophet* uses the `gilt` palette: black cloth stamped in gilt, which is
   what the 1923 Knopf first edition actually was. Gibran's own drawings were the
-  frontispiece and plates inside, not on the binding. To use a real cover image
-  instead, put the file in `assets/` and set `cover: "assets/your-file.jpg"` —
-  it replaces the lettering entirely.
+  frontispiece and plates inside, not on the binding — except the gilt device
+  stamped on the front board, drawn here as `assets/prophet-device.svg`. Set
+  `device: "assets/….svg"` for a stamped emblem below the lettering, or
+  `cover: "assets/….jpg"` to replace the whole face with a real cover image.
 - **The journals are not openable.** They carry the same binding as the books I
   wrote, so they read as the next volumes in that run rather than as decoration,
   and the years are the whole statement — no placard explains them. There is

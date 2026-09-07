@@ -135,6 +135,7 @@
     if (!item.invented) {
       var p = palette(item.palette);
       btn.classList.add("face-out--stamped");
+      if (item.device) btn.classList.add("face-out--device");
       btn.style.width = (item.faceWidth || 150) + "px";
       btn.style.height = ((item.height || 0.92) * 100) + "%";
       btn.style.background =
@@ -145,6 +146,8 @@
       rules.style.borderColor = p.rule;
     }
 
+    /* The 1923 binding carries no ruled frame — it is lettering and a device
+       stamped straight into the cloth — so the frame is opt-in. */
     if (item.cover) {
       /* A real cover image, if you have one, replaces the stamped lettering. */
       btn.classList.add("face-out--art");
@@ -152,8 +155,16 @@
       art.src = item.cover;
       art.alt = "";
       btn.appendChild(art);
+    } else if (item.device) {
+      /* Lettering at the head, device centred in the field below it. */
+      var dev = el("img", "face-out__device");
+      dev.src = item.device;
+      dev.alt = "";
+      btn.appendChild(title);
+      btn.appendChild(author);
+      btn.appendChild(dev);
     } else {
-      btn.appendChild(frame);
+      if (item.frame !== false) btn.appendChild(frame);
       btn.appendChild(title);
       btn.appendChild(rules);
       btn.appendChild(author);

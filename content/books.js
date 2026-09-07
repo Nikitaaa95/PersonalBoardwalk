@@ -594,6 +594,8 @@ window.SHELF = {
           author: "Kahlil Gibran",
           palette: "gilt", face: "garamond",
           height: 0.90, faceWidth: 152,
+          /* The 1923 binding: gilt caps at the head, Gibran's device below. */
+          device: "assets/prophet-device.svg",
           quote: "Your children are not your children. They are the sons and daughters of Life’s longing for itself.",
           source: "Kahlil Gibran, The Prophet (Knopf, 1923), 'On Children'",
           scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week.]`
