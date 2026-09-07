@@ -64,122 +64,138 @@ window.SHELF = {
       id: "wrote-1",
       label: "Books I wrote",
       items: [
-        { kind: "book", invented: true,
+                { kind: "book", invented: true,
           id: "inv-04",
-          title: "[SPINE TITLE FOUR]",
-          author: "[Your name]",
+          title: "Ten Siblings, One Surname",
+          author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
-        { kind: "book", invented: true,
-          id: "inv-05",
-          title: "[SPINE TITLE FIVE]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
-        { kind: "book", invented: true,
-          id: "inv-06",
-          title: "[SPINE TITLE SIX]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
+          /* The Chathanatt side: ten of them, out of very little. */
+          poem: `My grandfather's house had one good room.
+Ten of them came out of it
+and not one came out empty-handed.
+Nobody talks about the years before.
+We talk about the years after —
+the degrees, the houses, the flights home.
+At that table there is no chair for pity,
+only for whoever made it next.
+I built none of this.
+I inherited the finished building
+and was handed one instruction: keep it up.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
                 { kind: "book", invented: true,
+          id: "inv-05",
+          title: "The Good Silver",
+          author: "Nikita Thomas",
+          press: "[Invented Press]",
+          year: "[20—]",
+          /* My mother's parents, and the standard they set. */
+          poem: `They were people who knew which fork.
+Not for show — it was how they spoke,
+and I was born expected to be fluent.
+In every photograph her back is straight.
+My grandfather never raised his voice
+because he never once had to.
+I set a good table. I know the words.
+And still I read the room before I laugh,
+to work out how loud is allowed.
+No one ever sat me down and asked for this.
+That is the part I cannot put down.`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+                { kind: "book", invented: true,
+          id: "inv-06",
+          title: "The Oldest Job",
+          author: "Nikita Thomas",
+          press: "[Invented Press]",
+          year: "[20—]",
+          /* Being the eldest — my brother, and my sister. */
+          poem: `Nobody promoted me. I was first,
+and then there were two more,
+and the job started without an interview.
+My brother is my best friend now,
+which is not how it began.
+It began with me deciding he was mine.
+My sister is why I want anything at all.
+When I am tired I picture her watching
+and I get up.
+There is no version of this life
+where I set it down and walk away.
+I have never once wanted one.`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+                        { kind: "book", invented: true,
           id: "inv-20",
-          title: "[SPINE TITLE TWENTY-THREE]",
-          author: "[Your name]",
+          title: "The Sister Who Came Later",
+          author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
+          /* My sister-in-law. */
+          poem: `I did not grow up with her.
+She arrived the way weather does —
+already whole, already herself.
+I keep catching myself copying her:
+how she says no without apologising,
+how she holds a room without raising it.
+I have known her a fraction of my life
+and I measure myself against her anyway.
+The family you are given is a fact.
+The family you choose to look up to
+is a decision, made daily.
+I keep making it.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-        { kind: "book", invented: true,
+                { kind: "book", invented: true,
           id: "inv-21",
-          title: "[SPINE TITLE TWENTY-FOUR]",
-          author: "[Your name]",
+          title: "Walking Distance",
+          author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
+          /* City life. */
+          poem: `Everything I need is fifteen minutes on foot
+and I still take the long way.
+The city does not care that I live here,
+which is the kindest thing about it.
+I know the corner that smells of bread,
+which train runs late,
+which window keeps its lamp on late.
+Nobody on this street knows my family.
+I am nobody's eldest daughter here —
+only a person walking,
+deciding, for once,
+where to turn.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-        { kind: "book", invented: true,
+                { kind: "book", invented: true,
           id: "inv-22",
-          title: "[SPINE TITLE TWENTY-FIVE]",
-          author: "[Your name]",
+          title: "Door to Door",
+          author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
+          /* Politics. */
+          poem: `I have argued at tables I was a guest at.
+I have knocked on doors that opened an inch.
+Someone always says it makes no difference,
+that they are all alike, that nothing moves.
+I know the arithmetic of a margin.
+I know what a hundred doors is worth,
+and I know it is not nothing.
+I am not embarrassed to care this much.
+The people who taught me to be polite
+also taught me what is owed.
+So I keep the clipboard.
+So I keep knocking.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
