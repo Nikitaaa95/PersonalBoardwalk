@@ -527,13 +527,16 @@ Nothing here is behind glass. Pull anything down.`
         },
 
         { kind: "book", invented: false,
-          id: "real-05",
-          title: "[A LONGER REAL TITLE THAT HAS TO FIT]",
-          author: "[Author]",
-          palette: "tan", face: "garamond", height: 0.9, width: 34,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
+          id: "real-little-women",
+          title: "Little Women",
+          author: "Louisa May Alcott",
+          /* Photographed spine: the decorated Roberts Brothers cloth, blocked
+             and gilt, with the publisher's device at the foot. */
+          spineImage: "assets/spine-little-women.jpg",
+          spineAspect: 0.252, height: 0.96,
+          quote: "Christmas won't be Christmas without any presents.",
+          source: "Louisa May Alcott, Little Women, opening line",
+          scene: `[Where you were. How old. Which sister you thought you were, and which one you actually were.]`
         },
 
         { kind: "book", invented: false,
@@ -547,13 +550,16 @@ Nothing here is behind glass. Pull anything down.`
         },
 
         { kind: "book", invented: false,
-          id: "real-12",
-          title: "[THE TALL ONE]",
-          author: "[Author]",
-          palette: "olive", face: "playfair", height: 0.95, width: 34,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week.]`
+          id: "real-watchman",
+          title: "Go Set a Watchman",
+          author: "Harper Lee",
+          /* Photographed spine: the Harper jacket, lavender with the branch
+             running the length of the board. */
+          spineImage: "assets/spine-go-set-a-watchman.jpg",
+          spineAspect: 0.127, height: 0.93,
+          quote: "[Your pull quote.]",
+          source: "Harper Lee, Go Set a Watchman",
+          scene: `[Where you were. Whether you read it after Mockingbird, and what it did to that book.]`
         },
 
         { kind: "book", invented: false,
