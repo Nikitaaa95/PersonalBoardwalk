@@ -510,13 +510,15 @@ Nothing here is behind glass. Pull anything down.`
         },
 
         { kind: "book", invented: false,
-          id: "real-10",
-          title: "[THE THIN ONE]",
-          author: "[Author]",
-          palette: "rust", face: "oswald", height: 0.83, width: 28,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week.]`
+          id: "real-midnight",
+          title: "The Midnight Library",
+          author: "Matt Haig",
+          /* Photographed spine: the Viking jacket, navy with the gilt script. */
+          spineImage: "assets/spine-midnight-library.jpg",
+          spineAspect: 0.111, height: 0.93,
+          quote: "[Your pull quote.]",
+          source: "Matt Haig, The Midnight Library",
+          scene: `[Where you were. What you were deciding at the time.]`
         },
 
         { kind: "book", invented: false,
@@ -609,6 +611,31 @@ Nothing here is behind glass. Pull anything down.`
           quote: "I will not say: do not weep; for not all tears are an evil.",
           source: "J. R. R. Tolkien, The Return of the King",
           scene: `[Where you were standing when it ended.]`
+        },
+
+        { kind: "book", invented: false,
+          id: "real-dictionary",
+          title: "The Dictionary of Lost Words",
+          author: "Pip Williams",
+          /* Photographed spine: the poppies-and-vines jacket over dark ground. */
+          spineImage: "assets/spine-dictionary-lost-words.jpg",
+          spineAspect: 0.128, height: 0.96,
+          quote: "[Your pull quote.]",
+          source: "Pip Williams, The Dictionary of Lost Words",
+          scene: `[Where you were. Which word you went and looked up afterwards.]`
+        },
+
+        { kind: "book", invented: false,
+          id: "real-mom-died",
+          title: "I'm Glad My Mom Died",
+          author: "Jennette McCurdy",
+          /* Photographed spine: the yellow board, photographed lying down and
+             turned upright so the title reads head to foot like the others. */
+          spineImage: "assets/spine-glad-my-mom-died.jpg",
+          spineAspect: 0.129, height: 0.90,
+          quote: "[Your pull quote.]",
+          source: "Jennette McCurdy, I'm Glad My Mom Died",
+          scene: `[Where you were. Whether you read it in one sitting, and who you told about it.]`
         },
 
         { kind: "photo",
