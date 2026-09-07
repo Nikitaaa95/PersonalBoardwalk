@@ -232,25 +232,6 @@ body {
 }
 
 /* Turned with the lettering, since the whole spine reads sideways. */
-.spine__device {
-  flex: 0 0 auto;
-  width: 84%;
-  height: auto;
-  margin-top: 9px;
-  transform: rotate(90deg);
-  opacity: .9;
-}
-.spine__imprint {
-  flex: 0 0 auto;
-  writing-mode: vertical-rl;
-  white-space: nowrap;
-  overflow: hidden;
-  margin-top: 9px;
-  font-size: 7px;
-  letter-spacing: .09em;
-  opacity: .85;
-}
-
 .spine__author {
   flex: 0 0 auto;
   writing-mode: vertical-rl;
@@ -272,6 +253,28 @@ body {
   opacity: .5;
 }
 .spine__band--bottom { margin: 8px 0 0; }
+
+/* A photographed spine: the picture is the book. Its own aspect sets the
+   width against the shelf's height, so it is never stretched, and the cloth
+   shading is lifted above it so the print still reads as a curved surface
+   standing on a shelf rather than as a flat cut-out. */
+.spine--image {
+  width: auto;
+  aspect-ratio: var(--spine-aspect, 0.12);
+  padding: 0;
+  background: none;
+}
+.spine--image > img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+}
+.spine--image::before { z-index: 1; opacity: .75; }
 
 /* Every volume I wrote, forever, is this exact object. */
 .spine--invented {

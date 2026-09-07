@@ -30,7 +30,8 @@ Three object types, matching the brief:
 | `kind` | Opens to | Fields |
 |---|---|---|
 | `book` with `invented: true` | plate + poem | `title, author, press, year, poem, image, imageAlt`; `intro` instead of `poem` for prose |
-| `book` with `invented: false` | quote + scene | `title, author, palette, face, height, width, quote, source, scene`; optional `titleInk`, `authorInk`, `device`, `imprint` |
+| `book` with `invented: false` | quote + scene | `title, author, palette, face, height, width, quote, source, scene` |
+| …with `spineImage` | quote + scene | a photograph of the real spine: `spineImage, spineAspect, height` — replaces the cloth and lettering entirely |
 | either, plus `faceOut: true` | as above | stands face out; add `faceWidth`, `cover` for a real cover image, or `portrait` for a plated photograph |
 | `photo` | flips in place | `image, aspect, width, alt, tilt, back: {date, place, note}` |
 | `journals` | not openable | `years` — e.g. `["2027", "2028", "2029"]`; optional `plant` |
@@ -87,6 +88,16 @@ are filled; the handwriting on their backs is still placeholder.
   drawn mark takes the shelf's scale factor anyway. Keep such a drawing coarse
   — at a spine's width it renders about 34px across, and fine detail turns
   into marks that read as lettering.
+- **A photograph of the spine beats a drawing of one.** Three books carry
+  pictures of their actual spines — *The Return of the King* (Houghton Mifflin),
+  *Peter Pan and Wendy* (Folio), *Alice in Wonderland* (Raphael Tuck) — set with
+  `spineImage`. `spineAspect` is the photograph's width ÷ height: the shelf gives
+  the book its height and that ratio gives its width, so the picture is never
+  stretched. Photographed spines skip the drawn furniture entirely — no cloth,
+  no bands, no set lettering — but keep the cloth shading over the top so they
+  still read as curved boards standing on a shelf rather than flat cut-outs.
+  Real spines are thinner than the drawn ones, so swapping several in shortens
+  a run noticeably; see the note on levelling below.
 - **A real cover image wins over lettering.** *The Prophet* uses a scan of the
   1923 Knopf first edition — black cloth stamped in gilt, with Gibran's own
   device on the front board — in `assets/the-prophet-1923.jpg`. Published 1923,
