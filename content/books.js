@@ -417,6 +417,15 @@ Nothing here is behind glass. Pull anything down.`
           scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week.]`
         },
 
+        { kind: "photo",
+          id: "ph-02",
+          tilt: 4,
+          image: "assets/photo-turban.jpg",
+          aspect: 0.754, width: 78,
+          alt: "A small child in a red turban, tongue out, with a drawn-on moustache.",
+          back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
+        },
+
         { kind: "book", invented: false,
           id: "real-little-women",
           title: "Little Women",
@@ -557,15 +566,6 @@ Nothing here is behind glass. Pull anything down.`
           quote: "[Your pull quote.]",
           source: "Jennette McCurdy, I'm Glad My Mom Died",
           scene: `[Where you were. Whether you read it in one sitting, and who you told about it.]`
-        },
-
-        { kind: "photo",
-          id: "ph-02",
-          tilt: 4,
-          image: "assets/photo-turban.jpg",
-          aspect: 0.754, width: 78,
-          alt: "A small child in a red turban, tongue out, with a drawn-on moustache.",
-          back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
         },
 
         { kind: "photo",
