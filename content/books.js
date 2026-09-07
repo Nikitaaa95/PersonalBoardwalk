@@ -383,66 +383,6 @@ Nothing here is behind glass. Pull anything down.`
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-        { kind: "book", invented: true,
-          id: "inv-20",
-          title: "[SPINE TITLE TWENTY]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
-        { kind: "book", invented: true,
-          id: "inv-21",
-          title: "[SPINE TITLE TWENTY-ONE]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
-        { kind: "book", invented: true,
-          id: "inv-22",
-          title: "[SPINE TITLE TWENTY-TWO]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
         /* The volumes not written yet. Same binding as the books above, so they
            read as the next ones in the run rather than as decoration. Not
            openable — there is nothing inside them to read yet. */
