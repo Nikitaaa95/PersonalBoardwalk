@@ -149,9 +149,25 @@
       rules.style.borderColor = p.rule;
     }
 
-    /* The 1923 binding carries no ruled frame — it is lettering and a device
-       stamped straight into the cloth — so the frame is opt-in. */
-    if (item.cover) {
+    /* A jacket with a photograph on it: the picture takes the whole front
+       board and the lettering sits over the foot of it, the way a memoir
+       jacket is set. If the file is missing it falls back to the binding
+       underneath rather than showing a broken image. */
+    if (item.portrait) {
+      btn.classList.add("face-out--jacket");
+      var shot = el("img", "face-out__portrait");
+      shot.src = item.portrait;
+      shot.alt = item.portraitAlt || "";
+      shot.addEventListener("error", function () {
+        btn.classList.remove("face-out--jacket");
+        shot.remove();
+      });
+      var band = el("span", "face-out__band");
+      band.appendChild(el("span", "face-out__band-title", item.title || ""));
+      if (item.author) band.appendChild(el("span", "face-out__band-author", item.author));
+      btn.appendChild(shot);
+      btn.appendChild(band);
+    } else if (item.cover) {
       /* A real cover image, if you have one, replaces the stamped lettering. */
       btn.classList.add("face-out--art");
       var art = el("img", "face-out__art");

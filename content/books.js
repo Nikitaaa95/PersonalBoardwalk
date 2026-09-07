@@ -291,8 +291,10 @@ window.SHELF = {
 
         { kind: "book", invented: true, faceOut: true,
           id: "inv-01",
-          title: "[SPINE TITLE — the four-foot test]",
-          author: "[Your name]",
+          title: "The Collected Works, So Far",
+          author: "Nikita Thomas",
+          portrait: "assets/portrait.jpg",
+          portraitAlt: "Nikita Thomas.",
           press: "[Invented Press]",
           year: "[20—]",
           poem: `[Line 1.]
