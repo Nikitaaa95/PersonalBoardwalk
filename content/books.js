@@ -60,26 +60,6 @@ window.SHELF = {
       id: "wrote-1",
       label: "Books I wrote",
       items: [
-        { kind: "book", invented: true, faceOut: true,
-          id: "inv-01",
-          title: "[SPINE TITLE — the four-foot test]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
         { kind: "book", invented: true,
           id: "inv-02",
           title: "[SPINE TITLE TWO]",
@@ -332,6 +312,26 @@ window.SHELF = {
         { kind: "book", invented: true,
           id: "inv-14",
           title: "[SPINE TITLE FOURTEEN]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true, faceOut: true,
+          id: "inv-01",
+          title: "[SPINE TITLE — the four-foot test]",
           author: "[Your name]",
           press: "[Invented Press]",
           year: "[20—]",
