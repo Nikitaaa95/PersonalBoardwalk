@@ -309,9 +309,13 @@ body {
 .face-out--portrait { justify-content: flex-start; padding-top: 18px; }
 .face-out__plate {
   flex: 0 0 auto;
-  width: 66%;
+  /* Sized off the board's height, not its width: a short window makes the
+     board shorter without making it narrower, and a plate measured across
+     would then push the lettering off the foot of the book. */
+  height: 46%;
+  width: auto;
   aspect-ratio: 3 / 4;
-  margin: 0 0 12px;
+  margin: 0 0 10px;
   overflow: hidden;
   /* A line round the plate, and the shadow of it sitting on the cloth. */
   box-shadow:
