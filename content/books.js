@@ -193,46 +193,6 @@ window.SHELF = {
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-        { kind: "book", invented: true,
-          id: "inv-10",
-          title: "[SPINE TITLE TEN]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
-        { kind: "book", invented: true,
-          id: "inv-11",
-          title: "[SPINE TITLE ELEVEN]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
         { kind: "book", invented: true, faceOut: true,
           id: "inv-01",
           title: "The Collected Works, So Far",
@@ -261,26 +221,6 @@ There is nothing inside them. That is the honest part of the case — most of it
 is still ahead of me.
 
 Nothing here is behind glass. Pull anything down.`
-        },
-
-        { kind: "book", invented: true,
-          id: "inv-12",
-          title: "[SPINE TITLE TWELVE]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
         },
 
         ]
@@ -403,66 +343,6 @@ Nothing here is behind glass. Pull anything down.`
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-        { kind: "book", invented: true,
-          id: "inv-20",
-          title: "[SPINE TITLE TWENTY]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
-        { kind: "book", invented: true,
-          id: "inv-21",
-          title: "[SPINE TITLE TWENTY-ONE]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
-        { kind: "book", invented: true,
-          id: "inv-22",
-          title: "[SPINE TITLE TWENTY-TWO]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
         /* The volumes not written yet. Same binding as the books above, so they
            read as the next ones in the run rather than as decoration. Not
            openable — there is nothing inside them to read yet. */
@@ -495,16 +375,6 @@ Nothing here is behind glass. Pull anything down.`
           quote: "Your children are not your children. They are the sons and daughters of Life's longing for itself.",
           source: "Kahlil Gibran, The Prophet (Knopf, 1923), 'On Children'",
           scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week.]`
-        },
-
-        { kind: "book", invented: false,
-          id: "real-01",
-          title: "[REAL BOOK]",
-          author: "[Author]",
-          palette: "oxblood", face: "garamond", height: 0.94, width: 46,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
         },
 
         { kind: "book", invented: false,
@@ -554,26 +424,6 @@ Nothing here is behind glass. Pull anything down.`
           quote: "[The pull quote. Let this half be the abstract one.]",
           source: "[Author, Title, p. —]",
           scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
-        },
-
-        { kind: "book", invented: false,
-          id: "real-06",
-          title: "[REAL BOOK SIX]",
-          author: "[Author]",
-          palette: "plum", face: "playfair", height: 0.86, width: 36,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
-        },
-
-                { kind: "book", invented: false,
-          id: "real-08",
-          title: "[REAL BOOK EIGHT]",
-          author: "[Author]",
-          palette: "tan", face: "playfair", height: 0.88, width: 36,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week.]`
         },
 
         { kind: "book", invented: false,
