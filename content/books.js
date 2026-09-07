@@ -517,16 +517,6 @@ Nothing here is behind glass. Pull anything down.`
         },
 
         { kind: "book", invented: false,
-          id: "real-04",
-          title: "[FROM SOMEONE ELSE'S SHELF]",
-          author: "[Author]",
-          palette: "olive", face: "oswald", height: 0.97, width: 42,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
-        },
-
-        { kind: "book", invented: false,
           id: "real-little-women",
           title: "Little Women",
           author: "Louisa May Alcott",
