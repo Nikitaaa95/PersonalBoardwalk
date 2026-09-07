@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Personal Boardwalk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@400;600&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/shelf.css">
+</head>
+<body>
+
+  <header class="masthead">
+    <h1 id="site-title" class="masthead__title"></h1>
+    <p id="site-line" class="masthead__line"></p>
+  </header>
+
+  <main id="shelves" class="shelves" aria-label="The shelf"></main>
+
+  <dialog id="reader" class="reader" aria-labelledby="reader-title">
+    <form method="dialog" class="reader__close-form">
+      <button class="reader__close" value="close" aria-label="Close and return to the shelf">&times;</button>
+    </form>
+    <div class="reader__book">
+      <div class="reader__page reader__page--verso" id="reader-verso"></div>
+      <div class="reader__page reader__page--recto" id="reader-recto"></div>
+    </div>
+    <p class="reader__colophon" id="reader-colophon"></p>
+  </dialog>
+
+  <script src="content/books.js"></script>
+  <script src="js/shelf.js"></script>
+</body>
+</html>
