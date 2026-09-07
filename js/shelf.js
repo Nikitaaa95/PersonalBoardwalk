@@ -119,15 +119,48 @@
     }
   }
 
-  /* --- face-out --------------------------------------------------------- */
+  /* --- face-out ------------------------------------------------------------
+     Works for either kind of book. A volume I wrote uses the standard binding;
+     a book I've read uses its own cloth, stamped rather than printed. */
   function buildFaceOut(item) {
     var btn = el("button", "face-out");
     btn.type = "button";
-    btn.appendChild(el("span", "face-out__title", item.title || ""));
-    btn.appendChild(el("span", "face-out__rules"));
-    btn.appendChild(el("span", "face-out__author",
-      [item.author, item.year].filter(Boolean).join("  ·  ")));
-    btn.setAttribute("aria-label", "Open " + (item.title || "book"));
+
+    var frame  = el("span", "face-out__frame");
+    var title  = el("span", "face-out__title", item.title || "");
+    var rules  = el("span", "face-out__rules");
+    var author = el("span", "face-out__author",
+      item.invented ? [item.author, item.year].filter(Boolean).join("  ·  ") : (item.author || ""));
+
+    if (!item.invented) {
+      var p = palette(item.palette);
+      btn.classList.add("face-out--stamped");
+      btn.style.width = (item.faceWidth || 150) + "px";
+      btn.style.height = ((item.height || 0.92) * 100) + "%";
+      btn.style.background =
+        "linear-gradient(100deg," + shade(p.cloth, -12) + " 0 7px," + p.cloth + " 7px 100%)";
+      btn.style.color = p.ink;
+      btn.style.fontFamily = face(item.face);
+      frame.style.borderColor = p.rule;
+      rules.style.borderColor = p.rule;
+    }
+
+    if (item.cover) {
+      /* A real cover image, if you have one, replaces the stamped lettering. */
+      btn.classList.add("face-out--art");
+      var art = el("img", "face-out__art");
+      art.src = item.cover;
+      art.alt = "";
+      btn.appendChild(art);
+    } else {
+      btn.appendChild(frame);
+      btn.appendChild(title);
+      btn.appendChild(rules);
+      btn.appendChild(author);
+    }
+
+    btn.setAttribute("aria-label", "Open " + (item.title || "book") +
+      (item.author ? ", " + item.author : ""));
     btn.addEventListener("click", function () { openReader(item); });
     return btn;
   }

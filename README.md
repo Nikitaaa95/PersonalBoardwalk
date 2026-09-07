@@ -29,6 +29,7 @@ Three object types, matching the brief:
 |---|---|---|
 | `book` with `invented: true` | plate + poem | `title, author, press, year, poem, image, imageAlt` |
 | `book` with `invented: false` | quote + scene | `title, author, palette, face, height, width, quote, source, scene` |
+| either, plus `faceOut: true` | as above | stands face out; add `faceWidth`, or `cover` for a real cover image |
 | `photo` | flips in place | `image, alt, tilt, back: {date, place, note}` |
 | `journals` | not openable | `years` — e.g. `["2027", "2028", "2029"]` |
 | `end` | — | `volumes` — how many volumes of room to leave |
@@ -59,6 +60,14 @@ between paragraphs.
 - **The room at the end stays.** The `end` object draws a bookend and then leaves
   `volumes` × one book-width of empty plank. The case is one piece of furniture
   with a back and sides, so unfilled plank reads as shelf rather than as a bug.
+- **Face-out books work on any shelf.** A volume you wrote uses the standard
+  binding; a book you've read is stamped instead — caps, wide letterspacing and
+  a ruled frame in its palette's `rule` colour, the way a hardcover is lettered.
+  *The Prophet* uses the `gilt` palette: black cloth stamped in gilt, which is
+  what the 1923 Knopf first edition actually was. Gibran's own drawings were the
+  frontispiece and plates inside, not on the binding. To use a real cover image
+  instead, put the file in `assets/` and set `cover: "assets/your-file.jpg"` —
+  it replaces the lettering entirely.
 - **The journals are not openable.** They carry the same binding as the books I
   wrote, so they read as the next volumes in that run rather than as decoration,
   and the years are the whole statement — no placard explains them. There is

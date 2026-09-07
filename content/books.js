@@ -40,7 +40,9 @@ window.SHELF = {
     tan:     { cloth: "#c2a476", ink: "#33260f", rule: "#5c4520" },
     plum:    { cloth: "#4a2c42", ink: "#e9d8e4", rule: "#a67c9b" },
     slate:   { cloth: "#3f4750", ink: "#e2e5e8", rule: "#95a0aa" },
-    rust:    { cloth: "#8a4426", ink: "#f0dcc6", rule: "#c98f5e" }
+    rust:    { cloth: "#8a4426", ink: "#f0dcc6", rule: "#c98f5e" },
+    /* Black cloth stamped in gilt — the 1923 Knopf binding of The Prophet. */
+    gilt:    { cloth: "#100f0e", ink: "#c9a961", rule: "#c9a961" }
   },
 
   /* --- Typefaces for the books I've read. Books I wrote never use these. --- */
@@ -586,6 +588,17 @@ window.SHELF = {
       id: "read",
       label: "Books I've read",
       items: [
+        { kind: "book", invented: false, faceOut: true,
+          id: "real-prophet",
+          title: "The Prophet",
+          author: "Kahlil Gibran",
+          palette: "gilt", face: "garamond",
+          height: 0.90, faceWidth: 152,
+          quote: "Your children are not your children. They are the sons and daughters of Life’s longing for itself.",
+          source: "Kahlil Gibran, The Prophet (Knopf, 1923), 'On Children'",
+          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week.]`
+        },
+
         { kind: "book", invented: false,
           id: "real-01",
           title: "[REAL BOOK]",
@@ -717,46 +730,6 @@ window.SHELF = {
           title: "[THE TALL ONE]",
           author: "[Author]",
           palette: "olive", face: "oswald", height: 1.0, width: 41,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
-        },
-
-        { kind: "book", invented: false,
-          id: "real-13",
-          title: "[REAL BOOK THIRTEEN]",
-          author: "[Author]",
-          palette: "tan", face: "garamond", height: 0.84, width: 29,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
-        },
-
-        { kind: "book", invented: false,
-          id: "real-14",
-          title: "[REAL BOOK FOURTEEN]",
-          author: "[Author]",
-          palette: "plum", face: "playfair", height: 0.91, width: 43,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
-        },
-
-        { kind: "book", invented: false,
-          id: "real-15",
-          title: "[REAL BOOK FIFTEEN]",
-          author: "[Author]",
-          palette: "slate", face: "cormorant", height: 0.87, width: 35,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
-        },
-
-        { kind: "book", invented: false,
-          id: "real-16",
-          title: "[REAL BOOK SIXTEEN]",
-          author: "[Author]",
-          palette: "rust", face: "oswald", height: 0.96, width: 39,
           quote: "[The pull quote. Let this half be the abstract one.]",
           source: "[Author, Title, p. —]",
           scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
