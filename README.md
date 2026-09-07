@@ -30,7 +30,7 @@ Three object types, matching the brief:
 | `book` with `invented: true` | plate + poem | `title, author, press, year, poem, image, imageAlt` |
 | `book` with `invented: false` | quote + scene | `title, author, palette, face, height, width, quote, source, scene` |
 | either, plus `faceOut: true` | as above | stands face out; add `faceWidth`, or `cover` for a real cover image |
-| `photo` | flips in place | `image, alt, tilt, back: {date, place, note}` |
+| `photo` | flips in place | `image, aspect, width, alt, tilt, back: {date, place, note}` |
 | `journals` | not openable | `years` — e.g. `["2027", "2028", "2029"]` |
 | `end` | — | `volumes` — how many volumes of room to leave |
 
@@ -39,6 +39,12 @@ a real bookcase behaves when a section spills onto the next shelf.
 
 Poems keep their line breaks. Scenes are prose and reflow; leave a blank line
 between paragraphs.
+
+Photographs hang in clean gold frames. `aspect` is the print's width ÷ height
+and `width` is how wide the frame sits on the shelf — the frame follows the
+picture's proportions, so nothing is cropped to a fixed box. Two of the four
+frames still point at `assets/placeholder-photo.svg`; drop a file in `assets/`
+and change `image` and `aspect` to fill them.
 
 ## What the code enforces, so you don't have to
 

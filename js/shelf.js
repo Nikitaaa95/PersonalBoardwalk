@@ -189,6 +189,10 @@
     btn.style.transform = "rotate(" + (item.tilt || 0) + "deg)";
 
     var inner = el("div", "photo__inner");
+    /* Each print keeps its own proportions; the frame follows the picture. */
+    var w = item.width || 124;
+    inner.style.width = w + "px";
+    inner.style.height = Math.round(w / (item.aspect || 1.29)) + "px";
 
     var front = el("div", "photo__face");
     var img = el("img");
@@ -197,9 +201,11 @@
     front.appendChild(img);
 
     var back = el("div", "photo__face photo__face--back");
+    var backing = el("div", "photo__backing");
     var b = item.back || {};
-    back.appendChild(el("span", "photo__meta", [b.date, b.place].filter(Boolean).join(" · ")));
-    back.appendChild(el("span", "photo__note", b.note || ""));
+    backing.appendChild(el("span", "photo__meta", [b.date, b.place].filter(Boolean).join(" · ")));
+    backing.appendChild(el("span", "photo__note", b.note || ""));
+    back.appendChild(backing);
 
     inner.appendChild(front);
     inner.appendChild(back);

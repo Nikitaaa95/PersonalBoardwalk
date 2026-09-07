@@ -207,8 +207,9 @@ window.SHELF = {
         { kind: "photo",
           id: "ph-01",
           tilt: -3,
-          image: "assets/placeholder-photo.svg",
-          alt: "[Describe the photograph.]",
+          image: "assets/photo-family-three.jpg",
+          aspect: 1.333, width: 132,
+          alt: "A young family of three.",
           back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
         },
 
@@ -466,6 +467,7 @@ window.SHELF = {
           id: "ph-02",
           tilt: 4,
           image: "assets/placeholder-photo.svg",
+          aspect: 1.29, width: 124,
           alt: "[Describe the photograph.]",
           back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
         },
@@ -634,8 +636,9 @@ window.SHELF = {
         { kind: "photo",
           id: "ph-03",
           tilt: -5,
-          image: "assets/placeholder-photo.svg",
-          alt: "[Describe the photograph.]",
+          image: "assets/photo-family-five.jpg",
+          aspect: 1.507, width: 142,
+          alt: "A family of five, dressed for a celebration.",
           back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
         },
 
@@ -723,6 +726,7 @@ window.SHELF = {
           id: "ph-04",
           tilt: 3,
           image: "assets/placeholder-photo.svg",
+          aspect: 1.29, width: 124,
           alt: "[Describe the photograph.]",
           back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
         },
@@ -742,6 +746,26 @@ window.SHELF = {
           title: "[REAL BOOK THIRTEEN]",
           author: "[Author]",
           palette: "tan", face: "garamond", height: 0.84, width: 29,
+          quote: "[The pull quote. Let this half be the abstract one.]",
+          source: "[Author, Title, p. —]",
+          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
+        },
+
+        { kind: "book", invented: false,
+          id: "real-14",
+          title: "[REAL BOOK FOURTEEN]",
+          author: "[Author]",
+          palette: "plum", face: "playfair", height: 0.91, width: 43,
+          quote: "[The pull quote. Let this half be the abstract one.]",
+          source: "[Author, Title, p. —]",
+          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
+        },
+
+        { kind: "book", invented: false,
+          id: "real-15",
+          title: "[REAL BOOK FIFTEEN]",
+          author: "[Author]",
+          palette: "slate", face: "cormorant", height: 0.87, width: 35,
           quote: "[The pull quote. Let this half be the abstract one.]",
           source: "[Author, Title, p. —]",
           scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`

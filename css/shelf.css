@@ -358,7 +358,10 @@ body {
   filter: drop-shadow(0 1px 1px rgba(0,0,0,.6));
 }
 
-/* --- Photographs: static in the physical version, flippable here. -------- */
+/* --- Photographs: static in the physical version, flippable here. --------
+   Clean gold moulding — a thin bevelled frame, a dark rebate line, and the
+   print. No ornament: the frames should read as furniture, not as decoration
+   competing with the spines. */
 .photo {
   flex: 0 0 auto;
   margin: 0 14px;
@@ -368,10 +371,10 @@ body {
   cursor: pointer;
   perspective: 900px;
 }
-.photo:focus-visible { outline: 2px solid var(--gild); outline-offset: 4px; }
+.photo:focus-visible { outline: 2px solid var(--gild); outline-offset: 5px; }
 .photo__inner {
   position: relative;
-  width: 118px;
+  width: 124px;
   height: 96px;
   transform-style: preserve-3d;
   transition: transform .6s cubic-bezier(.4,.1,.2,1);
@@ -379,18 +382,39 @@ body {
      the flip. The shadow lives on the faces instead. */
 }
 .photo.is-flipped .photo__inner { transform: rotateY(180deg); }
+
 .photo__face {
   position: absolute;
   inset: 0;
   backface-visibility: hidden;
-  background: var(--paper);
-  border: 1px solid var(--paper-edge);
-  box-shadow: 0 10px 16px -4px rgba(0,0,0,.6);
-  padding: 5px 5px 14px;
+  padding: 7px;
+  border-radius: 2px;
+  /* Bevelled gold: light catching the top-left, shadow at the lower-right. */
+  background:
+    linear-gradient(135deg,
+      #f4e3ae 0%, #cda94f 18%, #a4832c 38%,
+      #f6ead0 52%, #b08f34 68%, #8a6c20 88%, #dcc078 100%);
+  box-shadow:
+    0 10px 16px -5px rgba(0,0,0,.65),
+    inset 0 0 0 1px rgba(255,255,255,.28),
+    inset 0 0 0 7px rgba(0,0,0,.06);
+}
+/* The rebate: the thin dark line where the moulding meets the print. */
+.photo__face::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(0,0,0,.55);
+  border-radius: 1px;
+  pointer-events: none;
 }
 .photo__face img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.photo__face--back {
-  transform: rotateY(180deg);
+
+.photo__face--back { transform: rotateY(180deg); }
+/* The backing board behind the glass, carrying the handwriting. */
+.photo__backing {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -400,12 +424,10 @@ body {
   color: #3b3a56;
   font-family: "Cormorant Garamond", cursive, serif;
   font-style: italic;
-  font-size: 12px;
-  line-height: 1.35;
   text-align: left;
 }
 .photo__meta { font-size: 10px; opacity: .75; letter-spacing: .03em; }
-.photo__note { font-size: 13px; }
+.photo__note { font-size: 13px; line-height: 1.35; }
 
 /* --- The journals: the volumes not written yet. -------------------------- */
 /* Not openable, on purpose — there is nothing inside them to read. The years
