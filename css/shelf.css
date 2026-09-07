@@ -41,8 +41,12 @@ html { color-scheme: dark; }
 
 body {
   margin: 0;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  /* Sideways is the wrong axis for a bookcase, so the case never scrolls
+     across; when it outgrows the window it grows downward and the page
+     scrolls, which is how you read a real one. */
+  overflow-x: hidden;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   background:
@@ -55,7 +59,7 @@ body {
 /* --- The bookcase: one piece of furniture, filling the page. ------------- */
 .bookcase {
   flex: 1 1 auto;
-  min-height: 0;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -78,7 +82,16 @@ body {
   flex-direction: column;
 }
 
-/* Each shelf scrolls on its own if its run outgrows the case. */
+/* Once a run has spilled onto extra planks there are more shelves than the
+   window can divide up, so planks take a fixed height and the case runs on
+   past the fold instead of squashing every book to fit. */
+.bookcase--wrapped { flex: 0 0 auto; }
+.bookcase--wrapped .shelf-unit {
+  flex: 0 0 auto;
+  height: var(--shelf-h, 232px);
+}
+
+/* A last resort only: runs wrap onto more planks before this can bite. */
 .shelf-scroll {
   flex: 1 1 auto;
   min-height: 0;

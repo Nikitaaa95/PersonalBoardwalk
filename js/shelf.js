@@ -242,6 +242,7 @@
   function buildEnd(item) {
     var wrap = el("div", "shelf-end");
     wrap.setAttribute("aria-hidden", "true");
+    wrap._isRoom = true;
     var room = el("div", "shelf-room");
     room.style.width = "calc(var(--inv-width) * " + (item.volumes || 4) + " + 12px)";
     wrap.appendChild(room);
@@ -313,19 +314,24 @@
     if (e.target === reader) reader.close();
   });
 
-  /* --- render ----------------------------------------------------------- */
+  /* --- render -------------------------------------------------------------
+     A run is a labelled sequence of objects. The data may already split one
+     across two shelves — a shelf with no label continues the run above it — and
+     that is exactly what happens again here when the window is too narrow to
+     hold a run on one plank: it spills onto the next, the way a section of a
+     real bookcase does, instead of running off the side of the furniture. */
   var spines    = [];
-  var racks     = [];
   var scalables = [];   /* fixed-width books, scaled to fill the case */
   var frames    = [];   /* framed photographs, scaled with their aspect */
+  var shelves   = [];
 
   (data.shelves || []).forEach(function (shelf) {
-    var unit = el("section", "shelf-unit");
-    unit.setAttribute("aria-label", shelf.label || shelf.id);
+    /* One entry per authored shelf. Wrapping only ever splits one of these
+       further — it never joins two, because where a run breaks is a decision
+       made in content/books.js, not a consequence of the window. */
+    var run = { label: shelf.label, nodes: [] };
+    shelves.push(run);
 
-    var scroll = el("div", "shelf-scroll");
-    var rack   = el("div", "shelf-rack");
-    var board  = el("div", "shelf-board");
     (shelf.items || []).forEach(function (item) {
       var node;
       if (item.kind === "photo")     node = buildPhoto(item);
@@ -335,28 +341,51 @@
       else                         { node = buildSpine(item); spines.push(node); }
       if (node._baseW) scalables.push(node);
       if (node.firstChild && node.firstChild._baseW) frames.push(node.firstChild);
-      board.appendChild(node);
+      run.nodes.push(node);
     });
-
-    var plank = el("div", "shelf-plank");
-    /* A shelf with no label is a continuation of the run above it. */
-    if (shelf.label) plank.appendChild(el("h2", "shelf-plank__label", shelf.label));
-
-    rack.appendChild(board);
-    rack.appendChild(plank);
-    racks.push(rack);
-    scroll.appendChild(rack);
-    unit.appendChild(scroll);
-    mount.appendChild(unit);
   });
 
-  /* The case is the page now, so instead of sizing the furniture to its books,
-     the books are scaled to the furniture. Widths are all fixed pixels, so a
+  /* Planks are rebuilt on every layout, but the objects standing on them are
+     built once and moved, so click handlers and a flipped photograph survive a
+     resize. */
+  function renderRows(rows) {
+    mount.innerHTML = "";
+    rows.forEach(function (row) {
+      var unit   = el("section", "shelf-unit");
+      unit.setAttribute("aria-label", row.label || "Continued");
+      var scroll = el("div", "shelf-scroll");
+      var rack   = el("div", "shelf-rack");
+      var board  = el("div", "shelf-board");
+      row.nodes.forEach(function (n) { board.appendChild(n); });
+
+      var plank = el("div", "shelf-plank");
+      /* Only the first plank of a run is engraved; the rest read as continuation. */
+      if (row.label) plank.appendChild(el("h2", "shelf-plank__label", row.label));
+
+      rack.appendChild(board);
+      rack.appendChild(plank);
+      scroll.appendChild(rack);
+      unit.appendChild(scroll);
+      mount.appendChild(unit);
+    });
+  }
+
+  function wholeShelves() {
+    return shelves.map(function (r) { return { label: r.label, nodes: r.nodes }; });
+  }
+
+  /* The case is the page, so instead of sizing the furniture to its books, the
+     books are scaled to the furniture. Widths are all fixed pixels, so a
      full-width case would otherwise trail off into empty plank again.
 
      Fixed chrome — gaps, photo margins, case padding — does not scale with the
      books, so one pass overshoots; a few iterations converge. */
-  var BASE_INV = 44;
+  var BASE_INV     = 44;
+  var BASE_SHELF_H = 232;   /* a plank's height on a laptop, at scale 1 */
+  var ONE_ROW_MIN  = 0.66;  /* below this, spines stop reading — wrap instead */
+  var WRAP_SCALE   = 1;     /* wrapped, books return to their designed size */
+  var GAP          = 3;     /* .shelf-board gap */
+  var BOARD_PAD    = 28;    /* .shelf-board padding, both sides */
 
   function applyScale(k) {
     mount.style.setProperty("--inv-width", (BASE_INV * k).toFixed(2) + "px");
@@ -370,39 +399,144 @@
     });
   }
 
+  /* Margins are chrome and do not scale, but they do take room on the plank.
+     offsetWidth, not a bounding rect: the photographs are tilted, and a rect
+     measures the tilted box rather than the room the frame actually occupies. */
+  function outerWidth(node) {
+    var cs = window.getComputedStyle(node);
+    return node.offsetWidth +
+           parseFloat(cs.marginLeft || 0) + parseFloat(cs.marginRight || 0);
+  }
+
+  /* Add the objects up rather than asking for the plank's max-content width:
+     a face-out book sized from its cover's proportions takes its width from its
+     height, and under max-content that height resolves against nothing, so the
+     plank measures short and every book is scaled up to a case it overruns. */
+  function boardWidth(board) {
+    var w = BOARD_PAD;
+    for (var i = 0; i < board.children.length; i++) {
+      w += outerWidth(board.children[i]) + (i ? GAP : 0);
+    }
+    return w;
+  }
+
   function widestRun() {
     var widest = 0;
-    racks.forEach(function (r) { r.style.width = "max-content"; r.style.minWidth = "0"; });
-    racks.forEach(function (r) { widest = Math.max(widest, r.getBoundingClientRect().width); });
-    racks.forEach(function (r) { r.style.width = ""; r.style.minWidth = ""; });
+    [].slice.call(mount.querySelectorAll(".shelf-board")).forEach(function (b) {
+      widest = Math.max(widest, boardWidth(b));
+    });
     return widest;
+  }
+
+  /* Snapshot every object's width while they are all still standing on a
+     plank. Packing takes objects off the shelf to try them elsewhere, and a
+     node that is not in the document measures zero — which is how a thing wider
+     than the plank talks its way back on. */
+  function measureAll() {
+    shelves.forEach(function (run) {
+      run.nodes.forEach(function (n) {
+        /* document.contains, not parentNode: a dropped object keeps a parent —
+           the discarded plank it was standing on — and measures zero there. */
+        if (document.contains(n)) n._w = outerWidth(n);
+      });
+    });
+  }
+
+  function widestObject() {
+    var widest = 0;
+    shelves.forEach(function (run) {
+      run.nodes.forEach(function (n) { widest = Math.max(widest, n._w || 0); });
+    });
+    return widest;
+  }
+
+  /* Fill each plank in order, then start another. Greedy is right here: the
+     objects are in a deliberate order and must stay in it. */
+  function packShelves(avail) {
+    var rows = [];
+    shelves.forEach(function (run) {
+      var row = null, used = 0, first = true;
+      run.nodes.forEach(function (n) {
+        var w = n._w || 0;
+        /* Room at the end of a run is leftover plank, so it can only ever be
+           leftover: if it will not fit after the last book it is dropped
+           rather than given a plank of its own, which would read as an empty
+           shelf instead of as room. */
+        if (n._isRoom && row && used + GAP + w > avail) return;
+        if (!row || (row.nodes.length && used + GAP + w > avail)) {
+          row = { label: first ? run.label : null, nodes: [] };
+          rows.push(row);
+          used = 0;
+          first = false;
+        }
+        used += (row.nodes.length ? GAP : 0) + w;
+        row.nodes.push(n);
+      });
+    });
+    return rows;
   }
 
   var scale = 1;
 
-  function fitCase() {
-    if (!racks.length) return;
-    var cs = window.getComputedStyle(mount);
-    var avail = mount.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
-    if (avail <= 0) return;
+  function shelfHeight(k) {
+    mount.style.setProperty("--shelf-h", Math.round(BASE_SHELF_H * k) + "px");
+  }
 
+  function fitOneRow(avail) {
     var k = scale;
     for (var pass = 0; pass < 5; pass++) {
       applyScale(k);
       var w = widestRun();
       if (!w) break;
       var next = k * (avail / w);
-      /* Below about two-thirds the books stop being readable; let the shelf
-         scroll instead of shrinking further. */
-      next = Math.max(0.66, Math.min(2.2, next));
+      next = Math.max(0.3, Math.min(2.2, next));
       if (Math.abs(next - k) < 0.002) { k = next; break; }
       k = next;
     }
-    scale = k;
-    applyScale(k);
+    return k;
   }
 
-  function fitAll() { fitCase(); spines.forEach(fitTitle); }
+  function layout() {
+    if (!shelves.length) return;
+    var cs = window.getComputedStyle(mount);
+    var avail = mount.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+    if (avail <= 0) return;
+
+    /* Measure with each run whole: that is the wide case, and it is also what
+       says whether one plank per run is still readable. */
+    mount.classList.remove("bookcase--wrapped");
+    renderRows(wholeShelves());
+
+    var k = fitOneRow(avail);
+    if (k >= ONE_ROW_MIN) { scale = k; applyScale(k); return; }
+
+    /* Too narrow. Give the books their designed size back and spend the extra
+       width the shelf no longer has on extra planks — the case grows downward
+       and the page scrolls, rather than the shelf scrolling sideways. */
+    scale = WRAP_SCALE;
+    mount.classList.add("bookcase--wrapped");
+    shelfHeight(scale);
+    applyScale(scale);
+    measureAll();
+
+    /* One object wider than the whole plank cannot be wrapped away; shrink
+       until it fits rather than leaving it to scroll. */
+    var widest = widestObject();
+    if (widest > avail - BOARD_PAD) {
+      scale = Math.max(0.4, scale * (avail - BOARD_PAD) / widest);
+      shelfHeight(scale);
+      applyScale(scale);
+      measureAll();
+    }
+
+    /* Twice: a face-out book sized from its cover's proportions takes its width
+       from the plank's height, and the first pass is what settles that. */
+    renderRows(packShelves(avail - BOARD_PAD));
+    measureAll();
+    renderRows(packShelves(avail - BOARD_PAD));
+  }
+
+  function fitAll() { layout(); spines.forEach(fitTitle); }
 
   fitAll();
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitAll);

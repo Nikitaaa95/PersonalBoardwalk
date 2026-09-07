@@ -3,7 +3,8 @@
 A browsable bookshelf that fills the window. Spines are the homepage; click one
 and the book opens.
 
-Three shelves in one case, sized to the window:
+Three shelves in one case, sized to the window — and on a narrow one, the runs
+spill onto extra planks rather than scrolling sideways:
 
 | Shelf | Holds |
 |---|---|
@@ -87,9 +88,19 @@ are filled; the handwriting on their backs is still placeholder.
   fixed width — spines, frames, journals, the room — is multiplied by one factor
   chosen so the longest run exactly fills the case. Fewer books simply means
   bigger books, which is the brief's "fewer, better" for free; more books means
-  smaller ones, down to a floor of 0.66 where the shelf scrolls instead.
-- **Keep the three runs about the same length.** The scale follows the *longest*
-  run, so a short shelf is the one that shows empty plank. They currently
+  smaller ones.
+- **Narrow windows wrap instead of scrolling.** Below about two-thirds scale a
+  spine stops being readable, so rather than shrink further the shelf gives the
+  books their designed size back and spills the run onto another plank — which
+  is what a bookcase does when a section outgrows its shelf. The case grows
+  downward and the page scrolls; it never scrolls sideways. On a phone the same
+  three runs read as a dozen planks. Wrapping only ever *splits* a shelf you
+  authored, never joins two: where a run breaks is a decision in
+  `content/books.js`, and a narrow window is not allowed to overrule it. Room at
+  the end of a run is dropped when it will not fit after the last book, since a
+  plank holding nothing but room reads as a bug rather than as room.
+- **Keep the three runs about the same length.** On a wide window the scale
+  follows the *longest* run, so a short shelf is the one that shows empty plank. They currently
   measure within about 25px of each other. If you add or cut books, even them up
   again — the counts are the three numbers passed to the layout, nothing more.
 
