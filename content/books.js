@@ -263,26 +263,6 @@ is still ahead of me.
 Nothing here is behind glass. Pull anything down.`
         },
 
-        { kind: "book", invented: true,
-          id: "inv-12",
-          title: "[SPINE TITLE TWELVE]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
         ]
     },
 
