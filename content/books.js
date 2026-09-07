@@ -720,7 +720,7 @@ Nothing here is behind glass. Pull anything down.`
           author: "J. M. Barrie",
           /* Photographed spine: the Folio edition, blue cloth blocked in silver. */
           spineImage: "assets/spine-peter-pan.jpg",
-          spineAspect: 0.158, height: 0.97,
+          spineAspect: 0.110, height: 0.97,
           quote: "All children, except one, grow up.",
           source: "J. M. Barrie, Peter and Wendy, opening line",
           scene: `[Where you were. How old. Who handed it to you. Not "this taught me about childhood" — the actual room.]`
