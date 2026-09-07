@@ -29,7 +29,7 @@ Three object types, matching the brief:
 
 | `kind` | Opens to | Fields |
 |---|---|---|
-| `book` with `invented: true` | plate + poem | `title, author, press, year, poem, image, imageAlt` |
+| `book` with `invented: true` | plate + poem | `title, author, press, year, poem, image, imageAlt`; `intro` instead of `poem` for prose |
 | `book` with `invented: false` | quote + scene | `title, author, palette, face, height, width, quote, source, scene` |
 | either, plus `faceOut: true` | as above | stands face out; add `faceWidth`, `cover` for a real cover image, or `portrait` for a plated photograph |
 | `photo` | flips in place | `image, aspect, width, alt, tilt, back: {date, place, note}` |
@@ -40,8 +40,10 @@ Three object types, matching the brief:
 A shelf with `label: null` reads as a continuation of the run above it, the way
 a real bookcase behaves when a section spills onto the next shelf.
 
-Poems keep their line breaks. Scenes are prose and reflow; leave a blank line
-between paragraphs.
+Poems keep their line breaks. Scenes and `intro` are prose and reflow; leave a
+blank line between paragraphs. The volume at the end of the top shelf carries
+an `intro` rather than a poem: it is the introduction to the case, so it is
+the one book on the shelf that is about the shelf.
 
 Photographs hang in clean gold frames. `aspect` is the print's width ÷ height
 and `width` is how wide the frame sits on the shelf — the frame follows the

@@ -438,12 +438,22 @@
       verso.appendChild(plate);
       if (item.imageAlt) verso.appendChild(el("p", "plate-caption", item.imageAlt));
 
-      recto.appendChild(el("p", "page-head", "From the collection"));
+      recto.appendChild(el("p", "page-head", item.intro ? "About this shelf" : "From the collection"));
       var h = el("h2", "book-title", item.title || "");
       h.id = "reader-title";
       recto.appendChild(h);
       recto.appendChild(el("p", "book-byline", item.author || ""));
-      recto.appendChild(el("p", "poem", item.poem || ""));
+      /* A volume can carry prose instead of a poem — the one at the end of the
+         top shelf is the introduction to the case, not a poem in it. Prose
+         reflows; a poem's line breaks are the poem, so the two cannot share a
+         renderer. */
+      if (item.intro) {
+        splitProse(item.intro).forEach(function (para) {
+          recto.appendChild(el("p", "scene", para));
+        });
+      } else {
+        recto.appendChild(el("p", "poem", item.poem || ""));
+      }
 
       coloph.textContent = [item.author, item.press, item.year].filter(Boolean).join("  ·  ");
     } else {

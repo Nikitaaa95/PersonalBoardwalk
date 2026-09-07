@@ -295,19 +295,28 @@ window.SHELF = {
           author: "Nikita Thomas",
           portrait: "assets/portrait.jpg",
           portraitAlt: "Nikita Thomas.",
-          press: "[Invented Press]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
+          image: "assets/portrait.jpg",
+          imageAlt: "Nikita Thomas.",
+          intro: `Every shelf is a self-portrait, whether the person who filled
+it meant one or not. This one is on purpose.
+
+The top two shelves hold books I wrote. Most of them do not exist yet. They are
+the ones I would write if I had the time and the nerve — a volume for each thing
+I have thought about long enough to have given it a title. They are bound alike
+deliberately: the same cloth, the same rule, the same press. You will notice
+that sameness before you read a single one of the titles, which is the point.
+The books I made look like they came from one pair of hands, because they did.
+
+The bottom shelf holds books I have actually read. Those vary — a tall one, a
+thin one, one I would never recommend — the way a real shelf does, and the
+variation is what makes the uniform run above it noticeable. Open one and you
+get a line I kept and where I was standing when I read it.
+
+At the end of the second shelf are three empty journals: 2027, 2028, 2029.
+There is nothing inside them. That is the honest part of the case — most of it
+is still ahead of me.
+
+Nothing here is behind glass. Pull anything down.`
         }
       ]
     },
