@@ -511,7 +511,9 @@ body {
   position: absolute;
   left: 50%;
   bottom: 100%;
-  width: calc(var(--inv-width) * 2.1);
+  /* What it would like to be. A plant cannot be taller than the gap it stands
+     in, so the shelf trims this to what fits under the plank above. */
+  width: calc(var(--inv-width) * 5.25);
   transform: translateX(-50%);
 }
 

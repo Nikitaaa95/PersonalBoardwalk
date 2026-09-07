@@ -90,6 +90,12 @@ are filled; the handwriting on their backs is still placeholder.
   units as the drawing: standing on the journals it wants about 56, so the
   strands reach the plank; standing on a plank itself it wants about 28, past
   which the shelf below cuts them off.
+- **A plant is bounded by the shelf above it.** The stylesheet says what size
+  it would like (`--inv-width * 5.25`); the shelf cuts that down to the
+  headroom over the stack, because a plant taller than its gap would be sliced
+  off by the plank above. On a tall window it gets the size it asked for; on a
+  short one it is trimmed. Raising the multiplier alone will not make it bigger
+  on a laptop — the gap is the constraint, not the number.
 - **A plant on the journals costs the run nothing.** Give the `journals` object
   a `plant` and it stands on the stack, positioned out of flow — so it takes no
   width on the plank and the packing never sees it.

@@ -688,7 +688,24 @@
     renderRows(packShelves(avail - BOARD_PAD));
   }
 
-  function fitAll() { layout(); spines.forEach(fitTitle); }
+  /* A plant standing on a shelf is bounded by the shelf above it, the same way
+     a real one is. It asks for a size in the stylesheet; this cuts it down to
+     the headroom it actually has, so it is never sliced off by the plank. */
+  function fitPlants() {
+    [].slice.call(mount.querySelectorAll(".journals__plant")).forEach(function (pot) {
+      var stack = pot.parentNode;
+      var box = stack.closest && stack.closest(".shelf-scroll");
+      if (!box) return;
+      pot.style.width = "";                       /* back to the asked-for size */
+      var want = pot.getBoundingClientRect().width;
+      var high = pot.getBoundingClientRect().height;
+      var room = stack.getBoundingClientRect().top - box.getBoundingClientRect().top - 8;
+      if (high > room && high > 0) want = want * (room / high);
+      pot.style.width = Math.max(0, want).toFixed(1) + "px";
+    });
+  }
+
+  function fitAll() { layout(); spines.forEach(fitTitle); fitPlants(); }
 
   fitAll();
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitAll);
