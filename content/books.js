@@ -38,7 +38,16 @@ window.SHELF = {
     slate:   { cloth: "#3f4750", ink: "#e2e5e8", rule: "#95a0aa" },
     rust:    { cloth: "#8a4426", ink: "#f0dcc6", rule: "#c98f5e" },
     /* Black cloth stamped in gilt — the 1923 Knopf binding of The Prophet. */
-    gilt:    { cloth: "#100f0e", ink: "#c9a961", rule: "#c9a961" }
+    gilt:    { cloth: "#100f0e", ink: "#c9a961", rule: "#c9a961" },
+
+    /* Folio Society blue cloth, blocked in silver. */
+    folio:   { cloth: "#1b3a6b", ink: "#dce4f0", rule: "#93a9c9" },
+
+    /* The Houghton Mifflin Tolkien jackets: three pastel grounds, all three
+       lettered in the same red, so they read as a set from across the room. */
+    buff:    { cloth: "#e4cf92", ink: "#a8382a", rule: "#4f6b46" },
+    sage:    { cloth: "#a9c7b3", ink: "#a8382a", rule: "#4f6b46" },
+    chalk:   { cloth: "#ece5d9", ink: "#a8382a", rule: "#4f6b46" }
   },
 
   /* --- Typefaces for the books I've read. Books I wrote never use these. --- */
@@ -673,43 +682,45 @@ Nothing here is behind glass. Pull anything down.`
         },
 
         { kind: "book", invented: false,
-          id: "real-08",
-          title: "[THE THIN ONE]",
-          author: "[Author]",
-          palette: "rust", face: "oswald", height: 0.83, width: 26,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
+          id: "real-peter-pan",
+          title: "Peter Pan and Wendy",
+          author: "J. M. Barrie",
+          palette: "folio", face: "cormorant", height: 0.97, width: 40,
+          quote: "All children, except one, grow up.",
+          source: "J. M. Barrie, Peter and Wendy, opening line",
+          scene: `[Where you were. How old. Who handed it to you. Not "this taught me about childhood" — the actual room.]`
+        },
+
+        /* The three volumes stand together and are lettered alike, which is
+           the same trick the books I wrote use one shelf up. */
+        { kind: "book", invented: false,
+          id: "real-fellowship",
+          title: "The Fellowship of the Ring",
+          author: "J. R. R. Tolkien",
+          palette: "buff", face: "cormorant", height: 0.93, width: 38,
+          quote: "All that is gold does not glitter, not all those who wander are lost.",
+          source: "J. R. R. Tolkien, The Fellowship of the Ring",
+          scene: `[Where you were when you started it. Whether you finished all three.]`
         },
 
         { kind: "book", invented: false,
-          id: "real-09",
-          title: "[REAL BOOK NINE]",
-          author: "[Author]",
-          palette: "oxblood", face: "garamond", height: 0.92, width: 44,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
+          id: "real-two-towers",
+          title: "The Two Towers",
+          author: "J. R. R. Tolkien",
+          palette: "sage", face: "cormorant", height: 0.93, width: 38,
+          quote: "Folk in those stories had lots of chances of turning back, only they didn't. They kept going, because they were holding on to something.",
+          source: "J. R. R. Tolkien, The Two Towers",
+          scene: `[The middle one is always the one people stall on. Did you?]`
         },
 
         { kind: "book", invented: false,
-          id: "real-10",
-          title: "[REAL BOOK TEN]",
-          author: "[Author]",
-          palette: "navy", face: "playfair", height: 0.88, width: 32,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
-        },
-
-        { kind: "book", invented: false,
-          id: "real-11",
-          title: "[REAL BOOK ELEVEN]",
-          author: "[Author]",
-          palette: "ochre", face: "cormorant", height: 0.95, width: 37,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
+          id: "real-return",
+          title: "The Return of the King",
+          author: "J. R. R. Tolkien",
+          palette: "chalk", face: "cormorant", height: 0.93, width: 38,
+          quote: "I will not say: do not weep; for not all tears are an evil.",
+          source: "J. R. R. Tolkien, The Return of the King",
+          scene: `[Where you were standing when it ended.]`
         },
 
         { kind: "photo",
