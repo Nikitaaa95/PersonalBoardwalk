@@ -466,9 +466,9 @@ window.SHELF = {
         { kind: "photo",
           id: "ph-02",
           tilt: 4,
-          image: "assets/placeholder-photo.svg",
-          aspect: 1.29, width: 124,
-          alt: "[Describe the photograph.]",
+          image: "assets/photo-turban.jpg",
+          aspect: 0.754, width: 98,
+          alt: "A small child in a red turban, tongue out, with a drawn-on moustache.",
           back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
         },
 
@@ -725,9 +725,9 @@ window.SHELF = {
         { kind: "photo",
           id: "ph-04",
           tilt: 3,
-          image: "assets/placeholder-photo.svg",
-          aspect: 1.29, width: 124,
-          alt: "[Describe the photograph.]",
+          image: "assets/photo-dog.jpg",
+          aspect: 0.989, width: 112,
+          alt: "A black dog on grass, looking straight at the camera.",
           back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
         },
 

@@ -42,9 +42,8 @@ between paragraphs.
 
 Photographs hang in clean gold frames. `aspect` is the print's width ÷ height
 and `width` is how wide the frame sits on the shelf — the frame follows the
-picture's proportions, so nothing is cropped to a fixed box. Two of the four
-frames still point at `assets/placeholder-photo.svg`; drop a file in `assets/`
-and change `image` and `aspect` to fill them.
+picture's proportions, so nothing is cropped to a fixed box. All four frames
+are filled; the handwriting on their backs is still placeholder.
 
 ## What the code enforces, so you don't have to
 
