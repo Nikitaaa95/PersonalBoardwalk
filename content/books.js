@@ -300,31 +300,11 @@ So I keep knocking.`,
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-        { kind: "book", invented: true,
-          id: "inv-28",
-          title: "[SPINE TITLE THIRTY-ONE]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
         { kind: "photo",
           id: "ph-01",
           tilt: -3,
           image: "assets/photo-family-three.jpg",
-          aspect: 1.333, width: 106,
+          aspect: 1.333, width: 191,
           alt: "A young family of three.",
           back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
         },
@@ -535,51 +515,11 @@ Nothing here is behind glass. Pull anything down.`
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-        { kind: "book", invented: true,
-          id: "inv-33",
-          title: "[SPINE TITLE THIRTY-SIX]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
-        { kind: "book", invented: true,
-          id: "inv-34",
-          title: "[SPINE TITLE THIRTY-SEVEN]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
         { kind: "photo",
           id: "ph-03",
           tilt: -5,
           image: "assets/photo-family-five.jpg",
-          aspect: 1.507, width: 114,
+          aspect: 1.507, width: 205,
           alt: "A family of five, dressed for a celebration.",
           back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
         },
@@ -617,7 +557,7 @@ Nothing here is behind glass. Pull anything down.`
           id: "ph-02",
           tilt: 4,
           image: "assets/photo-turban.jpg",
-          aspect: 0.754, width: 78,
+          aspect: 0.754, width: 140,
           alt: "A small child in a red turban, tongue out, with a drawn-on moustache.",
           back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
         },
@@ -768,7 +708,7 @@ Nothing here is behind glass. Pull anything down.`
           id: "ph-04",
           tilt: 3,
           image: "assets/photo-dog.jpg",
-          aspect: 0.989, width: 90,
+          aspect: 0.989, width: 162,
           alt: "A black dog on grass, looking straight at the camera.",
           back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
         }
