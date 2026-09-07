@@ -2,6 +2,14 @@
 
 A browsable bookshelf. Spines are the homepage; click one and the book opens.
 
+Three shelves in one case, sized to the window:
+
+| Shelf | Holds |
+|---|---|
+| 1 | Books I wrote |
+| 2 | …continued, ending in the journals and the room |
+| 3 | Books I've read |
+
 Built from the StoryWalk bookshelf brief. Static HTML, CSS and JS — no build step,
 no dependencies. Open `index.html` directly, or serve the folder.
 
@@ -22,7 +30,11 @@ Three object types, matching the brief:
 | `book` with `invented: true` | plate + poem | `title, author, press, year, poem, image, imageAlt` |
 | `book` with `invented: false` | quote + scene | `title, author, palette, face, height, width, quote, source, scene` |
 | `photo` | flips in place | `image, alt, tilt, back: {date, place, note}` |
+| `journals` | not openable | `years` — e.g. `["2027", "2028", "2029"]` |
 | `end` | — | `volumes` — how many volumes of room to leave |
+
+A shelf with `label: null` reads as a continuation of the run above it, the way
+a real bookcase behaves when a section spills onto the next shelf.
 
 Poems keep their line breaks. Scenes are prose and reflow; leave a blank line
 between paragraphs.
@@ -45,15 +57,21 @@ between paragraphs.
 - **The shelf is never left.** Books open in a dialog over the shelf and closing
   returns focus to the spine you clicked. No page navigation anywhere.
 - **The room at the end stays.** The `end` object draws a bookend and then leaves
-  `volumes` × one invented-book width of empty plank. There is no blank book —
-  that would preempt the next project. All planks are levelled to one width so the
-  unit reads as a bookcase rather than as ragged shelves.
-- **A book may appear on both shelves.** Reuse the same entry on both — repeating
-  an `id` is supported. It survived; that is the point.
+  `volumes` × one book-width of empty plank. The case is one piece of furniture
+  with a back and sides, so unfilled plank reads as shelf rather than as a bug.
+- **The journals are not openable.** They carry the same binding as the books I
+  wrote, so they read as the next volumes in that run rather than as decoration,
+  and the years are the whole statement — no placard explains them. There is
+  nothing inside them to read yet.
+- **How full a shelf looks is one number.** `--case-max` in `css/shelf.css` caps
+  the case width. Narrow it and fewer volumes fill a shelf; widen it and you need
+  more. That is the lever between "the case fills the page" and the brief's
+  "fewer, better".
 
 ## Still to do (from the brief)
 
-- [ ] Choose the chapters for the invented books (4–5)
+- [ ] Choose the chapters for the books I wrote — the placeholders currently fill
+      two shelves, which is far more than the brief's "4–5, fewer better"
 - [ ] Write the spine titles — hardest part, and where this lands or goes soft
 - [ ] Write the poems (10–12 lines)
 - [ ] Pick the real books, pull quotes, and the concrete scene for each

@@ -1,40 +1,52 @@
 /* =============================================================================
    Personal Boardwalk — the shelf.
-   Warm library: cloth, board, grain. The spine view is the homepage, so
-   almost all of the weight here is spent on making spines legible.
+   Warm library: cloth, board, grain. The spine view is the homepage, so almost
+   all of the weight here is spent on making spines legible.
+
+   The bookcase is sized to the window: three shelves, full width, filling the
+   viewport height. Shelf heights are proportional, so book heights are given as
+   percentages of their shelf rather than in pixels.
 ============================================================================= */
 
 :root {
   --room:        #241c16;
   --room-lit:    #322619;
-  --board:       #46352a;
-  --board-lip:   #5c4634;
-  --board-dark:  #1a130e;
+  --carcass:     #3a2c21;
+  --carcass-2:   #2f231a;
+  --board:       #4d3a2c;
+  --board-lip:   #654c38;
+  --board-dark:  #1d150f;
   --paper:       #f2ead9;
   --paper-edge:  #d9cdb4;
   --ink:         #2b2119;
   --ink-soft:    #6a5a49;
   --gild:        #c9a961;
+  --engraved:    #c0a578;
 
-  /* The invented-book standard. Change these and every invented volume —
+  /* The standard for books I wrote. Change these and every such volume —
      including ones added years from now — changes together. */
   --inv-cloth:   #3c4f4a;
   --inv-cloth-2: #35463f;
   --inv-ink:     #e9e2cf;
   --inv-rule:    #9db3a4;
   --inv-width:   44px;
-  --inv-height:  0.92;   /* fraction of the shelf's usable height */
+  --inv-height:  92%;
   --inv-face:    "Libre Baskerville", Georgia, serif;
 
-  --shelf-h:     356px;
+  --plank-h:     26px;
+  /* Narrow this and fewer volumes fill a shelf; widen it and you need more.
+     It is the lever between "the case fills the page" and "fewer, better". */
+  --case-max:    1180px;
 }
 
 * { box-sizing: border-box; }
-
 html { color-scheme: dark; }
 
 body {
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background:
     radial-gradient(120% 80% at 50% -10%, var(--room-lit) 0%, var(--room) 55%, #17110c 100%);
   color: var(--paper);
@@ -44,70 +56,102 @@ body {
 
 /* --- Masthead: deliberately small. Not an essay. ------------------------- */
 .masthead {
-  padding: 40px 32px 20px;
-  max-width: 60ch;
+  flex: 0 0 auto;
+  padding: 26px 32px 16px;
+  max-width: 70ch;
 }
 .masthead__title {
   margin: 0;
   font-family: "Playfair Display", Georgia, serif;
   font-weight: 800;
-  font-size: clamp(26px, 4vw, 40px);
-  letter-spacing: 0.01em;
-  color: var(--paper);
+  font-size: clamp(22px, 3vw, 34px);
+  letter-spacing: .01em;
 }
 .masthead__line {
-  margin: 8px 0 0;
-  font-size: clamp(15px, 1.6vw, 18px);
+  margin: 6px 0 0;
+  font-size: clamp(14px, 1.5vw, 17px);
   font-style: italic;
   color: #b7a68f;
 }
 
-/* --- Shelves ------------------------------------------------------------- */
-.shelves { padding: 8px 0 96px; }
-
-.shelf-unit { margin-bottom: 8px; }
-
-.shelf-unit__label {
-  margin: 0 0 6px;
-  padding: 0 32px;
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: #8d7a63;
+/* --- The bookcase: one piece of furniture, filling the page. ------------- */
+.bookcase {
+  flex: 1 1 auto;
+  min-height: 620px;
+  display: flex;
+  flex-direction: column;
+  width: min(100% - 48px, var(--case-max));
+  margin: 0 auto 30px;
+  padding: 16px 14px 14px;
+  border-radius: 4px;
+  background:
+    linear-gradient(90deg, #241a12 0 12px, transparent 12px calc(100% - 12px), #241a12 calc(100% - 12px)),
+    linear-gradient(180deg, #241a12 0 4px, transparent 4px),
+    repeating-linear-gradient(90deg, var(--carcass) 0 7px, var(--carcass-2) 7px 14px);
+  box-shadow:
+    inset 0 0 90px rgba(0,0,0,.65),
+    inset 0 2px 0 rgba(255,255,255,.05),
+    0 26px 60px -24px #000;
 }
 
-/* The shelf scrolls horizontally like a real shelf rather than reflowing.
-   The rack is sized to its contents so the plank ends where the books end —
-   otherwise the deliberate room at the far end drowns in accidental emptiness. */
+.shelf-unit {
+  flex: 1 1 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Each shelf scrolls on its own if its run outgrows the case. */
 .shelf-scroll {
+  flex: 1 1 auto;
+  min-height: 0;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 0 32px;
   scrollbar-width: thin;
   scrollbar-color: #5c4634 transparent;
 }
-.shelf-scroll::-webkit-scrollbar { height: 8px; }
+.shelf-scroll::-webkit-scrollbar { height: 7px; }
 .shelf-scroll::-webkit-scrollbar-thumb { background: #5c4634; border-radius: 4px; }
 
-.shelf-rack { width: max-content; }
+.shelf-rack {
+  width: max-content;
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
 .shelf-board {
+  flex: 1 1 auto;
+  min-height: 0;
   display: flex;
   align-items: flex-end;
   gap: 3px;
-  height: var(--shelf-h);
+  padding: 0 14px;
 }
 
-/* The board itself: a plank the books stand on. */
+/* The board the books stand on. It carries the shelf's label, engraved into
+   the front edge, so no text floats loose above the furniture. */
 .shelf-plank {
-  height: 26px;
-  margin: 0 0 44px;
-  border-radius: 0 0 2px 2px;
+  flex: 0 0 auto;
+  height: var(--plank-h);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
   background:
-    linear-gradient(180deg, var(--board-lip) 0 5px, var(--board) 5px 17px, var(--board-dark) 17px 100%);
-  box-shadow: 0 16px 28px -12px #000;
+    linear-gradient(180deg, var(--board-lip) 0 4px, var(--board) 4px 14px, var(--board-dark) 14px 100%);
+  box-shadow: 0 12px 22px -10px #000;
+}
+.shelf-plank__label {
+  margin: 6px 0 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--engraved);
+  text-shadow: 0 1px 0 rgba(0,0,0,.7);
+  white-space: nowrap;
 }
 
 /* --- Spines -------------------------------------------------------------- */
@@ -117,7 +161,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 12px 0 10px;
+  padding: 10px 0 9px;
   border: 0;
   border-radius: 2px 2px 1px 1px;
   cursor: pointer;
@@ -151,34 +195,31 @@ body {
 }
 .spine:focus-visible { box-shadow: 0 0 0 2px var(--gild); }
 
-/* The title gets whatever vertical room is left after the bands and the
-   author line have taken theirs. It can never overrun them. */
+/* The title gets whatever vertical room is left once the bands and the author
+   line have taken theirs. It can never overrun them. */
 .spine__titlewrap {
   flex: 1 1 auto;
   min-height: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  width: 100%;
 }
 .spine__title {
   writing-mode: vertical-rl;
   white-space: nowrap;
   line-height: 1.15;
-  line-height: 1;
   letter-spacing: .02em;
   text-align: center;
 }
 
-/* Author line and colophon bands — part of the invented standard, carried by
-   the real books too so the standard doesn't look like a gimmick. */
 .spine__author {
   flex: 0 0 auto;
   writing-mode: vertical-rl;
   white-space: nowrap;
   overflow: hidden;
-  max-height: 78px;
+  max-height: 72px;
   margin-top: 6px;
   font-size: 8.5px;
   letter-spacing: .06em;
@@ -195,9 +236,10 @@ body {
 }
 .spine__band--bottom { margin: 8px 0 0; }
 
-/* Every invented volume, forever, is this exact object. */
+/* Every volume I wrote, forever, is this exact object. */
 .spine--invented {
   width: var(--inv-width);
+  height: var(--inv-height);
   background: linear-gradient(90deg, var(--inv-cloth-2), var(--inv-cloth) 45%, var(--inv-cloth-2));
   color: var(--inv-ink);
   font-family: var(--inv-face);
@@ -208,24 +250,26 @@ body {
 .face-out {
   position: relative;
   flex: 0 0 auto;
+  height: var(--inv-height);
+  width: calc(var(--inv-width) * 4);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 26px 18px 20px;
+  padding: 22px 16px 16px;
   border: 0;
   border-radius: 2px 4px 4px 2px;
   cursor: pointer;
   text-align: center;
   background: linear-gradient(100deg, var(--inv-cloth-2) 0 7px, var(--inv-cloth) 7px 100%);
   outline: 1px solid rgba(255,255,255,.12);
-  outline-offset: -12px;
+  outline-offset: -11px;
   color: var(--inv-ink);
   font-family: var(--inv-face);
   box-shadow: -6px 0 12px -6px #000, 0 16px 24px -14px #000;
   transition: transform .18s ease, filter .18s ease;
 }
-.face-out:hover, .face-out:focus-visible { transform: translateY(-10px); filter: brightness(1.14); outline: none; }
+.face-out:hover, .face-out:focus-visible { transform: translateY(-12px); filter: brightness(1.14); outline-color: var(--gild); }
 .face-out:focus-visible { box-shadow: 0 0 0 2px var(--gild); }
 .face-out__title  { font-size: 15px; font-weight: 700; line-height: 1.35; }
 .face-out__author { font-size: 10px; letter-spacing: .1em; opacity: .8; }
@@ -234,7 +278,7 @@ body {
 /* --- Photographs: static in the physical version, flippable here. -------- */
 .photo {
   flex: 0 0 auto;
-  margin: 0 20px;
+  margin: 0 14px;
   border: 0;
   padding: 0;
   background: none;
@@ -244,8 +288,8 @@ body {
 .photo:focus-visible { outline: 2px solid var(--gild); outline-offset: 4px; }
 .photo__inner {
   position: relative;
-  width: 124px;
-  height: 102px;
+  width: 118px;
+  height: 96px;
   transform-style: preserve-3d;
   transition: transform .6s cubic-bezier(.4,.1,.2,1);
   /* No `filter` here: a filter flattens `preserve-3d`, which silently breaks
@@ -259,7 +303,7 @@ body {
   background: var(--paper);
   border: 1px solid var(--paper-edge);
   box-shadow: 0 10px 16px -4px rgba(0,0,0,.6);
-  padding: 6px 6px 16px;
+  padding: 5px 5px 14px;
 }
 .photo__face img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .photo__face--back {
@@ -268,28 +312,81 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 4px;
-  padding: 12px;
+  padding: 10px;
   background: #efe6d2;
   color: #3b3a56;
   font-family: "Cormorant Garamond", cursive, serif;
   font-style: italic;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.35;
   text-align: left;
 }
-.photo__meta { font-size: 11px; opacity: .75; letter-spacing: .03em; }
-.photo__note { font-size: 14px; }
+.photo__meta { font-size: 10px; opacity: .75; letter-spacing: .03em; }
+.photo__note { font-size: 13px; }
 
-/* --- The end of the shelf: a bookend, then room. ------------------------ */
+/* --- The journals: the volumes not written yet. -------------------------- */
+/* Not openable, on purpose — there is nothing inside them to read. The years
+   are the whole statement, so they carry no placard explaining themselves. */
+.journals {
+  flex: 0 0 auto;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0 14px 0 20px;
+  padding-bottom: 1px;
+}
+.journal {
+  position: relative;
+  width: calc(var(--inv-width) * 3.4);
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 12px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--inv-cloth) 0 3px, var(--inv-cloth-2) 3px 100%);
+  box-shadow: 0 3px 6px -2px rgba(0,0,0,.7), inset 0 1px 0 rgba(255,255,255,.07);
+  color: var(--inv-ink);
+  font-family: var(--inv-face);
+}
+/* The block of pages, showing along the front edge under the cover. */
+.journal::after {
+  content: "";
+  position: absolute;
+  left: 3px; right: 3px; bottom: 3px;
+  height: 7px;
+  border-radius: 0 0 2px 2px;
+  background: repeating-linear-gradient(180deg, #e2d7bd 0 1px, #cabfa4 1px 2px);
+  opacity: .85;
+}
+.journal__year {
+  position: relative;
+  z-index: 1;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  opacity: .9;
+}
+.journal__rule {
+  position: absolute;
+  left: 12px;
+  width: 26px;
+  height: 4px;
+  border-top: 1px solid var(--inv-rule);
+  border-bottom: 1px solid var(--inv-rule);
+  opacity: .5;
+}
+
+/* --- The open end of the shelf ------------------------------------------ */
 .shelf-end { display: flex; align-items: flex-end; flex: 0 0 auto; }
 .bookend {
-  width: 12px;
-  height: 96px;
+  width: 11px;
+  height: 84px;
   background: linear-gradient(90deg, #6f6357, #3f382f);
   border-radius: 1px 1px 0 0;
   box-shadow: 2px 0 6px -2px #000;
 }
-/* Sized in invented-book widths: literally room for the next volumes. */
 .shelf-room { height: 4px; }
 
 /* --- The reader: a book opening. Never navigates away from the shelf. --- */
@@ -331,7 +428,6 @@ body {
   max-height: calc(88vh - 46px);
   overflow: auto;
 }
-/* The gutter between the two pages. */
 .reader__book::before {
   content: "";
   grid-row: 1;
@@ -392,8 +488,9 @@ body {
 }
 
 @media (max-width: 720px) {
-  :root { --shelf-h: 300px; }
-  .reader__book { grid-template-columns: 1fr; max-height: calc(88vh - 46px); }
+  .bookcase { width: calc(100% - 24px); margin: 0 auto 20px; padding: 12px 8px 10px; min-height: 560px; }
+  .shelf-board { padding: 0 8px; }
+  .reader__book { grid-template-columns: 1fr; }
   .reader__book::before { display: none; }
   .reader__page--verso, .reader__page--recto { grid-column: 1; }
   .reader__page--verso { grid-row: 1; }

@@ -42,11 +42,10 @@
       /* The standard. Nothing per-book is allowed to vary here — that
          uniformity is the tell, and it is what lets later volumes match. */
       btn.classList.add("spine--invented");
-      btn.style.height = "calc(var(--shelf-h) * var(--inv-height))";
     } else {
       var p = palette(item.palette);
       btn.style.width = (item.width || 40) + "px";
-      btn.style.height = "calc(var(--shelf-h) * " + (item.height || 0.9) + ")";
+      btn.style.height = ((item.height || 0.9) * 100) + "%";
       btn.style.background =
         "linear-gradient(90deg," + shade(p.cloth, -18) + "," + p.cloth + " 45%," + shade(p.cloth, -14) + ")";
       btn.style.color = p.ink;
@@ -124,8 +123,6 @@
   function buildFaceOut(item) {
     var btn = el("button", "face-out");
     btn.type = "button";
-    btn.style.height = "calc(var(--shelf-h) * var(--inv-height))";
-    btn.style.width = "calc(var(--inv-width) * 4.2)";
     btn.appendChild(el("span", "face-out__title", item.title || ""));
     btn.appendChild(el("span", "face-out__rules"));
     btn.appendChild(el("span", "face-out__author",
@@ -165,6 +162,29 @@
       btn.setAttribute("aria-pressed", String(flipped));
     });
     return btn;
+  }
+
+  /* --- the journals: volumes not written yet -----------------------------
+     Deliberately not openable — there is nothing inside them to read. They
+     carry the same binding as the books I wrote, so they read as the next
+     ones in that run rather than as decoration. */
+  function buildJournals(item) {
+    var years = item.years || [];
+    var stack = el("div", "journals");
+    stack.setAttribute("role", "img");
+    stack.setAttribute("aria-label",
+      "A stack of empty journals" + (years.length ? " labelled " + years.join(", ") : "") + ".");
+
+    /* Nearest year on top — the one you would reach for first. */
+    years.forEach(function (year, i) {
+      var j = el("div", "journal");
+      j.style.transform = "translateX(" + (i % 2 ? 4 : -3) + "px)";
+      j.style.width = "calc(var(--inv-width) * " + (3.4 - i * 0.12).toFixed(2) + ")";
+      j.appendChild(el("span", "journal__rule"));
+      j.appendChild(el("span", "journal__year", year));
+      stack.appendChild(j);
+    });
+    return stack;
   }
 
   /* --- the open end of the shelf ---------------------------------------- */
@@ -245,13 +265,10 @@
 
   /* --- render ----------------------------------------------------------- */
   var spines = [];
-  var racks  = [];
 
   (data.shelves || []).forEach(function (shelf) {
     var unit = el("section", "shelf-unit");
     unit.setAttribute("aria-label", shelf.label || shelf.id);
-
-    if (shelf.label) unit.appendChild(el("h2", "shelf-unit__label", shelf.label));
 
     var scroll = el("div", "shelf-scroll");
     var rack   = el("div", "shelf-rack");
@@ -260,30 +277,24 @@
       var node;
       if (item.kind === "photo")     node = buildPhoto(item);
       else if (item.kind === "end")  node = buildEnd(item);
+      else if (item.kind === "journals") node = buildJournals(item);
       else if (item.faceOut)         node = buildFaceOut(item);
       else                         { node = buildSpine(item); spines.push(node); }
       board.appendChild(node);
     });
 
+    var plank = el("div", "shelf-plank");
+    /* A shelf with no label is a continuation of the run above it. */
+    if (shelf.label) plank.appendChild(el("h2", "shelf-plank__label", shelf.label));
+
     rack.appendChild(board);
-    rack.appendChild(el("div", "shelf-plank"));
-    racks.push(rack);
+    rack.appendChild(plank);
     scroll.appendChild(rack);
     unit.appendChild(scroll);
     mount.appendChild(unit);
   });
 
-  /* One bookcase, so every plank is the same length. Ragged shelf widths read
-     as a broken layout rather than as the deliberate room at the far end —
-     that room is marked by the bookend, not by a short plank. */
-  function levelRacks() {
-    var widest = 0;
-    racks.forEach(function (r) { r.style.width = "max-content"; });
-    racks.forEach(function (r) { widest = Math.max(widest, r.getBoundingClientRect().width); });
-    racks.forEach(function (r) { r.style.width = widest + "px"; });
-  }
-
-  function fitAll() { levelRacks(); spines.forEach(fitTitle); }
+  function fitAll() { spines.forEach(fitTitle); }
 
   fitAll();
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitAll);

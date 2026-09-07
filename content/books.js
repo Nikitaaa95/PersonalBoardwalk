@@ -3,16 +3,27 @@
    Everything here is a PLACEHOLDER. Overwrite it. Nothing in css/ or js/
    needs to change when you add, remove, or reorder books.
 
-   THE SPINE STANDARD (section 4 of the brief) is enforced in code, not by you:
-   every book with `invented: true` is rendered at the same width, the same
-   height, the same cloth, the same type, with the same author line and
-   colophon rule. That uniformity IS the quiet visual tell between tiers —
-   there is no legend and no filter, on purpose. It is also what lets the
-   follow-up project drop in as the next volumes on this same shelf: add
-   objects to `invented` and they arrive already matching.
+   THREE SHELVES:
+     1 + 2  books I wrote    (kind "book", invented: true)
+     3      books I've read  (kind "book", invented: false)
 
-   Real books vary — height, width, cloth, typeface — because real shelves do.
-   Vary them freely; that variation is what makes the uniform run noticeable.
+   Shelf 2 has no `label` — a shelf without one reads as a continuation of the
+   run above it, which is how a real bookcase behaves when a section spills.
+
+   ON THE NUMBER OF VOLUMES: two full shelves of books I wrote is a lot of
+   poems, and the brief argued the opposite ("4–5 revised invented books beats
+   10 first drafts"). If you want fewer, delete entries and narrow `--case-max`
+   in css/shelf.css to match — that is the lever between "the case fills the
+   page" and "fewer, better". Nothing else needs to change.
+
+   THE SPINE STANDARD is enforced in code, not by you: every book with
+   `invented: true` renders at the same width, height, cloth, type, author line
+   and colophon. That is what lets the follow-up project arrive as the next
+   volumes on this same shelf — add objects and they already match. The journal
+   stack carries the same binding for the same reason.
+
+   Books I've read vary — height, width, cloth, typeface — because real shelves
+   do. Vary them freely.
 ============================================================================= */
 
 window.SHELF = {
@@ -21,8 +32,7 @@ window.SHELF = {
   title: "[SITE TITLE]",
   line:  "[One line. Not a paragraph — the shelf is the homepage.]",
 
-  /* --- Cloths available to REAL books. Add your own; `ink` must stay legible
-         against `cloth` from four feet away. ------------------------------- */
+  /* --- Cloths for the books I've read. `ink` must stay legible on `cloth`. -- */
   palettes: {
     oxblood: { cloth: "#6b2b2b", ink: "#e8d5b5", rule: "#b08d5a" },
     navy:    { cloth: "#26364d", ink: "#dfe4ea", rule: "#8fa3bd" },
@@ -34,7 +44,7 @@ window.SHELF = {
     rust:    { cloth: "#8a4426", ink: "#f0dcc6", rule: "#c98f5e" }
   },
 
-  /* --- Typefaces available to REAL books. Invented books never use these. --- */
+  /* --- Typefaces for the books I've read. Books I wrote never use these. --- */
   faces: {
     garamond:  '"EB Garamond", Georgia, serif',
     playfair:  '"Playfair Display", Georgia, serif',
@@ -42,35 +52,133 @@ window.SHELF = {
     oswald:    '"Oswald", "Arial Narrow", sans-serif'
   },
 
-  /* --- The two shelves. Labels must be phrased as the brief's first column,
-         never "past / present / future". A third shelf is NOT in this build. -- */
   shelves: [
 
-    /* =======================================================================
-       SHELF ONE — least chosen. Assigned, gifted, inherited, stumbled into.
-    ======================================================================= */
+    /* =====================================================================
+       SHELF ONE — books I wrote. The face-out volume is the "start here":
+       the first thing anyone opens, so it should be the best one. Nothing
+       labels it; the position is the invitation.
+    ===================================================================== */
     {
-      id: "happened",
-      label: "Books that happened to me",
+      id: "wrote-1",
+      label: "Books I wrote",
       items: [
-
-        { kind: "book", invented: true,
+        { kind: "book", invented: true, faceOut: true,
           id: "inv-01",
           title: "[SPINE TITLE — the four-foot test]",
           author: "[Your name]",
           press: "[Invented Press]",
-          year: "[19—]",
-          /* 10–12 lines. Readable in one breath, standing up. */
-          poem: `[Line one of the poem.]
-[Line two.]
-[Line three.]
-[Line four.]
-[Line five.]
-[Line six.]
-[Line seven.]
-[Line eight.]
-[Line nine.]
-[Line ten.]`,
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-02",
+          title: "[SPINE TITLE TWO]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-03",
+          title: "[A LONGER SPINE TITLE, TO TEST THE FIT]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-04",
+          title: "[SPINE TITLE FOUR]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-05",
+          title: "[SPINE TITLE FIVE]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-06",
+          title: "[SPINE TITLE SIX]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
@@ -80,86 +188,258 @@ window.SHELF = {
           tilt: -3,
           image: "assets/placeholder-photo.svg",
           alt: "[Describe the photograph.]",
-          /* The handwriting on the back. Half a sentence — no more. */
           back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
         },
 
-        { kind: "book", invented: false,
-          id: "real-01",
-          title: "[REAL BOOK]",
-          author: "[Author]",
-          palette: "oxblood", face: "garamond", height: 0.94, width: 46,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          /* Concrete beats abstract: where you were, how old, who gave it to
-             you, what you were avoiding at the time. */
-          scene: `[Where you were. How old. Who handed it to you. What you were
-avoiding that week. Not "this taught me patience" — the actual room.]`
-        },
-
         { kind: "book", invented: true,
-          id: "inv-02",
-          title: "[SPINE TITLE — longer, to test the fit]",
+          id: "inv-07",
+          title: "[SPINE TITLE SEVEN]",
           author: "[Your name]",
           press: "[Invented Press]",
           year: "[20—]",
-          poem: `[Line one.]
-[Line two.]
-[Line three.]
-[Line four.]
-[Line five.]
-[Line six.]
-[Line seven.]
-[Line eight.]
-[Line nine.]
-[Line ten.]
-[Line eleven.]`,
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
           image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture.]"
-        },
-
-        { kind: "book", invented: false,
-          id: "real-02",
-          title: "[SHORT ONE]",
-          author: "[Author]",
-          palette: "ochre", face: "oswald", height: 0.8, width: 30,
-          quote: "[Pull quote.]",
-          source: "[Author, Title]",
-          scene: `[The concrete scene.]`
-        },
-
-        { kind: "book", invented: false,
-          id: "real-03",
-          title: "[THE ONE YOU'D NEVER RECOMMEND]",
-          author: "[Author]",
-          palette: "slate", face: "cormorant", height: 1.0, width: 38,
-          quote: "[Pull quote.]",
-          source: "[Author, Title]",
-          /* Section 5: the gap between "made me" and "would give you" is the
-             most revealing space on the shelf. This one stays on this shelf
-             only — it never appears on the shelf below. */
-          scene: `[Rearranged you at 14. Would embarrass you to hand anyone now.
-Say why, concretely.]`
+          imageAlt: "[Describe the picture facing this poem.]"
         },
 
         { kind: "book", invented: true,
-          id: "inv-03",
-          title: "[SPINE TITLE THREE]",
+          id: "inv-08",
+          title: "[SPINE TITLE EIGHT]",
           author: "[Your name]",
           press: "[Invented Press]",
           year: "[20—]",
-          poem: `[Ten to twelve lines.]
-[Two.]
-[Three.]
-[Four.]
-[Five.]
-[Six.]
-[Seven.]
-[Eight.]
-[Nine.]
-[Ten.]`,
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
           image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture.]"
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-09",
+          title: "[SPINE TITLE NINE]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-10",
+          title: "[SPINE TITLE TEN]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-11",
+          title: "[SPINE TITLE ELEVEN]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-12",
+          title: "[SPINE TITLE TWELVE]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-13",
+          title: "[SPINE TITLE THIRTEEN]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-14",
+          title: "[SPINE TITLE FOURTEEN]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        }
+      ]
+    },
+
+    /* =====================================================================
+       SHELF TWO — the same run, continued. No label, on purpose. It ends
+       with the journals and then room: a full shelf reads as finished, a
+       shelf with room reads as still going.
+    ===================================================================== */
+    {
+      id: "wrote-2",
+      label: null,
+      items: [
+        { kind: "book", invented: true,
+          id: "inv-15",
+          title: "[SPINE TITLE FIFTEEN]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-16",
+          title: "[SPINE TITLE SIXTEEN]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-17",
+          title: "[SPINE TITLE SEVENTEEN]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-18",
+          title: "[SPINE TITLE EIGHTEEN]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
         },
 
         { kind: "photo",
@@ -168,63 +448,133 @@ Say why, concretely.]`
           image: "assets/placeholder-photo.svg",
           alt: "[Describe the photograph.]",
           back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
-        }
-      ]
-    },
+        },
 
-    /* =======================================================================
-       SHELF TWO — most chosen. A recommendation imagines a reader.
-    ======================================================================= */
-    {
-      id: "handed",
-      label: "Books I hand people",
-      items: [
-
-        /* Face-out: the "start here". First thing anyone opens, so it should
-           be your best one. Nothing labels it — the position is the invitation. */
-        { kind: "book", invented: true, faceOut: true,
-          id: "inv-04",
-          title: "[THE BEST ONE — FACE OUT]",
+        { kind: "book", invented: true,
+          id: "inv-19",
+          title: "[SPINE TITLE NINETEEN]",
           author: "[Your name]",
           press: "[Invented Press]",
           year: "[20—]",
-          poem: `[This is the first poem anyone will read.]
-[Make it the strongest one you have.]
-[Line three.]
-[Line four.]
-[Line five.]
-[Line six.]
-[Line seven.]
-[Line eight.]
-[Line nine.]
-[Line ten.]`,
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
           image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture.]"
+          imageAlt: "[Describe the picture facing this poem.]"
         },
 
-        { kind: "book", invented: false,
-          id: "real-04",
-          title: "[FROM SOMEONE ELSE'S SHELF]",
-          author: "[Author]",
-          palette: "navy", face: "playfair", height: 0.97, width: 42,
-          quote: "[Pull quote.]",
-          source: "[Author, Title]",
-          /* Section 5: the whole premise in a single object. */
-          scene: `[You first saw this on someone else's shelf and then went and
-got it. Whose shelf. What made you write the title down.]`
+        { kind: "book", invented: true,
+          id: "inv-20",
+          title: "[SPINE TITLE TWENTY]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
         },
 
-        /* Section 5: the same book, on both shelves. It survived. The re-read
-           is the strongest signal of a value that actually held.
-           Repeating an id is supported — reuse it verbatim on both shelves. */
+        { kind: "book", invented: true,
+          id: "inv-21",
+          title: "[SPINE TITLE TWENTY-ONE]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-22",
+          title: "[SPINE TITLE TWENTY-TWO]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        /* The volumes not written yet. Same binding as the books above, so they
+           read as the next ones in the run rather than as decoration. Not
+           openable — there is nothing inside them to read yet. */
+        { kind: "journals", years: ["2027", "2028", "2029"] },
+
+        /* A bookend, then room. `volumes` is measured in book widths. */
+        { kind: "end", volumes: 3 }
+      ]
+    },
+
+    /* =====================================================================
+       SHELF THREE — books I've read.
+    ===================================================================== */
+    {
+      id: "read",
+      label: "Books I've read",
+      items: [
         { kind: "book", invented: false,
           id: "real-01",
           title: "[REAL BOOK]",
           author: "[Author]",
           palette: "oxblood", face: "garamond", height: 0.94, width: 46,
-          quote: "[The same book, re-read. You may want a different quote here.]",
+          quote: "[The pull quote. Let this half be the abstract one.]",
           source: "[Author, Title, p. —]",
-          scene: `[What was different the second time.]`
+          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
+        },
+
+        { kind: "book", invented: false,
+          id: "real-02",
+          title: "[SHORT ONE]",
+          author: "[Author]",
+          palette: "navy", face: "playfair", height: 0.8, width: 30,
+          quote: "[The pull quote. Let this half be the abstract one.]",
+          source: "[Author, Title, p. —]",
+          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
+        },
+
+        { kind: "book", invented: false,
+          id: "real-03",
+          title: "[THE ONE I'D NEVER RECOMMEND]",
+          author: "[Author]",
+          palette: "ochre", face: "cormorant", height: 1.0, width: 38,
+          quote: "[The pull quote. Let this half be the abstract one.]",
+          source: "[Author, Title, p. —]",
+          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
         },
 
         { kind: "photo",
@@ -235,41 +585,163 @@ got it. Whose shelf. What made you write the title down.]`
           back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
         },
 
-        { kind: "book", invented: true,
-          id: "inv-05",
-          title: "[SPINE TITLE FIVE]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Ten to twelve lines.]
-[Two.]
-[Three.]
-[Four.]
-[Five.]
-[Six.]
-[Seven.]
-[Eight.]
-[Nine.]
-[Ten.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture.]"
+        { kind: "book", invented: false,
+          id: "real-04",
+          title: "[FROM SOMEONE ELSE'S SHELF]",
+          author: "[Author]",
+          palette: "olive", face: "oswald", height: 0.97, width: 42,
+          quote: "[The pull quote. Let this half be the abstract one.]",
+          source: "[Author, Title, p. —]",
+          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
         },
 
         { kind: "book", invented: false,
           id: "real-05",
           title: "[A LONGER REAL TITLE THAT HAS TO FIT]",
           author: "[Author]",
-          palette: "olive", face: "garamond", height: 0.9, width: 34,
-          quote: "[Pull quote.]",
-          source: "[Author, Title]",
-          scene: `[The concrete scene.]`
+          palette: "tan", face: "garamond", height: 0.9, width: 34,
+          quote: "[The pull quote. Let this half be the abstract one.]",
+          source: "[Author, Title, p. —]",
+          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
         },
 
-        /* A bookend, then room. The shelf ends open on purpose: a full shelf
-           reads as finished, a shelf with room reads as still going. No blank
-           book — that would preempt the next project. `volumes` sizes the gap
-           in invented-book widths, so it is literally room for four more. */
-        { kind: "end", volumes: 4 }
+        { kind: "book", invented: false,
+          id: "real-06",
+          title: "[REAL BOOK SIX]",
+          author: "[Author]",
+          palette: "plum", face: "playfair", height: 0.86, width: 36,
+          quote: "[The pull quote. Let this half be the abstract one.]",
+          source: "[Author, Title, p. —]",
+          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
+        },
+
+        { kind: "book", invented: false,
+          id: "real-07",
+          title: "[REAL BOOK SEVEN]",
+          author: "[Author]",
+          palette: "slate", face: "cormorant", height: 0.99, width: 40,
+          quote: "[The pull quote. Let this half be the abstract one.]",
+          source: "[Author, Title, p. —]",
+          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
+        },
+
+        { kind: "book", invented: false,
+          id: "real-08",
+          title: "[THE THIN ONE]",
+          author: "[Author]",
+          palette: "rust", face: "oswald", height: 0.83, width: 26,
+          quote: "[The pull quote. Let this half be the abstract one.]",
+          source: "[Author, Title, p. —]",
+          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
+        },
+
+        { kind: "book", invented: false,
+          id: "real-09",
+          title: "[REAL BOOK NINE]",
+          author: "[Author]",
+          palette: "oxblood", face: "garamond", height: 0.92, width: 44,
+          quote: "[The pull quote. Let this half be the abstract one.]",
+          source: "[Author, Title, p. —]",
+          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
+        },
+
+        { kind: "book", invented: false,
+          id: "real-10",
+          title: "[REAL BOOK TEN]",
+          author: "[Author]",
+          palette: "navy", face: "playfair", height: 0.88, width: 32,
+          quote: "[The pull quote. Let this half be the abstract one.]",
+          source: "[Author, Title, p. —]",
+          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
+        },
+
+        { kind: "book", invented: false,
+          id: "real-11",
+          title: "[REAL BOOK ELEVEN]",
+          author: "[Author]",
+          palette: "ochre", face: "cormorant", height: 0.95, width: 37,
+          quote: "[The pull quote. Let this half be the abstract one.]",
+          source: "[Author, Title, p. —]",
+          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
+        },
+
+        { kind: "photo",
+          id: "ph-04",
+          tilt: 3,
+          image: "assets/placeholder-photo.svg",
+          alt: "[Describe the photograph.]",
+          back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
+        },
+
+        { kind: "book", invented: false,
+          id: "real-12",
+          title: "[THE TALL ONE]",
+          author: "[Author]",
+          palette: "olive", face: "oswald", height: 1.0, width: 41,
+          quote: "[The pull quote. Let this half be the abstract one.]",
+          source: "[Author, Title, p. —]",
+          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
+        },
+
+        { kind: "book", invented: false,
+          id: "real-13",
+          title: "[REAL BOOK THIRTEEN]",
+          author: "[Author]",
+          palette: "tan", face: "garamond", height: 0.84, width: 29,
+          quote: "[The pull quote. Let this half be the abstract one.]",
+          source: "[Author, Title, p. —]",
+          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
+        },
+
+        { kind: "book", invented: false,
+          id: "real-14",
+          title: "[REAL BOOK FOURTEEN]",
+          author: "[Author]",
+          palette: "plum", face: "playfair", height: 0.91, width: 43,
+          quote: "[The pull quote. Let this half be the abstract one.]",
+          source: "[Author, Title, p. —]",
+          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
+        },
+
+        { kind: "book", invented: false,
+          id: "real-15",
+          title: "[REAL BOOK FIFTEEN]",
+          author: "[Author]",
+          palette: "slate", face: "cormorant", height: 0.87, width: 35,
+          quote: "[The pull quote. Let this half be the abstract one.]",
+          source: "[Author, Title, p. —]",
+          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
+        },
+
+        { kind: "book", invented: false,
+          id: "real-16",
+          title: "[REAL BOOK SIXTEEN]",
+          author: "[Author]",
+          palette: "rust", face: "oswald", height: 0.96, width: 39,
+          quote: "[The pull quote. Let this half be the abstract one.]",
+          source: "[Author, Title, p. —]",
+          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
+        },
+
+        { kind: "book", invented: false,
+          id: "real-17",
+          title: "[REAL BOOK SEVENTEEN]",
+          author: "[Author]",
+          palette: "oxblood", face: "garamond", height: 0.82, width: 31,
+          quote: "[The pull quote. Let this half be the abstract one.]",
+          source: "[Author, Title, p. —]",
+          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
+        },
+
+        { kind: "book", invented: false,
+          id: "real-18",
+          title: "[REAL BOOK EIGHTEEN]",
+          author: "[Author]",
+          palette: "navy", face: "playfair", height: 0.93, width: 45,
+          quote: "[The pull quote. Let this half be the abstract one.]",
+          source: "[Author, Title, p. —]",
+          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
+        }
       ]
     }
   ]
