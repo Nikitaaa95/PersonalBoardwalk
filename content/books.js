@@ -124,6 +124,266 @@ window.SHELF = {
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
+                { kind: "book", invented: true,
+          id: "inv-20",
+          title: "[SPINE TITLE TWENTY-THREE]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-21",
+          title: "[SPINE TITLE TWENTY-FOUR]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-22",
+          title: "[SPINE TITLE TWENTY-FIVE]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-23",
+          title: "[SPINE TITLE TWENTY-SIX]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-24",
+          title: "[SPINE TITLE TWENTY-SEVEN]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-25",
+          title: "[SPINE TITLE TWENTY-EIGHT]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-26",
+          title: "[SPINE TITLE TWENTY-NINE]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-27",
+          title: "[SPINE TITLE THIRTY]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-28",
+          title: "[SPINE TITLE THIRTY-ONE]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-29",
+          title: "[SPINE TITLE THIRTY-TWO]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+                { kind: "book", invented: true,
+          id: "inv-40",
+          title: "[SPINE TITLE FORTY-THREE]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-41",
+          title: "[SPINE TITLE FORTY-FOUR]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+                { kind: "book", invented: true,
+          id: "inv-44",
+          title: "[SPINE TITLE FORTY-SEVEN]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
         { kind: "photo",
           id: "ph-01",
           tilt: -3,
@@ -339,6 +599,246 @@ Nothing here is behind glass. Pull anything down.`
            openable — there is nothing inside them to read yet. */
         /* The plant stands on the journals, and its vines fall down over
            them. `plant` is optional; drop it and the stack is just a stack. */
+                { kind: "book", invented: true,
+          id: "inv-30",
+          title: "[SPINE TITLE THIRTY-THREE]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-31",
+          title: "[SPINE TITLE THIRTY-FOUR]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-32",
+          title: "[SPINE TITLE THIRTY-FIVE]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-33",
+          title: "[SPINE TITLE THIRTY-SIX]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-34",
+          title: "[SPINE TITLE THIRTY-SEVEN]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-35",
+          title: "[SPINE TITLE THIRTY-EIGHT]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-36",
+          title: "[SPINE TITLE THIRTY-NINE]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-37",
+          title: "[SPINE TITLE FORTY]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-38",
+          title: "[SPINE TITLE FORTY-ONE]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-39",
+          title: "[SPINE TITLE FORTY-TWO]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+                { kind: "book", invented: true,
+          id: "inv-42",
+          title: "[SPINE TITLE FORTY-FIVE]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-43",
+          title: "[SPINE TITLE FORTY-SIX]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
         { kind: "photo",
           id: "ph-03",
           tilt: -5,

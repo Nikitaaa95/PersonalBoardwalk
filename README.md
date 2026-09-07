@@ -98,6 +98,12 @@ are filled; the handwriting on their backs is still placeholder.
   still read as curved boards standing on a shelf rather than flat cut-outs.
   Real spines are thinner than the drawn ones, so swapping several in shortens
   a run noticeably; see the note on levelling below.
+- **Filling a shelf costs volumes.** The case scales its books so the longest
+  run fills it, so narrow spines and a full shelf pull against each other: the
+  narrower the boards, the more of them a shelf needs. At `--inv-width: 30px`
+  the two written shelves take 36 volumes between them. That is a lot of poems
+  against the brief's "4–5, fewer better" — the lever back the other way is to
+  widen `--inv-width` or narrow `--case-max`, either of which needs fewer books.
 - **A real book replaces a placeholder; it does not join them.** The read shelf
   is a fixed number of slots being filled in, not a pile being added to. When a
   real book arrives, a `[REAL BOOK …]` entry comes out. Right now: 12 real, no placeholders — the read shelf is finished. Changing one shelf does not mean changing the others — level the
