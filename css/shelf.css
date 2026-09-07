@@ -35,7 +35,7 @@
 
   --plank-h:     26px;
   --stile:       22px;   /* the thickness of the case's own sides */
-  --case-max:    1040px; /* past this the room shows either side of it */
+  --case-max:    800px; /* wider than this and the books must fatten to fill it */
 }
 
 * { box-sizing: border-box; }

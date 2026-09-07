@@ -100,11 +100,12 @@ are filled; the handwriting on their backs is still placeholder.
   a run noticeably; see the note on levelling below.
 - **Filling a shelf costs volumes.** The case scales its books so the longest
   run fills it, so narrow spines and a full shelf pull against each other: the
-  narrower the boards, the more of them a shelf needs — and the read shelf sets
-  the ceiling, since its books are real and cannot be padded. Levelling the
-  three runs against it puts the scale at its 2.2 limit, which is why the boards
-  read wide and the frames read large. Fewer volumes means bigger ones; more
-  volumes means smaller ones. Twelve written volumes at present.
+  narrower the boards, the more of them a shelf needs. The two numbers that
+  settle it are `--case-max` and the volume count: a wide case with few books
+  can only fill itself by fattening them. At 800px with 22 written volumes a
+  spine sits at about 0.165 of its own height, which is roughly what a real
+  book does. Widen the case and the boards fatten again unless books go in with
+  it.
 - **A real book replaces a placeholder; it does not join them.** The read shelf
   is a fixed number of slots being filled in, not a pile being added to. When a
   real book arrives, a `[REAL BOOK …]` entry comes out. Right now: 12 real, no placeholders — the read shelf is finished. Changing one shelf does not mean changing the others — level the
