@@ -100,8 +100,7 @@ are filled; the handwriting on their backs is still placeholder.
   a run noticeably; see the note on levelling below.
 - **A real book replaces a placeholder; it does not join them.** The read shelf
   is a fixed number of slots being filled in, not a pile being added to. When a
-  real book arrives, a `[REAL BOOK …]` entry comes out. Right now: 12 real, 1
-  placeholder. Changing one shelf does not mean changing the others — level the
+  real book arrives, a `[REAL BOOK …]` entry comes out. Right now: 12 real, no placeholders — the read shelf is finished. Changing one shelf does not mean changing the others — level the
   runs only when asked, since a shelf ending a little short reads as room.
 - **A drawn spine has a budget.** The title takes what the bands, the author
   line and the imprint leave it. A long title on a short spine can end up with

@@ -448,6 +448,15 @@ Nothing here is behind glass. Pull anything down.`
            openable — there is nothing inside them to read yet. */
         /* The plant stands on the journals, and its vines fall down over
            them. `plant` is optional; drop it and the stack is just a stack. */
+        { kind: "photo",
+          id: "ph-03",
+          tilt: -5,
+          image: "assets/photo-family-five.jpg",
+          aspect: 1.507, width: 142,
+          alt: "A family of five, dressed for a celebration.",
+          back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
+        },
+
         { kind: "journals", years: ["2027", "2028", "2029"],
           plant: { drape: 56 } },
 
@@ -475,25 +484,6 @@ Nothing here is behind glass. Pull anything down.`
           quote: "Your children are not your children. They are the sons and daughters of Life's longing for itself.",
           source: "Kahlil Gibran, The Prophet (Knopf, 1923), 'On Children'",
           scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week.]`
-        },
-
-        { kind: "book", invented: false,
-          id: "real-03",
-          title: "[THE ONE I'D NEVER RECOMMEND]",
-          author: "[Author]",
-          palette: "ochre", face: "cormorant", height: 1.0, width: 38,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
-        },
-
-        { kind: "photo",
-          id: "ph-03",
-          tilt: -5,
-          image: "assets/photo-family-five.jpg",
-          aspect: 1.507, width: 142,
-          alt: "A family of five, dressed for a celebration.",
-          back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
         },
 
         { kind: "book", invented: false,
