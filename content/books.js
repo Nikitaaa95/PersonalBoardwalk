@@ -745,56 +745,6 @@ window.SHELF = {
           aspect: 0.989, width: 112,
           alt: "A black dog on grass, looking straight at the camera.",
           back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
-        },
-
-        { kind: "book", invented: false,
-          id: "real-12",
-          title: "[THE TALL ONE]",
-          author: "[Author]",
-          palette: "olive", face: "oswald", height: 1.0, width: 41,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
-        },
-
-        { kind: "book", invented: false,
-          id: "real-13",
-          title: "[REAL BOOK THIRTEEN]",
-          author: "[Author]",
-          palette: "tan", face: "garamond", height: 0.84, width: 29,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
-        },
-
-        { kind: "book", invented: false,
-          id: "real-14",
-          title: "[REAL BOOK FOURTEEN]",
-          author: "[Author]",
-          palette: "plum", face: "playfair", height: 0.91, width: 43,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
-        },
-
-        { kind: "book", invented: false,
-          id: "real-15",
-          title: "[REAL BOOK FIFTEEN]",
-          author: "[Author]",
-          palette: "slate", face: "cormorant", height: 0.87, width: 35,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
-        },
-
-        { kind: "book", invented: false,
-          id: "real-16",
-          title: "[REAL BOOK SIXTEEN]",
-          author: "[Author]",
-          palette: "rust", face: "oswald", height: 0.96, width: 39,
-          quote: "[The pull quote. Let this half be the abstract one.]",
-          source: "[Author, Title, p. —]",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
         }
       ]
     }

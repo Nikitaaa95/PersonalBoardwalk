@@ -488,7 +488,10 @@
       applyScale(k);
       var w = widestRun();
       if (!w) break;
-      var next = k * (avail / w);
+      /* A pixel of slack: widths are measured as whole pixels, and a run that
+         lands exactly on the case can still round a pixel over it and put a
+         scrollbar under the books. */
+      var next = k * ((avail - 1) / w);
       next = Math.max(0.3, Math.min(2.2, next));
       if (Math.abs(next - k) < 0.002) { k = next; break; }
       k = next;
