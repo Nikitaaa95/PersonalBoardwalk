@@ -238,6 +238,144 @@
     return stack;
   }
 
+  /* --- a potted plant ------------------------------------------------------
+     Succulents in a terracotta pot, with strings of pearls trailing over the
+     front of the plank. Drawn rather than photographed so it takes the shelf's
+     scale factor like everything else, and so the vines can be given lengths
+     that suit the plank they hang over.
+
+     Some strands are drawn before the pot and some after it, so a few fall
+     behind the clay and a few over the front of it. That layering is most of
+     what keeps it from reading as a sticker. */
+  function buildPlant(item) {
+    var NS = "http://www.w3.org/2000/svg";
+    var W = 120, H = 132;                /* the pot and its plants */
+    var DRAPE = item.drape || 34;        /* how far the longest vine hangs past */
+
+    var wrap = el("div", "plant");
+    wrap.setAttribute("aria-hidden", "true");
+    wrap._baseW = item.width || 104;
+
+    function node(name, attrs) {
+      var n = document.createElementNS(NS, name);
+      for (var k in attrs) n.setAttribute(k, attrs[k]);
+      return n;
+    }
+
+    var svg = node("svg", { viewBox: "0 0 " + W + " " + H, class: "plant__art", focusable: "false" });
+
+    var defs = node("defs");
+    var clay = node("linearGradient", { id: "pot-clay", x1: "0", y1: "0", x2: "1", y2: "0" });
+    [["0", "#5e3620"], ["0.30", "#a2603c"], ["0.58", "#8b5032"], ["1", "#4d2c19"]]
+      .forEach(function (st) { clay.appendChild(node("stop", { offset: st[0], "stop-color": st[1] })); });
+    defs.appendChild(clay);
+    svg.appendChild(defs);
+
+    /* --- one string of pearls -------------------------------------------- */
+    function strand(g, x0, y0, dx, endY, r, tone) {
+      var len = endY - y0;
+      /* Down the clay first, out only near the end: a strand leaves the soil
+         lying against the pot, and it is the weight of the tip that swings it
+         clear. Splaying it straight off the rim gives a spider, not a plant. */
+      var p1 = [x0 + dx * 0.10, y0 + len * 0.34];
+      var p2 = [x0 + dx * 0.95, y0 + len * 0.76];
+      var p3 = [x0 + dx, endY];
+
+      g.appendChild(node("path", {
+        d: "M" + x0 + "," + y0 +
+           " C" + p1[0].toFixed(1) + "," + p1[1].toFixed(1) +
+           " " + p2[0].toFixed(1) + "," + p2[1].toFixed(1) +
+           " " + p3[0].toFixed(1) + "," + p3[1].toFixed(1),
+        fill: "none", stroke: "#5a7850", "stroke-width": "1.3", "stroke-linecap": "round"
+      }));
+
+      /* Close-set, and thinning towards the tip the way a growing end does. */
+      var beads = Math.max(6, Math.round(len / 5.4));
+      for (var b = 0; b <= beads; b++) {
+        var t = 0.04 + (b / beads) * 0.96, mt = 1 - t;
+        var px = mt*mt*mt*x0 + 3*mt*mt*t*p1[0] + 3*mt*t*t*p2[0] + t*t*t*p3[0];
+        var py = mt*mt*mt*y0 + 3*mt*mt*t*p1[1] + 3*mt*t*t*p2[1] + t*t*t*p3[1];
+        var pr = r * (1 - t * 0.30) * (b % 3 === 1 ? 0.88 : 1);
+        g.appendChild(node("circle", { cx: px.toFixed(1), cy: py.toFixed(1), r: pr.toFixed(2), fill: tone }));
+        g.appendChild(node("circle", {
+          cx: (px - pr * 0.30).toFixed(1), cy: (py - pr * 0.32).toFixed(1),
+          r: (pr * 0.32).toFixed(2), fill: "#c3dab3", opacity: "0.7"
+        }));
+      }
+    }
+
+    /* --- a ring of pointed leaves ---------------------------------------- */
+    function leaves(g, cx, cy, h, count, fill, turn) {
+      var w = h * 0.33;
+      for (var i = 0; i < count; i++) {
+        var a = turn + (i / count) * 360;
+        g.appendChild(node("path", {
+          d: "M" + cx + "," + cy +
+             " C" + (cx - w) + "," + (cy - h * 0.52) +
+             " " + (cx - w * 0.42) + "," + (cy - h) +
+             " " + cx + "," + (cy - h) +
+             " C" + (cx + w * 0.42) + "," + (cy - h) +
+             " " + (cx + w) + "," + (cy - h * 0.52) +
+             " " + cx + "," + cy + " Z",
+          fill: fill,
+          transform: "rotate(" + a.toFixed(1) + " " + cx + " " + cy + ")"
+        }));
+      }
+    }
+
+    /* A rosette is rings of leaves, each shorter and paler than the one under
+       it and set between its neighbours, which is how a real one furls. */
+    function rosette(cx, cy, rad, turn) {
+      var g = node("g", {});
+      leaves(g, cx, cy, rad,        11, "#5f7f55", turn);
+      leaves(g, cx, cy, rad * 0.76,  9, "#799a6a", turn + 16);
+      leaves(g, cx, cy, rad * 0.52,  7, "#93b581", turn + 33);
+      g.appendChild(node("circle", { cx: cx, cy: cy, r: rad * 0.13, fill: "#bcd6ab" }));
+      return g;
+    }
+
+    /* --- the vines that fall behind the pot ------------------------------- */
+    /* Uneven spacing and no two the same length: four evenly spaced strands
+       read as the wires a hanging basket comes on. Density is what makes it a
+       plant, so they are close-set and allowed to cross. */
+    var back = node("g", {});
+    [[27, -11, 0.44], [34, -6, 0.92], [40, -3, 0.20], [82, 5, 0.66], [90, 10, 1.0]]
+      .forEach(function (v, i) {
+        strand(back, v[0], 82, v[1], H + DRAPE * v[2], i % 2 ? 3.2 : 3.5, i % 2 ? "#7d9c6c" : "#86a574");
+      });
+    svg.appendChild(back);
+
+    /* --- the pot ---------------------------------------------------------- */
+    svg.appendChild(node("path", {           /* body */
+      d: "M33,92 L87,92 L79,127 Q78.5,130.5 75,130.5 L45,130.5 Q41.5,130.5 41,127 Z",
+      fill: "url(#pot-clay)"
+    }));
+    svg.appendChild(node("path", {           /* rim, standing a little proud of it */
+      d: "M28,81 L92,81 Q94.5,81 94.5,83.5 L94.5,89.5 Q94.5,92 92,92 L28,92 Q25.5,92 25.5,89.5 L25.5,83.5 Q25.5,81 28,81 Z",
+      fill: "url(#pot-clay)"
+    }));
+    svg.appendChild(node("path", {           /* the shadow the rim throws */
+      d: "M33,92 L87,92 L86,96.5 L34,96.5 Z", fill: "#000", opacity: ".22"
+    }));
+    svg.appendChild(node("ellipse", { cx: "60", cy: "82.5", rx: "32", ry: "3.6", fill: "#241a13" }));
+
+    /* --- the succulents ---------------------------------------------------- */
+    svg.appendChild(rosette(38, 74, 11.5, 17));
+    svg.appendChild(rosette(83, 75, 11,   33));
+    svg.appendChild(rosette(60, 65, 17,    0));
+
+    /* --- and the vines that fall in front of it ----------------------------- */
+    var front = node("g", {});
+    [[45, -7, 0.83], [53, -2, 0.31], [64, 2, 0.58], [73, 6, 0.15]]
+      .forEach(function (v, i) {
+        strand(front, v[0], 86, v[1], H + DRAPE * v[2], i % 2 ? 2.9 : 3.2, i % 2 ? "#7b9a6a" : "#88a877");
+      });
+    svg.appendChild(front);
+
+    wrap.appendChild(svg);
+    return wrap;
+  }
+
   /* --- the open end of the shelf ---------------------------------------- */
   function buildEnd(item) {
     var wrap = el("div", "shelf-end");
@@ -336,6 +474,7 @@
       var node;
       if (item.kind === "photo")     node = buildPhoto(item);
       else if (item.kind === "end")  node = buildEnd(item);
+      else if (item.kind === "plant") node = buildPlant(item);
       else if (item.kind === "journals") node = buildJournals(item);
       else if (item.faceOut)         node = buildFaceOut(item);
       else                         { node = buildSpine(item); spines.push(node); }

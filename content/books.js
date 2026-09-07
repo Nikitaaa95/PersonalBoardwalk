@@ -745,7 +745,11 @@ window.SHELF = {
           aspect: 0.989, width: 112,
           alt: "A black dog on grass, looking straight at the camera.",
           back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
-        }
+        },
+
+        /* The one living thing on the case. Its vines are the only shape here
+           allowed over the front edge of a plank. */
+        { kind: "plant", id: "plant-01", width: 104, drape: 28 }
       ]
     }
   ]

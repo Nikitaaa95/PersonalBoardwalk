@@ -34,6 +34,8 @@
   --inv-face:    "Libre Baskerville", Georgia, serif;
 
   --plank-h:     26px;
+  --stile:       22px;   /* the thickness of the case's own sides */
+  --case-max:    1500px; /* past this the room shows either side of it */
 }
 
 * { box-sizing: border-box; }
@@ -56,24 +58,47 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* --- The bookcase: one piece of furniture, filling the page. ------------- */
+/* --- The bookcase: one piece of furniture, standing in a room. -----------
+   It has a width it stops growing at. Past that the room shows either side of
+   it, the way furniture sits against a wall; narrow the window and the room
+   closes up until the case is the whole page again. */
 .bookcase {
+  position: relative;
   flex: 1 1 auto;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 0;
-  padding: 14px 12px 12px;
+  max-width: var(--case-max);
+  margin: 0 auto;
+  padding: 16px var(--stile) 14px;
   background:
-    linear-gradient(90deg, #241a12 0 12px, transparent 12px calc(100% - 12px), #241a12 calc(100% - 12px)),
-    linear-gradient(180deg, #241a12 0 4px, transparent 4px),
+    linear-gradient(180deg, #241a12 0 5px, transparent 5px),
+    linear-gradient(0deg, #1c140e 0 7px, transparent 7px),
     repeating-linear-gradient(90deg, var(--carcass) 0 7px, var(--carcass-2) 7px 14px);
   box-shadow:
     inset 0 0 90px rgba(0,0,0,.65),
     inset 0 2px 0 rgba(255,255,255,.05),
-    0 26px 60px -24px #000;
+    0 30px 70px -22px #000,
+    0 0 0 1px rgba(0,0,0,.55);
 }
+
+/* The two sides of the case, seen edge-on: the planks run into them rather
+   than off the page. */
+.bookcase::before,
+.bookcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: var(--stile);
+  background:
+    linear-gradient(90deg, #17100b 0%, #3f2e21 42%, #2c2016 78%, #150f0a 100%),
+    repeating-linear-gradient(180deg, rgba(0,0,0,.10) 0 3px, transparent 3px 9px);
+  box-shadow: inset 0 0 50px rgba(0,0,0,.55);
+}
+.bookcase::before { left: 0; }
+.bookcase::after  { right: 0; transform: scaleX(-1); }
 
 .shelf-unit {
   flex: 1 1 0;
@@ -112,6 +137,8 @@ body {
 }
 
 .shelf-board {
+  position: relative;
+  z-index: 1;   /* so a trailing plant hangs over the plank, not behind it */
   flex: 1 1 auto;
   min-height: 0;
   display: flex;
@@ -466,6 +493,24 @@ body {
 }
 
 /* --- The open end of the shelf ------------------------------------------ */
+/* --- a potted plant ------------------------------------------------------
+   Every other object on these shelves is a rectangle standing to attention, so
+   the one living thing is the one allowed to break the line: its vines are
+   drawn past the bottom of its own box and hang over the front of the plank. */
+.plant {
+  position: relative;
+  flex: 0 0 auto;
+  align-self: flex-end;
+  line-height: 0;
+}
+.plant__art {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  filter: drop-shadow(0 6px 8px rgba(0,0,0,.45));
+}
+
 .shelf-end { display: flex; align-items: flex-end; flex: 0 0 auto; }
 .shelf-room { height: 4px; }
 

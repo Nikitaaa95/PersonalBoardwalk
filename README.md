@@ -34,6 +34,7 @@ Three object types, matching the brief:
 | either, plus `faceOut: true` | as above | stands face out; add `faceWidth`, or `cover` for a real cover image |
 | `photo` | flips in place | `image, aspect, width, alt, tilt, back: {date, place, note}` |
 | `journals` | not openable | `years` — e.g. `["2027", "2028", "2029"]` |
+| `plant` | not openable | `width`, `drape` — how far the vines hang past the pot |
 | `end` | — | `volumes` — how many volumes of room to leave |
 
 A shelf with `label: null` reads as a continuation of the run above it, the way
@@ -79,6 +80,14 @@ are filled; the handwriting on their backs is still placeholder.
   `cover:` + `coverAspect:` on any face-out book to do the same. Without a
   cover, `device: "assets/….svg"` stamps an emblem under the lettering
   instead.
+- **The case is a piece of furniture in a room.** It stops growing at
+  `--case-max` and centres, so on a wide window the room shows either side of
+  it and the sides of the case (`--stile`) are visible edge-on. Narrow the
+  window and that margin closes up until the case is the whole page again.
+- **The plant is the one thing allowed over the edge.** Its vines are drawn
+  past the bottom of its own box, so they hang over the front of the plank
+  while every other object stands squarely on it. `drape` is in the same units
+  as the drawing; much past 28 and the vines are cut off by the shelf below.
 - **The journals are not openable.** They carry the same binding as the books I
   wrote, so they read as the next volumes in that run rather than as decoration,
   and the years are the whole statement — no placard explains them. There is
