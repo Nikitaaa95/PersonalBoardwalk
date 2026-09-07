@@ -65,46 +65,6 @@ window.SHELF = {
       label: "Books I wrote",
       items: [
         { kind: "book", invented: true,
-          id: "inv-02",
-          title: "[SPINE TITLE TWO]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
-        { kind: "book", invented: true,
-          id: "inv-03",
-          title: "[A LONGER SPINE TITLE, TO TEST THE FIT]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
-        { kind: "book", invented: true,
           id: "inv-04",
           title: "[SPINE TITLE FOUR]",
           author: "[Your name]",
