@@ -15,9 +15,6 @@
   var coloph  = document.getElementById("reader-colophon");
   var lastFocus = null;
 
-  document.getElementById("site-title").textContent = data.title || "";
-  document.getElementById("site-line").textContent  = data.line  || "";
-
   /* --- helpers ---------------------------------------------------------- */
   function el(tag, cls, text) {
     var n = document.createElement(tag);
@@ -44,7 +41,7 @@
       btn.classList.add("spine--invented");
     } else {
       var p = palette(item.palette);
-      btn.style.width = (item.width || 40) + "px";
+      btn._baseW = item.width || 40;
       btn.style.height = ((item.height || 0.9) * 100) + "%";
       btn.style.background =
         "linear-gradient(90deg," + shade(p.cloth, -18) + "," + p.cloth + " 45%," + shade(p.cloth, -14) + ")";
@@ -139,10 +136,10 @@
       btn.style.height = ((item.height || 0.92) * 100) + "%";
       if (item.cover) {
         /* The scan's own proportions decide the width, so the boards are not
-           stretched. Height still comes from the shelf. */
+           stretched. Height still comes from the shelf, so it needs no scaling. */
         btn.style.setProperty("--cover-aspect", item.coverAspect || "0.657");
       } else {
-        btn.style.width = (item.faceWidth || 150) + "px";
+        btn._baseW = item.faceWidth || 150;
       }
       btn.style.background =
         "linear-gradient(100deg," + shade(p.cloth, -12) + " 0 7px," + p.cloth + " 7px 100%)";
@@ -190,9 +187,8 @@
 
     var inner = el("div", "photo__inner");
     /* Each print keeps its own proportions; the frame follows the picture. */
-    var w = item.width || 124;
-    inner.style.width = w + "px";
-    inner.style.height = Math.round(w / (item.aspect || 1.29)) + "px";
+    inner._baseW = item.width || 124;
+    inner._aspect = item.aspect || 1.29;
 
     var front = el("div", "photo__face");
     var img = el("img");
@@ -318,8 +314,10 @@
   });
 
   /* --- render ----------------------------------------------------------- */
-  var spines = [];
-  var racks  = [];
+  var spines    = [];
+  var racks     = [];
+  var scalables = [];   /* fixed-width books, scaled to fill the case */
+  var frames    = [];   /* framed photographs, scaled with their aspect */
 
   (data.shelves || []).forEach(function (shelf) {
     var unit = el("section", "shelf-unit");
@@ -335,6 +333,8 @@
       else if (item.kind === "journals") node = buildJournals(item);
       else if (item.faceOut)         node = buildFaceOut(item);
       else                         { node = buildSpine(item); spines.push(node); }
+      if (node._baseW) scalables.push(node);
+      if (node.firstChild && node.firstChild._baseW) frames.push(node.firstChild);
       board.appendChild(node);
     });
 
@@ -350,25 +350,56 @@
     mount.appendChild(unit);
   });
 
-  /* Size the case to its longest run, so shelves fill the furniture instead of
-     trailing off into empty plank on the right. The deliberate room at the end
-     of a run still shows, because it is part of that run's measured width. */
-  function fitCase() {
-    if (!racks.length) return;
+  /* The case is the page now, so instead of sizing the furniture to its books,
+     the books are scaled to the furniture. Widths are all fixed pixels, so a
+     full-width case would otherwise trail off into empty plank again.
 
-    var pad = 0;
-    var cs = window.getComputedStyle(mount);
-    pad = parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight);
+     Fixed chrome — gaps, photo margins, case padding — does not scale with the
+     books, so one pass overshoots; a few iterations converge. */
+  var BASE_INV = 44;
 
-    /* Measure each run at its natural width, not the width it was stretched to. */
-    racks.forEach(function (r) { r.style.width = "max-content"; r.style.minWidth = "0"; });
+  function applyScale(k) {
+    mount.style.setProperty("--inv-width", (BASE_INV * k).toFixed(2) + "px");
+    scalables.forEach(function (el) {
+      el.style.width = (el._baseW * k).toFixed(2) + "px";
+    });
+    frames.forEach(function (inner) {
+      var w = inner._baseW * k;
+      inner.style.width = w.toFixed(2) + "px";
+      inner.style.height = (w / inner._aspect).toFixed(2) + "px";
+    });
+  }
+
+  function widestRun() {
     var widest = 0;
+    racks.forEach(function (r) { r.style.width = "max-content"; r.style.minWidth = "0"; });
     racks.forEach(function (r) { widest = Math.max(widest, r.getBoundingClientRect().width); });
     racks.forEach(function (r) { r.style.width = ""; r.style.minWidth = ""; });
+    return widest;
+  }
 
-    var maxAllowed = parseFloat(cs.getPropertyValue("--case-max")) || Infinity;
-    var target = Math.min(widest + pad, maxAllowed, document.documentElement.clientWidth - 48);
-    mount.style.width = Math.round(target) + "px";
+  var scale = 1;
+
+  function fitCase() {
+    if (!racks.length) return;
+    var cs = window.getComputedStyle(mount);
+    var avail = mount.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+    if (avail <= 0) return;
+
+    var k = scale;
+    for (var pass = 0; pass < 5; pass++) {
+      applyScale(k);
+      var w = widestRun();
+      if (!w) break;
+      var next = k * (avail / w);
+      /* Below about two-thirds the books stop being readable; let the shelf
+         scroll instead of shrinking further. */
+      next = Math.max(0.66, Math.min(2.2, next));
+      if (Math.abs(next - k) < 0.002) { k = next; break; }
+      k = next;
+    }
+    scale = k;
+    applyScale(k);
   }
 
   function fitAll() { fitCase(); spines.forEach(fitTitle); }

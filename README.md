@@ -1,6 +1,7 @@
 # Personal Boardwalk
 
-A browsable bookshelf. Spines are the homepage; click one and the book opens.
+A browsable bookshelf that fills the window. Spines are the homepage; click one
+and the book opens.
 
 Three shelves in one case, sized to the window:
 
@@ -81,12 +82,16 @@ are filled; the handwriting on their backs is still placeholder.
   wrote, so they read as the next volumes in that run rather than as decoration,
   and the years are the whole statement — no placard explains them. There is
   nothing inside them to read yet.
-- **The case sizes itself to its longest run.** Add or delete books and the
-  furniture narrows or widens to match, so there is no empty plank trailing off
-  on the right. Keep the three runs roughly the same length and all three
-  shelves reach the edge. `--case-max` in `css/shelf.css` is only an upper cap.
-  This means cutting volumes costs nothing visually — it just makes a narrower
-  bookcase, which is the brief's "fewer, better" for free.
+- **The books scale to the window.** The case is the whole page, so the books
+  are sized to fill it rather than the furniture being sized to the books. Every
+  fixed width — spines, frames, journals, the room — is multiplied by one factor
+  chosen so the longest run exactly fills the case. Fewer books simply means
+  bigger books, which is the brief's "fewer, better" for free; more books means
+  smaller ones, down to a floor of 0.66 where the shelf scrolls instead.
+- **Keep the three runs about the same length.** The scale follows the *longest*
+  run, so a short shelf is the one that shows empty plank. They currently
+  measure within about 25px of each other. If you add or cut books, even them up
+  again — the counts are the three numbers passed to the layout, nothing more.
 
 ## Still to do (from the brief)
 

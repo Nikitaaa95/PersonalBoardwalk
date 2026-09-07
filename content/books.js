@@ -27,10 +27,6 @@
 
 window.SHELF = {
 
-  /* --- Masthead. Keep it to one line; the spine view is the real homepage. --- */
-  title: "[SITE TITLE]",
-  line:  "[One line. Not a paragraph — the shelf is the homepage.]",
-
   /* --- Cloths for the books I've read. `ink` must stay legible on `cloth`. -- */
   palettes: {
     oxblood: { cloth: "#6b2b2b", ink: "#e8d5b5", rule: "#b08d5a" },
@@ -572,6 +568,26 @@ window.SHELF = {
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
+        { kind: "book", invented: true,
+          id: "inv-25",
+          title: "[SPINE TITLE TWENTY-FIVE]",
+          author: "[Your name]",
+          press: "[Invented Press]",
+          year: "[20—]",
+          poem: `[Line 1.]
+[Line 2.]
+[Line 3.]
+[Line 4.]
+[Line 5.]
+[Line 6.]
+[Line 7.]
+[Line 8.]
+[Line 9.]
+[Line 10.]`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
         /* The volumes not written yet. Same binding as the books above, so they
            read as the next ones in the run rather than as decoration. Not
            openable — there is nothing inside them to read yet. */
@@ -766,6 +782,16 @@ window.SHELF = {
           title: "[REAL BOOK FIFTEEN]",
           author: "[Author]",
           palette: "slate", face: "cormorant", height: 0.87, width: 35,
+          quote: "[The pull quote. Let this half be the abstract one.]",
+          source: "[Author, Title, p. —]",
+          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`
+        },
+
+        { kind: "book", invented: false,
+          id: "real-16",
+          title: "[REAL BOOK SIXTEEN]",
+          author: "[Author]",
+          palette: "rust", face: "oswald", height: 0.96, width: 39,
           quote: "[The pull quote. Let this half be the abstract one.]",
           source: "[Author, Title, p. —]",
           scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week. Not "this taught me patience" — the actual room.]`

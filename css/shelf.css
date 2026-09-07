@@ -34,9 +34,6 @@
   --inv-face:    "Libre Baskerville", Georgia, serif;
 
   --plank-h:     26px;
-  /* Narrow this and fewer volumes fill a shelf; widen it and you need more.
-     It is the lever between "the case fills the page" and "fewer, better". */
-  --case-max:    1180px;
 }
 
 * { box-sizing: border-box; }
@@ -44,7 +41,8 @@ html { color-scheme: dark; }
 
 body {
   margin: 0;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   background:
@@ -54,36 +52,15 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* --- Masthead: deliberately small. Not an essay. ------------------------- */
-.masthead {
-  flex: 0 0 auto;
-  padding: 26px 32px 16px;
-  max-width: 70ch;
-}
-.masthead__title {
-  margin: 0;
-  font-family: "Playfair Display", Georgia, serif;
-  font-weight: 800;
-  font-size: clamp(22px, 3vw, 34px);
-  letter-spacing: .01em;
-}
-.masthead__line {
-  margin: 6px 0 0;
-  font-size: clamp(14px, 1.5vw, 17px);
-  font-style: italic;
-  color: #b7a68f;
-}
-
 /* --- The bookcase: one piece of furniture, filling the page. ------------- */
 .bookcase {
   flex: 1 1 auto;
-  min-height: 620px;
+  min-height: 0;
   display: flex;
   flex-direction: column;
-  width: min(100% - 48px, var(--case-max));
-  margin: 0 auto 30px;
-  padding: 16px 14px 14px;
-  border-radius: 4px;
+  width: 100%;
+  margin: 0;
+  padding: 14px 12px 12px;
   background:
     linear-gradient(90deg, #241a12 0 12px, transparent 12px calc(100% - 12px), #241a12 calc(100% - 12px)),
     linear-gradient(180deg, #241a12 0 4px, transparent 4px),
@@ -578,7 +555,7 @@ body {
 }
 
 @media (max-width: 720px) {
-  .bookcase { width: calc(100% - 24px); margin: 0 auto 20px; padding: 12px 8px 10px; min-height: 560px; }
+  .bookcase { padding: 10px 6px 8px; }
   .shelf-board { padding: 0 8px; }
   .reader__book { grid-template-columns: 1fr; }
   .reader__book::before { display: none; }
