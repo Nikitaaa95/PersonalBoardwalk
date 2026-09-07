@@ -296,7 +296,6 @@ window.SHELF = {
           portrait: "assets/portrait.jpg",
           portraitAlt: "Nikita Thomas.",
           press: "[Invented Press]",
-          year: "[20—]",
           poem: `[Line 1.]
 [Line 2.]
 [Line 3.]

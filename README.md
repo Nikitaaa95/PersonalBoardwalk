@@ -31,7 +31,7 @@ Three object types, matching the brief:
 |---|---|---|
 | `book` with `invented: true` | plate + poem | `title, author, press, year, poem, image, imageAlt` |
 | `book` with `invented: false` | quote + scene | `title, author, palette, face, height, width, quote, source, scene` |
-| either, plus `faceOut: true` | as above | stands face out; add `faceWidth`, `cover` for a real cover image, or `portrait` for a photograph jacket |
+| either, plus `faceOut: true` | as above | stands face out; add `faceWidth`, `cover` for a real cover image, or `portrait` for a plated photograph |
 | `photo` | flips in place | `image, aspect, width, alt, tilt, back: {date, place, note}` |
 | `journals` | not openable | `years` — e.g. `["2027", "2028", "2029"]`; optional `plant` |
 | `plant` | not openable | `width`, `drape` — how far the vines hang past the pot |
@@ -72,12 +72,11 @@ are filled; the handwriting on their backs is still placeholder.
 - **Face-out books work on any shelf.** A volume you wrote uses the standard
   binding; a book you've read is stamped instead — caps, wide letterspacing and
   a ruled frame in its palette's `rule` colour, the way a hardcover is lettered.
-- **A photograph can be the jacket.** `portrait: "assets/….jpg"` on a face-out
-  book gives it the picture across the whole front board with the title and
-  name lettered over the foot of it, the way a memoir jacket is set. The
-  scrim is deep enough to letter over and shallow enough to keep a face; if
-  the file is missing the book falls back to its plain binding rather than
-  showing a broken image.
+- **A photograph can be plated onto the board.** `portrait: "assets/….jpg"` on
+  a face-out book sets the picture into the cloth above the title, ruled like
+  an author plate, with the standard title and name under it. If the file is
+  missing the plate simply does not appear and the binding is the standard
+  one — no broken image.
 - **A real cover image wins over lettering.** *The Prophet* uses a scan of the
   1923 Knopf first edition — black cloth stamped in gilt, with Gibran's own
   device on the front board — in `assets/the-prophet-1923.jpg`. Published 1923,

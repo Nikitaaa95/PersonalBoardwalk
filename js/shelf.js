@@ -149,24 +149,26 @@
       rules.style.borderColor = p.rule;
     }
 
-    /* A jacket with a photograph on it: the picture takes the whole front
-       board and the lettering sits over the foot of it, the way a memoir
-       jacket is set. If the file is missing it falls back to the binding
-       underneath rather than showing a broken image. */
+    /* A portrait plate on the front board: the picture set into the cloth
+       above the title, the way an author photograph is plated, rather than a
+       jacket printed edge to edge. If the file is missing the plate simply
+       does not appear and the binding is the standard one. */
     if (item.portrait) {
-      btn.classList.add("face-out--jacket");
+      btn.classList.add("face-out--portrait");
+      var plate = el("span", "face-out__plate");
       var shot = el("img", "face-out__portrait");
       shot.src = item.portrait;
       shot.alt = item.portraitAlt || "";
       shot.addEventListener("error", function () {
-        btn.classList.remove("face-out--jacket");
-        shot.remove();
+        plate.remove();
+        btn.classList.remove("face-out--portrait");
       });
-      var band = el("span", "face-out__band");
-      band.appendChild(el("span", "face-out__band-title", item.title || ""));
-      if (item.author) band.appendChild(el("span", "face-out__band-author", item.author));
-      btn.appendChild(shot);
-      btn.appendChild(band);
+      plate.appendChild(shot);
+      if (item.frame !== false) btn.appendChild(frame);
+      btn.appendChild(plate);
+      btn.appendChild(title);
+      btn.appendChild(rules);
+      btn.appendChild(author);
     } else if (item.cover) {
       /* A real cover image, if you have one, replaces the stamped lettering. */
       btn.classList.add("face-out--art");
