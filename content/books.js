@@ -714,9 +714,12 @@ That is what stayed with me. Not that atrocity goes unseen, but that it can be s
              gilt feathers on dark cloth, illustrated by Hugh Thomson. */
           spineImage: "assets/spine-pride-and-prejudice.jpg",
           spineAspect: 0.230, height: 0.99,
-          quote: "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-          source: "Jane Austen, Pride and Prejudice, opening line",
-          scene: `[Where you were. How old. Whether you got past the first fifty pages the first time.]`
+          quote: "There is a stubbornness about me that never can bear to be frightened at the will of others. My courage always rises at every attempt to intimidate me.",
+          source: "Jane Austen, Pride and Prejudice — Elizabeth Bennet",
+          sceneHead: "On gentility",
+          scene: `This was my first argument for taking women's rooms seriously. Drawing rooms, letters, walks, the endless talk of who might marry whom — it looks like nothing, and it is where every real decision in the book gets made.
+
+Gentility is not softness. Elizabeth is never once loud and never once moved. She holds her ground in the only register available to her, and it turns out to be enough. What I took from it is that composure is not the opposite of strength. It is usually the shape strength has to take.`
         },
 
         { kind: "book", invented: false,
