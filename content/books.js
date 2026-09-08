@@ -745,9 +745,12 @@ I was raised Catholic, and for a long time I thought that leaving meant giving u
              maroon board with the pink block at the foot. */
           spineImage: "assets/spine-horse-and-his-boy.jpg",
           spineAspect: 0.067, height: 0.90,
-          quote: "[Your pull quote.]",
+          quote: "One of the drawbacks about adventures is that when you come to the most beautiful places you are often too anxious and hurried to appreciate them.",
           source: "C. S. Lewis, The Horse and His Boy",
-          scene: `[Where you were. How old. Whether you read the seven in order.]`
+          sceneHead: "On arriving",
+          scene: `I have read this line at the end of trips I spent planning the next one. It is about me, and it was written for children, which is worse.
+
+The whole book is a journey towards somewhere that matters, and Lewis stops in the middle of it to say the part nobody says: that the getting there eats the being there. I am very good at arriving. I am still learning how to stand in a place I worked hard to reach and let it be enough while I am in it.`
         },
 
         { kind: "book", invented: false,
