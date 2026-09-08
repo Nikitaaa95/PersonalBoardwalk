@@ -237,8 +237,8 @@ and I get up.
 There is no version of this life
 where I set it down and walk away.
 I have never once wanted one.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
+          image: "assets/plate-oldest-job.jpg",
+          imageAlt: "My sister in fairy wings and my brother, both pointing wands at the camera."
         },
 
         { kind: "book", invented: true,
