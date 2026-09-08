@@ -815,9 +815,12 @@ The dictionary in it is made by men, and the words left out of it are the ones w
              turned upright so the title reads head to foot like the others. */
           spineImage: "assets/spine-glad-my-mom-died.jpg",
           spineAspect: 0.129, height: 0.90,
-          quote: "[Your pull quote.]",
+          quote: "A pushover is a bad thing to be, but an opinionated pushover is a worse thing to be. A pushover is nice and goes along with it, whatever it is. An opinionated pushover acts nice and goes along with it, but while quietly brooding and resentful. I am an opinionated pushover.",
           source: "Jennette McCurdy, I'm Glad My Mom Died",
-          scene: `[Where you were. Whether you read it in one sitting, and who you told about it.]`
+          sceneHead: "On making yourself small",
+          scene: `Her life was harder and more complicated than mine and I am not going to pretend otherwise. That is not why it lands. It lands because she names the thing exactly: acting nice, going along with it, and keeping score the whole time.
+
+I married a man who agreed with everyone and I called it kindness. Reading this I understood I had been doing a quieter version of the same thing — better mannered, and no more honest. The rage in this book is not decoration. It is what accumulates when you have made yourself small for long enough, and for a while it is the only thing holding the shape.`
         },
 
         { kind: "photo",

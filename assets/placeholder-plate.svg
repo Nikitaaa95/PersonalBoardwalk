@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 460" role="img" aria-label="Placeholder plate">
-  <rect width="640" height="460" fill="#e7dcc4"/>
-  <circle cx="450" cy="130" r="62" fill="none" stroke="#a2947a" stroke-width="2"/>
-  <path d="M60 360 L200 216 L308 322 L410 232 L580 372" fill="none" stroke="#8d8068" stroke-width="3"/>
-  <rect x="60" y="60" width="520" height="340" fill="none" stroke="#a2947a" stroke-width="2"/>
-  <text x="320" y="424" text-anchor="middle" font-family="monospace" font-size="17" fill="#7c705b">[PLATE — the picture facing the poem]</text>
-</svg>

@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" role="img" aria-label="Placeholder photograph">
-  <rect width="320" height="260" fill="#cdbfa6"/>
-  <rect x="0" y="170" width="320" height="90" fill="#c4b69c"/>
-  <circle cx="248" cy="58" r="26" fill="#e6d9bd"/>
-  <path d="M0 200 L86 132 L156 186 L228 140 L320 206 L320 260 L0 260 Z" fill="#9d9078"/>
-  <path d="M0 224 L70 178 L142 222 L214 184 L320 236 L320 260 L0 260 Z" fill="#857a64"/>
-  <text x="160" y="128" text-anchor="middle" font-family="monospace" font-size="15" fill="#6d6252">[PHOTOGRAPH]</text>
-</svg>
