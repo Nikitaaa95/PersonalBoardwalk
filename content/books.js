@@ -192,8 +192,8 @@ I learned my own appetite there,
 which is a strange place to learn it.
 For a while I was very good
 at something I had actually chosen.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
+          image: "assets/plate-first-republic.jpg",
+          imageAlt: "At the First Republic Bank sign."
         },
 
         { kind: "book", invented: true,
@@ -237,8 +237,8 @@ and I get up.
 There is no version of this life
 where I set it down and walk away.
 I have never once wanted one.`,
-          image: "assets/plate-oldest-job.jpg",
-          imageAlt: "The three of us piled on top of each other, December 1999."
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
         },
 
         { kind: "book", invented: true,
@@ -325,8 +325,8 @@ I have kept since middle school
 with the person who gets the whole file:
 the trip, the obsession, the bad day.
 Everything, daily. That is the friendship.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
+          image: "assets/plate-every-single-day.jpg",
+          imageAlt: "Arthi on her thirtieth, and me, at the flower wall."
         },
 
         { kind: "photo",
@@ -492,8 +492,8 @@ Now I think she is the only one of us
 who ever knew what it was for.
 My first sister. My oldest friend.
 Still the person I cannot argue with.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
+          image: "assets/plate-didnt-want-it.jpg",
+          imageAlt: "The pile of us as children, December 1999."
         },
 
         { kind: "book", invented: true,
@@ -559,8 +559,8 @@ no curve, no admissions committee.
 I have been good at everything
 a person can be good at on purpose.
 This one I cannot work out how to earn.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
+          image: "assets/plate-one-i-havent-met.jpg",
+          imageAlt: "Two cups of tea on a windowsill."
         },
 
         { kind: "book", invented: true,
@@ -582,8 +582,8 @@ The family you are given is a fact.
 The family you choose to look up to
 is a decision, made daily.
 I keep making it.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
+          image: "assets/plate-sister-came-later.jpg",
+          imageAlt: "The two of us on the street with ice cream."
         },
 
         { kind: "photo",
