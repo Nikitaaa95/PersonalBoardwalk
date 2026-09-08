@@ -90,15 +90,15 @@ That school is the voice I argue with.`,
 
         { kind: "book", invented: true,
           id: "inv-04",
-          title: "Ten Siblings, One Surname",
+          title: "Eleven Out of One Room",
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
           cloth: "#574434", ink: "#efe0c6", rule: "#b2946e",
           width: 52, height: 0.88,
-          /* The Chathanatt side: ten of them, out of very little. */
+          /* The Chathanatt side: my father and his ten brothers and sisters. */
           poem: `My grandfather's house had one good room.
-Ten of them came out of it
+Eleven of them came out of it
 and not one came out empty-handed.
 Nobody talks about the years before.
 We talk about the years after —
