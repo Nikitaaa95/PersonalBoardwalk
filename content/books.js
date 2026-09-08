@@ -696,9 +696,14 @@ You cannot hold anyone to the version of them you built when you were young. Tha
           spineAuthor: "Las Casas",
           palette: "classic", face: "garamond", height: 0.99, width: 44,
           imprint: "Penguin Classics",
-          quote: "[Your pull quote — I left this blank rather than risk misquoting a translation.]",
+          quote: "The Spaniards have shown not the slightest consideration for these people, treating them (and I speak from first-hand experience, having been there from the outset) not as brute animals — indeed, I would to God they had done and had shown them the consideration they afford their animals — so much as piles of dung in the middle of the road.",
           source: "Bartolomé de las Casas, A Short Account of the Destruction of the Indies (1552)",
-          scene: `[Where you were. How old. Whether it was assigned. What you did with it afterwards.]`
+          sceneHead: "On what was known",
+          scene: `The story we get told is that nobody knew — that it happened far away, out of sight, and that the people at home would have stopped it if only they had understood.
+
+They knew. This is a report to the King by a man who was there, and it was published, and it was read, and people argued about it. Some paid for saying it aloud. It changed almost nothing, because the money was worth more than the conscience.
+
+That is what stayed with me. Not that atrocity goes unseen, but that it can be seen clearly, named accurately, and carried on with anyway.`
         },
 
         { kind: "book", invented: false,
