@@ -82,8 +82,8 @@ I got out. I did well. I am still
 waiting for someone to check my work
 and find whatever they are looking for.
 That school is the voice I argue with.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
+          image: "assets/plate-the-curve.jpg",
+          imageAlt: "Graduation, in the white gown."
         },
 
         { kind: "book", invented: true,
@@ -126,8 +126,8 @@ I love people. I go back to them.
 But the door closing behind me
 at the end of a long day
 is the best sound I know.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
+          image: "assets/plate-alone-on-purpose.jpg",
+          imageAlt: "Reading in bed as a child, entirely absorbed."
         },
 
         { kind: "book", invented: true,
@@ -148,8 +148,8 @@ the truest thing between us.
 I do not regret the marriage.
 I regret how long I defended it
 to people who could already see.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
+          image: "assets/plate-married-at-24.jpg",
+          imageAlt: "The beading and lace of the dress, close up."
         },
 
         { kind: "book", invented: true,
@@ -170,8 +170,8 @@ and I would defend it with my life.
 I have met a great many people since.
 I have never once been tempted
 to promote anyone into that room.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
+          image: "assets/plate-trash.jpg",
+          imageAlt: "The five of us climbing the band room equipment, in high school."
         },
 
         { kind: "book", invented: true,
@@ -214,8 +214,8 @@ For a long time that felt like failing.
 Now I think it is the shape I am:
 a third thing, made here,
 out of a name from somewhere else.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
+          image: "assets/plate-secret-third-thing.jpg",
+          imageAlt: "Me in a kurta and sneakers, striking the Nataraja pose beside the statue."
         },
 
         { kind: "book", invented: true,
@@ -237,8 +237,8 @@ and I get up.
 There is no version of this life
 where I set it down and walk away.
 I have never once wanted one.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
+          image: "assets/plate-oldest-job.jpg",
+          imageAlt: "The three of us piled on top of each other, December 1999."
         },
 
         { kind: "book", invented: true,
@@ -259,8 +259,8 @@ in a city that does not know me,
 holding a map, deciding.
 There is always a next one.
 That is the part I need.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
+          image: "assets/plate-next-trip.jpg",
+          imageAlt: "Lunch in the souk in Marrakesh: tagine, briouats, fresh juice."
         },
 
         { kind: "book", invented: true,
@@ -281,8 +281,8 @@ I believe in Tuesday, and in the small
 repeated things that hold a life up.
 That is a creed. It has no building.
 I still say grace, most nights, to nobody.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
+          image: "assets/plate-lapsed.jpg",
+          imageAlt: "The east window of a church, lit, with the nave in darkness."
         },
 
         { kind: "book", invented: true,
@@ -303,8 +303,8 @@ I walk that campus like a guest
 told to make herself at home.
 The castle let me in.
 I am still standing in the doorway.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
+          image: "assets/plate-castle-on-the-hill.jpg",
+          imageAlt: "Me beside the Berkeley Haas sign."
         },
 
         { kind: "book", invented: true,
@@ -402,8 +402,8 @@ what happens if I turn up ordinary.
 It is not about being admired.
 It is about never being a disappointment.
 Those are not the same. I know it.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
+          image: "assets/plate-put-together.jpg",
+          imageAlt: "In the audience at a conference, name badge on, listening."
         },
 
         { kind: "book", invented: true,
@@ -424,8 +424,8 @@ is still in here somewhere, filed.
 I am not unhappy. That is the strange part.
 I keep a room for the other lives
 and I visit.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
+          image: "assets/plate-teacher.jpg",
+          imageAlt: "A room of middle schoolers throwing peace signs at the camera."
         },
 
         { kind: "book", invented: true,
@@ -447,8 +447,8 @@ And still I read a room before I laugh
 to work out how loud is allowed.
 Nobody ever asked this of me aloud.
 That is the part I cannot put down.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
+          image: "assets/plate-carry-the-tea.jpg",
+          imageAlt: "My mother and father with me as a baby, in a frame at home."
         },
 
         { kind: "book", invented: true,
@@ -470,8 +470,8 @@ The people who taught me to be polite
 also taught me what is owed.
 So I keep the clipboard.
 So I keep knocking.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
+          image: "assets/plate-door-to-door.jpg",
+          imageAlt: "Tchalla on the floor with an I Voted sticker on his shoulder."
         },
 
         { kind: "book", invented: true,
@@ -514,8 +514,8 @@ The biggest building in the world
 still only gives you one desk,
 and nobody in it knows your name.
 I know what I want now. Smaller.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
+          image: "assets/plate-year-we-were-bought.jpg",
+          imageAlt: "My desk: the First Republic pen cup, and JPMorganChase on the screen."
         },
 
         { kind: "book", invented: true,
@@ -537,8 +537,8 @@ every day, the way I used to.
 My friends are all somewhere else.
 My dog is asleep in the next room.
 I am homesick in both directions.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
+          image: "assets/plate-homesick.jpg",
+          imageAlt: "The Empire State Building at night, from the street."
         },
 
         { kind: "book", invented: true,
