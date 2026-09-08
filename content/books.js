@@ -799,9 +799,12 @@ The field you know is small. It is also the only one you can actually reach. I f
           /* Photographed spine: the poppies-and-vines jacket over dark ground. */
           spineImage: "assets/spine-dictionary-lost-words.jpg",
           spineAspect: 0.128, height: 0.96,
-          quote: "[Your pull quote.]",
+          quote: "Some words are more than letters on a page, don't you think? They have shape and texture. They are like bullets, full of energy, and when you give one breath you can feel its sharp edge against your lip.",
           source: "Pip Williams, The Dictionary of Lost Words",
-          scene: `[Where you were. Which word you went and looked up afterwards.]`
+          sceneHead: "On having the words",
+          scene: `I am shy and I am awkward, and there are languages spoken around me that I do not speak. Communication has never come easily to me, so a book about who gets to have words was never going to be abstract.
+
+The dictionary in it is made by men, and the words left out of it are the ones women used. That is the argument: language does not describe the world so much as decide which parts of it you are able to think about at all. What you know sets the size of the room. Which is why it is worth learning things that look like they have nothing to do with you — that is how the room gets bigger.`
         },
 
         { kind: "book", invented: false,
