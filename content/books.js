@@ -648,9 +648,12 @@ That is what this shelf is. Everything on it is something I learnt somewhere, fr
              and gilt, with the publisher's device at the foot. */
           spineImage: "assets/spine-little-women.jpg",
           spineAspect: 0.252, height: 0.96,
-          quote: "Christmas won't be Christmas without any presents.",
-          source: "Louisa May Alcott, Little Women, opening line",
-          scene: `[Where you were. How old. Which sister you thought you were, and which one you actually were.]`
+          quote: "Watch and pray, dear, never get tired of trying, and never think it is impossible to conquer your fault.",
+          source: "Louisa May Alcott, Little Women — Marmee to Jo",
+          sceneHead: "What it taught me",
+          scene: `The joys and the sorrows both pass. That is not the lesson. The lesson is that they do not leave you the same on the way through — you are altered by each one whether you agree to it or not.
+
+And the love does not go anywhere. It outlasts the people and the houses and the versions of yourself. I used to read the hard parts of this book as things that should not have happened. I read them now as things that were always going to, and were never the tragedy I took them for.`
         },
 
         { kind: "book", invented: false,
