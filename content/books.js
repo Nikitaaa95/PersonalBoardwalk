@@ -729,9 +729,12 @@ Gentility is not softness. Elizabeth is never once loud and never once moved. Sh
           /* Photographed spine: the Simon and Schuster jacket, worn pale. */
           spineImage: "assets/spine-the-chosen.jpg",
           spineAspect: 0.104, height: 0.94,
-          quote: "[Your pull quote.]",
+          quote: "He taught them that the purpose of a man is to make his life holy — every aspect of his life: eating, drinking, praying, sleeping. God is everywhere, he told them, and if it seems at times that He is hidden from us, it is only because we have not yet learned to seek Him correctly.",
           source: "Chaim Potok, The Chosen",
-          scene: `[Where you were. How old. Who handed it to you.]`
+          sceneHead: "On searching elsewhere",
+          scene: `Two boys, two fathers, and an argument about God that neither side can win. What I recognised was not the doctrine. It was the effort — the wanting to get it right, in a world that looked nothing like mine.
+
+I was raised Catholic, and for a long time I thought that leaving meant giving up the search. This book says the holiness is in the ordinary business of a day: eating, sleeping, working. And that if it seems hidden, you are looking wrongly, not looking in vain. That gave me permission to keep looking somewhere else.`
         },
 
         { kind: "book", invented: false,
