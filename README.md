@@ -29,7 +29,7 @@ Three object types, matching the brief:
 
 | `kind` | Opens to | Fields |
 |---|---|---|
-| `book` with `invented: true` | plate + poem | `title, author, press, year, poem, image, imageAlt`; `intro` instead of `poem` for prose |
+| `book` with `invented: true` | plate + poem | `title, author, poem, image, imageAlt`; `intro` instead of `poem` for prose. No colophon: the imprint line is kept for books I've read, where it credits a real author |
 | `book` with `invented: false` | quote + scene | `title, author, palette, face, height, width, quote, source, scene`; optional `imprint` (publisher at the foot) and `spineAuthor` (a shorter name for the spine) |
 | …with `spineImage` | quote + scene | a photograph of the real spine: `spineImage, spineAspect, height` — replaces the cloth and lettering entirely |
 | either, plus `faceOut: true` | as above | stands face out; add `faceWidth`, `cover` for a real cover image, or `portrait` for a plated photograph |

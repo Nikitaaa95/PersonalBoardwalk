@@ -496,7 +496,10 @@
         recto.appendChild(el("p", "poem", item.poem || ""));
       }
 
-      coloph.textContent = [item.author, item.press, item.year].filter(Boolean).join("  ·  ");
+      /* No colophon on my own volumes: the imprint line is kept for the books
+         I've read, where it credits a real author and publisher. */
+      coloph.textContent = "";
+      coloph.hidden = true;
     } else {
       /* Real book: the quote is the abstract half, the scene is the concrete
          half. Quote left, memory right. */
@@ -516,6 +519,7 @@
       });
 
       coloph.textContent = [item.author, item.title].filter(Boolean).join("  ·  ");
+      coloph.hidden = false;
     }
 
     reader.showModal();
