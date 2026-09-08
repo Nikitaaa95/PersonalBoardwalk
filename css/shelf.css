@@ -25,10 +25,10 @@
 
   /* The standard for books I wrote. Change these and every such volume —
      including ones added years from now — changes together. */
-  --inv-cloth:   #3c4f4a;
-  --inv-cloth-2: #35463f;
-  --inv-ink:     #e9e2cf;
-  --inv-rule:    #9db3a4;
+  --inv-cloth:   #4a3a2a;
+  --inv-cloth-2: #3d2f22;
+  --inv-ink:     #f0e3ca;
+  --inv-rule:    #bb9d75;
   --inv-width:   44px;
   --inv-height:  92%;
   --inv-face:    "Libre Baskerville", Georgia, serif;
