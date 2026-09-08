@@ -505,12 +505,16 @@
       /* Real book: the quote is the abstract half, the scene is the concrete
          half. Quote left, memory right. */
       var q = el("blockquote", "quote");
-      q.appendChild(document.createTextNode("“" + (item.quote || "") + "”"));
+      var parts = splitProse(item.quote);
+      parts.forEach(function (t, i) {
+        q.appendChild(el("p", "quote__para",
+          (i === 0 ? "“" : "") + t + (i === parts.length - 1 ? "”" : "")));
+      });
       q.appendChild(el("cite", "quote__source", item.source || ""));
       verso.appendChild(el("p", "page-head", "From the book"));
       verso.appendChild(q);
 
-      recto.appendChild(el("p", "page-head", "Where I was"));
+      recto.appendChild(el("p", "page-head", item.sceneHead || "Where I was"));
       var h2 = el("h2", "book-title", item.title || "");
       h2.id = "reader-title";
       recto.appendChild(h2);

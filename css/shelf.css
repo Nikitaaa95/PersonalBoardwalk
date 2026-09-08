@@ -672,6 +672,8 @@ body {
   font-style: italic;
   line-height: 1.45;
 }
+.quote__para { margin: 0 0 .6em; }
+.quote__para:last-of-type { margin-bottom: 0; }
 .quote__source { display: block; margin-top: 14px; font-size: 13px; font-style: normal; color: var(--ink-soft); }
 
 .scene { margin: 0 0 1em; font-size: 16px; line-height: 1.7; }

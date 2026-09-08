@@ -619,9 +619,14 @@ I keep making it.`,
           height: 0.92,
           cover: "assets/the-prophet-1923.jpg",
           coverAspect: 0.657,
-          quote: "Your children are not your children. They are the sons and daughters of Life's longing for itself.",
-          source: "Kahlil Gibran, The Prophet (Knopf, 1923), 'On Children'",
-          scene: `[Where you were. How old. Who handed it to you. What you were avoiding that week.]`
+          quote: `How often have you sailed in my dreams. And now you come in my awakening, which is my deeper dream.
+
+Ready am I to go, and my eagerness with sails full set awaits the wind.`,
+          source: "Kahlil Gibran, The Prophet (Knopf, 1923), 'The Coming of the Ship'",
+          sceneHead: "Before the next thing",
+          scene: `I read this at the end of one thing and the start of another, which is when it works. The ship has come. The leaving is not the point. The point is that before you go you are meant to stand still and account for what the years actually gave you.
+
+That is what this shelf is. Everything on it is something I learnt somewhere, from someone, usually the hard way. I wanted to set it all down and look at it once, properly, before whatever comes next.`
         },
 
         { kind: "photo",
