@@ -65,6 +65,28 @@ window.SHELF = {
       label: "Books I wrote",
       items: [
                 { kind: "book", invented: true,
+          id: "inv-25",
+          title: "The Curve",
+          author: "Nikita Thomas",
+          press: "[Invented Press]",
+          year: "[20—]",
+          /* Mission San Jose. */
+          poem: `Everyone there was somebody's genius.
+The rank was published. We all read it.
+I learned to work like I was behind,
+because I always was, by some measure.
+Nobody said you are not enough.
+The curve said it, in numbers,
+every single term for four years.
+I got out. I did well. I am still
+waiting for someone to check my work
+and find whatever they are looking for.
+That school is the voice I argue with.`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
           id: "inv-04",
           title: "Ten Siblings, One Surname",
           author: "Nikita Thomas",
@@ -86,29 +108,117 @@ and was handed one instruction: keep it up.`,
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-                { kind: "book", invented: true,
-          id: "inv-05",
-          title: "The Good Silver",
+        { kind: "book", invented: true,
+          id: "inv-16",
+          title: "Alone on Purpose",
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
-          /* My mother's parents, and the standard they set. */
-          poem: `They were people who knew which fork.
-Not for show — it was how they spoke,
-and I was born expected to be fluent.
-In every photograph her back is straight.
-My grandfather never raised his voice
-because he never once had to.
-I set a good table. I know the words.
-And still I read the room before I laugh,
-to work out how loud is allowed.
-No one ever sat me down and asked for this.
-That is the part I cannot put down.`,
+          /* Independence, introversion, my own space. */
+          poem: `I like my own house best.
+I like a drive with nowhere to be,
+one album the whole way, no talking.
+I like a book and an afternoon
+nobody else has a claim on.
+I feel guilty about it, which is silly.
+Needing less is not caring less.
+I love people. I go back to them.
+But the door closing behind me
+at the end of a long day
+is the best sound I know.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-                { kind: "book", invented: true,
+        { kind: "book", invented: true,
+          id: "inv-33",
+          title: "Married at Twenty-Four",
+          author: "Nikita Thomas",
+          press: "[Invented Press]",
+          year: "[20—]",
+          /* The marriage, and the divorce. */
+          poem: `I was twenty-four and certain.
+He agreed with everyone, including me,
+which I mistook for kindness.
+It takes a while to learn that a man
+who never disagrees is not being gentle.
+He was not honest. I was not listening.
+We ended it, and the ending was
+the truest thing between us.
+I do not regret the marriage.
+I regret how long I defended it
+to people who could already see.`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-18",
+          title: "Trash",
+          author: "Nikita Thomas",
+          press: "[Invented Press]",
+          year: "[20—]",
+          /* My best friends, since high school. */
+          poem: `That is what we call ourselves.
+Fifteen years of it now.
+They knew me before I was presentable,
+which makes them the only people
+I do not have to be excellent for.
+Nobody has to explain anything.
+The group chat is mostly nonsense
+and I would defend it with my life.
+I have met a great many people since.
+I have never once been tempted
+to promote anyone into that room.`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-23",
+          title: "First Republic",
+          author: "Nikita Thomas",
+          press: "[Invented Press]",
+          year: "[20—]",
+          /* The first job I loved, and where I found out I was ambitious. */
+          poem: `They gave me a desk and I loved it.
+Not the desk. The wanting.
+I did not know I was ambitious
+until they handed me something real
+and I stayed late making it better.
+I had been told what I ought to want.
+Nobody warned me I would want this.
+I learned my own appetite there,
+which is a strange place to learn it.
+For a while I was very good
+at something I had actually chosen.`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-32",
+          title: "A Secret Third Thing",
+          author: "Nikita Thomas",
+          press: "[Invented Press]",
+          year: "[20—]",
+          /* Indian, American, or something else. */
+          poem: `Indian, they ask, or American?
+I have never had an answer ready.
+Not both — both is too tidy.
+Something built out of the two
+that neither side would recognise.
+I am the wrong amount of everything
+in every room I walk into.
+For a long time that felt like failing.
+Now I think it is the shape I am:
+a third thing, made here,
+out of a name from somewhere else.`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
           id: "inv-06",
           title: "The Oldest Job",
           author: "Nikita Thomas",
@@ -131,142 +241,51 @@ I have never once wanted one.`,
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-                        { kind: "book", invented: true,
-          id: "inv-20",
-          title: "The Sister Who Came Later",
+        { kind: "book", invented: true,
+          id: "inv-15",
+          title: "The Next Trip",
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
-          /* My sister-in-law. */
-          poem: `I did not grow up with her.
-She arrived the way weather does —
-already whole, already herself.
-I keep catching myself copying her:
-how she says no without apologising,
-how she holds a room without raising it.
-I have known her a fraction of my life
-and I measure myself against her anyway.
-The family you are given is a fact.
-The family you choose to look up to
-is a decision, made daily.
-I keep making it.`,
+          /* Travel. */
+          poem: `Japan. Korea. Morocco. Italy.
+France. Spain. Dubai.
+I work so that I can leave,
+and I am always already planning
+the leaving after this one.
+It is not escape. I like my life.
+It is that I am most awake
+in a city that does not know me,
+holding a map, deciding.
+There is always a next one.
+That is the part I need.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-                { kind: "book", invented: true,
-          id: "inv-21",
-          title: "Walking Distance",
+        { kind: "book", invented: true,
+          id: "inv-31",
+          title: "Lapsed",
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
-          /* City life. */
-          poem: `Everything I need is fifteen minutes on foot
-and I still take the long way.
-The city does not care that I live here,
-which is the kindest thing about it.
-I know the corner that smells of bread,
-which train runs late,
-which window keeps its lamp on late.
-Nobody on this street knows my family.
-I am nobody's eldest daughter here —
-only a person walking,
-deciding, for once,
-where to turn.`,
+          /* Faith, and where it went. */
+          poem: `I was a good Catholic. I knew the words,
+the kneeling, the order of the year.
+I do not go now, and I do not miss it
+the way I was told that I would.
+The faith did not leave. It relocated.
+I believe in people who show up.
+I believe in fifteen years of friendship.
+I believe in Tuesday, and in the small
+repeated things that hold a life up.
+That is a creed. It has no building.
+I still say grace, most nights, to nobody.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-                { kind: "book", invented: true,
-          id: "inv-22",
-          title: "Door to Door",
-          author: "Nikita Thomas",
-          press: "[Invented Press]",
-          year: "[20—]",
-          /* Politics. */
-          poem: `I have argued at tables I was a guest at.
-I have knocked on doors that opened an inch.
-Someone always says it makes no difference,
-that they are all alike, that nothing moves.
-I know the arithmetic of a margin.
-I know what a hundred doors is worth,
-and I know it is not nothing.
-I am not embarrassed to care this much.
-The people who taught me to be polite
-also taught me what is owed.
-So I keep the clipboard.
-So I keep knocking.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
-                { kind: "book", invented: true,
-          id: "inv-23",
-          title: "First Republic",
-          author: "Nikita Thomas",
-          press: "[Invented Press]",
-          year: "[20—]",
-          /* The first job I loved, and where I found out I was ambitious. */
-          poem: `They gave me a desk and I loved it.
-Not the desk. The wanting.
-I did not know I was ambitious
-until they handed me something real
-and I stayed late making it better.
-I had been told what I ought to want.
-Nobody warned me I would want this.
-I learned my own appetite there,
-which is a strange place to learn it.
-For a while I was very good
-at something I had actually chosen.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
-                        { kind: "book", invented: true,
-          id: "inv-24",
-          title: "The Year We Were Bought",
-          author: "Nikita Thomas",
-          press: "[Invented Press]",
-          year: "[20—]",
-          /* The acquisition, and what it taught me I need. */
-          poem: `One morning it was ours. By spring
-it belonged to the largest bank alive.
-Nobody asked us. That was the lesson.
-I learned what I will trade away
-and what I will not.
-I want a floor under me.
-I want to matter to the room I am in.
-The biggest building in the world
-still only gives you one desk,
-and nobody in it knows your name.
-I know what I want now. Smaller.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
-                { kind: "book", invented: true,
-          id: "inv-25",
-          title: "The Curve",
-          author: "Nikita Thomas",
-          press: "[Invented Press]",
-          year: "[20—]",
-          /* Mission San Jose. */
-          poem: `Everyone there was somebody's genius.
-The rank was published. We all read it.
-I learned to work like I was behind,
-because I always was, by some measure.
-Nobody said you are not enough.
-The curve said it, in numbers,
-every single term for four years.
-I got out. I did well. I am still
-waiting for someone to check my work
-and find whatever they are looking for.
-That school is the voice I argue with.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
-                { kind: "book", invented: true,
+        { kind: "book", invented: true,
           id: "inv-26",
           title: "The Castle on the Hill",
           author: "Nikita Thomas",
@@ -288,68 +307,24 @@ I am still standing in the doorway.`,
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-                { kind: "book", invented: true,
-          id: "inv-27",
-          title: "The Teacher I Didn't Become",
+        { kind: "book", invented: true,
+          id: "inv-29",
+          title: "Every Single Day",
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
-          /* The careers I talked myself out of. */
-          poem: `First I wanted to teach.
-They said: not that, not for you.
-Then an NGO, something that mattered,
-and then a salary arrived
-and I stopped saying the word later.
-Then a doctorate, until I counted years.
-Every version of me I argued down
-is still in here somewhere, filed.
-I am not unhappy. That is the strange part.
-I keep a room for the other lives
-and I visit.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
-                { kind: "book", invented: true,
-          id: "inv-33",
-          title: "Married at Twenty-Four",
-          author: "Nikita Thomas",
-          press: "[Invented Press]",
-          year: "[20—]",
-          /* The marriage, and the divorce. */
-          poem: `I was twenty-four and certain.
-He agreed with everyone, including me,
-which I mistook for kindness.
-It takes a while to learn that a man
-who never disagrees is not being gentle.
-He was not honest. I was not listening.
-We ended it, and the ending was
-the truest thing between us.
-I do not regret the marriage.
-I regret how long I defended it
-to people who could already see.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
-                { kind: "book", invented: true,
-          id: "inv-34",
-          title: "Put Together",
-          author: "Nikita Thomas",
-          press: "[Invented Press]",
-          year: "[20—]",
-          /* Vanity. */
-          poem: `Successful. Intelligent. Presentable.
-I have never let anyone see me
-before I decide how to look.
-If I am not excellent I am failing
-someone — I could not tell you who.
-Nobody set this standard out loud.
-I have simply never tested
-what happens if I turn up ordinary.
-It is not about being admired.
-It is about never being a disappointment.
-Those are not the same. I know it.`,
+          /* Arthi. */
+          poem: `She gets the bullet journal spreads,
+the kpop, the flight deals at 1 a.m.
+We have talked every day for years
+about nothing worth recording,
+which is how I know that it is real.
+There is no occasion. There is no news.
+There is the running conversation
+I have kept since middle school
+with the person who gets the whole file:
+the trip, the obsession, the bad day.
+Everything, daily. That is the friendship.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
@@ -404,122 +379,101 @@ Nothing here is behind glass. Pull anything down.`
       id: "wrote-2",
       label: null,
       items: [
-                { kind: "book", invented: true,
-          id: "inv-15",
-          title: "The Next Trip",
-          author: "Nikita Thomas",
-          press: "[Invented Press]",
-          year: "[20—]",
-          /* Travel. */
-          poem: `Japan. Korea. Morocco. Italy.
-France. Spain. Dubai.
-I work so that I can leave,
-and I am always already planning
-the leaving after this one.
-It is not escape. I like my life.
-It is that I am most awake
-in a city that does not know me,
-holding a map, deciding.
-There is always a next one.
-That is the part I need.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
-                { kind: "book", invented: true,
-          id: "inv-16",
-          title: "Alone on Purpose",
-          author: "Nikita Thomas",
-          press: "[Invented Press]",
-          year: "[20—]",
-          /* Independence, introversion, my own space. */
-          poem: `I like my own house best.
-I like a drive with nowhere to be,
-one album the whole way, no talking.
-I like a book and an afternoon
-nobody else has a claim on.
-I feel guilty about it, which is silly.
-Needing less is not caring less.
-I love people. I go back to them.
-But the door closing behind me
-at the end of a long day
-is the best sound I know.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
-                { kind: "book", invented: true,
-          id: "inv-17",
-          title: "The One I Haven't Met",
-          author: "Nikita Thomas",
-          press: "[Invented Press]",
-          year: "[20—]",
-          /* Wanting a real partner. */
-          poem: `I would like to be known all the way down.
-Not managed. Not admired. Known.
-Someone who sees the whole apparatus —
-the ambition, the tiredness, the guard —
-and does not flinch or try to fix it.
-I do not know how you find that.
-There is no application for it,
-no curve, no admissions committee.
-I have been good at everything
-a person can be good at on purpose.
-This one I cannot work out how to earn.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
-                { kind: "book", invented: true,
-          id: "inv-18",
-          title: "Trash",
-          author: "Nikita Thomas",
-          press: "[Invented Press]",
-          year: "[20—]",
-          /* My best friends, since high school. */
-          poem: `That is what we call ourselves.
-Fifteen years of it now.
-They knew me before I was presentable,
-which makes them the only people
-I do not have to be excellent for.
-Nobody has to explain anything.
-The group chat is mostly nonsense
-and I would defend it with my life.
-I have met a great many people since.
-I have never once been tempted
-to promote anyone into that room.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
-        /* The volumes not written yet. Same binding as the books above, so they
+                /* The volumes not written yet. Same binding as the books above, so they
            read as the next ones in the run rather than as decoration. Not
            openable — there is nothing inside them to read yet. */
         /* The plant stands on the journals, and its vines fall down over
            them. `plant` is optional; drop it and the stack is just a stack. */
                                 { kind: "book", invented: true,
-          id: "inv-29",
-          title: "Every Single Day",
+          id: "inv-34",
+          title: "Put Together",
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
-          /* Arthi. */
-          poem: `She gets the bullet journal spreads,
-the kpop, the flight deals at 1 a.m.
-We have talked every day for years
-about nothing worth recording,
-which is how I know that it is real.
-There is no occasion. There is no news.
-There is the running conversation
-I have kept since middle school
-with the person who gets the whole file:
-the trip, the obsession, the bad day.
-Everything, daily. That is the friendship.`,
+          /* Vanity. */
+          poem: `Successful. Intelligent. Presentable.
+I have never let anyone see me
+before I decide how to look.
+If I am not excellent I am failing
+someone — I could not tell you who.
+Nobody set this standard out loud.
+I have simply never tested
+what happens if I turn up ordinary.
+It is not about being admired.
+It is about never being a disappointment.
+Those are not the same. I know it.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-                { kind: "book", invented: true,
+        { kind: "book", invented: true,
+          id: "inv-27",
+          title: "The Teacher I Didn't Become",
+          author: "Nikita Thomas",
+          press: "[Invented Press]",
+          year: "[20—]",
+          /* The careers I talked myself out of. */
+          poem: `First I wanted to teach.
+They said: not that, not for you.
+Then an NGO, something that mattered,
+and then a salary arrived
+and I stopped saying the word later.
+Then a doctorate, until I counted years.
+Every version of me I argued down
+is still in here somewhere, filed.
+I am not unhappy. That is the strange part.
+I keep a room for the other lives
+and I visit.`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-05",
+          title: "The Good Silver",
+          author: "Nikita Thomas",
+          press: "[Invented Press]",
+          year: "[20—]",
+          /* My mother's parents, and the standard they set. */
+          poem: `They were people who knew which fork.
+Not for show — it was how they spoke,
+and I was born expected to be fluent.
+In every photograph her back is straight.
+My grandfather never raised his voice
+because he never once had to.
+I set a good table. I know the words.
+And still I read the room before I laugh,
+to work out how loud is allowed.
+No one ever sat me down and asked for this.
+That is the part I cannot put down.`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-22",
+          title: "Door to Door",
+          author: "Nikita Thomas",
+          press: "[Invented Press]",
+          year: "[20—]",
+          /* Politics. */
+          poem: `I have argued at tables I was a guest at.
+I have knocked on doors that opened an inch.
+Someone always says it makes no difference,
+that they are all alike, that nothing moves.
+I know the arithmetic of a margin.
+I know what a hundred doors is worth,
+and I know it is not nothing.
+I am not embarrassed to care this much.
+The people who taught me to be polite
+also taught me what is owed.
+So I keep the clipboard.
+So I keep knocking.`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
           id: "inv-30",
           title: "The One Who Didn't Want It",
           author: "Nikita Thomas",
@@ -541,46 +495,92 @@ Still the person I cannot argue with.`,
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-                { kind: "book", invented: true,
-          id: "inv-31",
-          title: "Lapsed",
+        { kind: "book", invented: true,
+          id: "inv-24",
+          title: "The Year We Were Bought",
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
-          /* Faith, and where it went. */
-          poem: `I was a good Catholic. I knew the words,
-the kneeling, the order of the year.
-I do not go now, and I do not miss it
-the way I was told that I would.
-The faith did not leave. It relocated.
-I believe in people who show up.
-I believe in fifteen years of friendship.
-I believe in Tuesday, and in the small
-repeated things that hold a life up.
-That is a creed. It has no building.
-I still say grace, most nights, to nobody.`,
+          /* The acquisition, and what it taught me I need. */
+          poem: `One morning it was ours. By spring
+it belonged to the largest bank alive.
+Nobody asked us. That was the lesson.
+I learned what I will trade away
+and what I will not.
+I want a floor under me.
+I want to matter to the room I am in.
+The biggest building in the world
+still only gives you one desk,
+and nobody in it knows your name.
+I know what I want now. Smaller.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-                { kind: "book", invented: true,
-          id: "inv-32",
-          title: "A Secret Third Thing",
+        { kind: "book", invented: true,
+          id: "inv-21",
+          title: "Walking Distance",
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
-          /* Indian, American, or something else. */
-          poem: `Indian, they ask, or American?
-I have never had an answer ready.
-Not both — both is too tidy.
-Something built out of the two
-that neither side would recognise.
-I am the wrong amount of everything
-in every room I walk into.
-For a long time that felt like failing.
-Now I think it is the shape I am:
-a third thing, made here,
-out of a name from somewhere else.`,
+          /* City life. */
+          poem: `Everything I need is fifteen minutes on foot
+and I still take the long way.
+The city does not care that I live here,
+which is the kindest thing about it.
+I know the corner that smells of bread,
+which train runs late,
+which window keeps its lamp on late.
+Nobody on this street knows my family.
+I am nobody's eldest daughter here —
+only a person walking,
+deciding, for once,
+where to turn.`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-17",
+          title: "The One I Haven't Met",
+          author: "Nikita Thomas",
+          press: "[Invented Press]",
+          year: "[20—]",
+          /* Wanting a real partner. */
+          poem: `I would like to be known all the way down.
+Not managed. Not admired. Known.
+Someone who sees the whole apparatus —
+the ambition, the tiredness, the guard —
+and does not flinch or try to fix it.
+I do not know how you find that.
+There is no application for it,
+no curve, no admissions committee.
+I have been good at everything
+a person can be good at on purpose.
+This one I cannot work out how to earn.`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+        { kind: "book", invented: true,
+          id: "inv-20",
+          title: "The Sister Who Came Later",
+          author: "Nikita Thomas",
+          press: "[Invented Press]",
+          year: "[20—]",
+          /* My sister-in-law. */
+          poem: `I did not grow up with her.
+She arrived the way weather does —
+already whole, already herself.
+I keep catching myself copying her:
+how she says no without apologising,
+how she holds a room without raising it.
+I have known her a fraction of my life
+and I measure myself against her anyway.
+The family you are given is a fact.
+The family you choose to look up to
+is a decision, made daily.
+I keep making it.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
