@@ -621,7 +621,9 @@ I keep making it.`,
           coverAspect: 0.657,
           quote: `How often have you sailed in my dreams. And now you come in my awakening, which is my deeper dream.
 
-Ready am I to go, and my eagerness with sails full set awaits the wind.`,
+Ready am I to go, and my eagerness with sails full set awaits the wind.
+
+Only another breath will I breathe in this still air, only another loving look cast backward,`,
           source: "Kahlil Gibran, The Prophet (Knopf, 1923), 'The Coming of the Ship'",
           sceneHead: "Before the next thing",
           scene: `I read this at the end of one thing and the start of another, which is when it works. The ship has come. The leaving is not the point. The point is that before you go you are meant to stand still and account for what the years actually gave you.
