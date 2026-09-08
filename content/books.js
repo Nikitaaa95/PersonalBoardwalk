@@ -430,21 +430,22 @@ and I visit.`,
 
         { kind: "book", invented: true,
           id: "inv-05",
-          title: "The Good Silver",
+          title: "How to Carry the Tea",
           author: "Nikita Thomas",
           cloth: "#8c7a63", ink: "#f5ece0", rule: "#cbb79c",
           width: 42, height: 0.92,
           /* My mother's parents, and the standard they set. */
-          poem: `They were people who knew which fork.
-Not for show — it was how they spoke,
-and I was born expected to be fluent.
+          poem: `I know the right words for every aunty.
+I know which questions to ask, and when.
+I carry the tea before anyone asks.
+It is a language. I am fluent in it.
+I was raised to be.
 In every photograph her back is straight.
 My grandfather never raised his voice
 because he never once had to.
-I set a good table. I know the words.
-And still I read the room before I laugh,
+And still I read a room before I laugh
 to work out how loud is allowed.
-No one ever sat me down and asked for this.
+Nobody ever asked this of me aloud.
 That is the part I cannot put down.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
