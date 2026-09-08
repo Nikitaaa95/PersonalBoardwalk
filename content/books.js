@@ -200,102 +200,156 @@ So I keep knocking.`,
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-        { kind: "book", invented: true,
+                { kind: "book", invented: true,
           id: "inv-23",
-          title: "[SPINE TITLE TWENTY-SIX]",
-          author: "[Your name]",
+          title: "First Republic",
+          author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
+          /* The first job I loved, and where I found out I was ambitious. */
+          poem: `They gave me a desk and I loved it.
+Not the desk. The wanting.
+I did not know I was ambitious
+until they handed me something real
+and I stayed late making it better.
+I had been told what I ought to want.
+Nobody warned me I would want this.
+I learned my own appetite there,
+which is a strange place to learn it.
+For a while I was very good
+at something I had actually chosen.`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+                        { kind: "book", invented: true,
+          id: "inv-24",
+          title: "The Year We Were Bought",
+          author: "Nikita Thomas",
+          press: "[Invented Press]",
+          year: "[20—]",
+          /* The acquisition, and what it taught me I need. */
+          poem: `One morning it was ours. By spring
+it belonged to the largest bank alive.
+Nobody asked us. That was the lesson.
+I learned what I will trade away
+and what I will not.
+I want a floor under me.
+I want to matter to the room I am in.
+The biggest building in the world
+still only gives you one desk,
+and nobody in it knows your name.
+I know what I want now. Smaller.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
                 { kind: "book", invented: true,
-          id: "inv-24",
-          title: "[SPINE TITLE TWENTY-SEVEN]",
-          author: "[Your name]",
-          press: "[Invented Press]",
-          year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
-        },
-
-        { kind: "book", invented: true,
           id: "inv-25",
-          title: "[SPINE TITLE TWENTY-EIGHT]",
-          author: "[Your name]",
+          title: "The Curve",
+          author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
+          /* Mission San Jose. */
+          poem: `Everyone there was somebody's genius.
+The rank was published. We all read it.
+I learned to work like I was behind,
+because I always was, by some measure.
+Nobody said you are not enough.
+The curve said it, in numbers,
+every single term for four years.
+I got out. I did well. I am still
+waiting for someone to check my work
+and find whatever they are looking for.
+That school is the voice I argue with.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-        { kind: "book", invented: true,
+                { kind: "book", invented: true,
           id: "inv-26",
-          title: "[SPINE TITLE TWENTY-NINE]",
-          author: "[Your name]",
+          title: "The Castle on the Hill",
+          author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
+          /* Berkeley — rejected at seventeen, admitted at twenty-five. */
+          poem: `I could see it from the freeway.
+I applied at seventeen and they said no,
+and I let that settle the question
+of what I was.
+Years later I applied again,
+expecting nothing, and they said yes.
+I still do not entirely believe it.
+I walk that campus like a guest
+told to make herself at home.
+The castle let me in.
+I am still standing in the doorway.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-        { kind: "book", invented: true,
+                { kind: "book", invented: true,
           id: "inv-27",
-          title: "[SPINE TITLE THIRTY]",
-          author: "[Your name]",
+          title: "The Teacher I Didn't Become",
+          author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
+          /* The careers I talked myself out of. */
+          poem: `First I wanted to teach.
+They said: not that, not for you.
+Then an NGO, something that mattered,
+and then a salary arrived
+and I stopped saying the word later.
+Then a doctorate, until I counted years.
+Every version of me I argued down
+is still in here somewhere, filed.
+I am not unhappy. That is the strange part.
+I keep a room for the other lives
+and I visit.`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+                { kind: "book", invented: true,
+          id: "inv-33",
+          title: "Married at Twenty-Four",
+          author: "Nikita Thomas",
+          press: "[Invented Press]",
+          year: "[20—]",
+          /* The marriage, and the divorce. */
+          poem: `I was twenty-four and certain.
+He agreed with everyone, including me,
+which I mistook for kindness.
+It takes a while to learn that a man
+who never disagrees is not being gentle.
+He was not honest. I was not listening.
+We ended it, and the ending was
+the truest thing between us.
+I do not regret the marriage.
+I regret how long I defended it
+to people who could already see.`,
+          image: "assets/placeholder-plate.svg",
+          imageAlt: "[Describe the picture facing this poem.]"
+        },
+
+                { kind: "book", invented: true,
+          id: "inv-34",
+          title: "Put Together",
+          author: "Nikita Thomas",
+          press: "[Invented Press]",
+          year: "[20—]",
+          /* Vanity. */
+          poem: `Successful. Intelligent. Presentable.
+I have never let anyone see me
+before I decide how to look.
+If I am not excellent I am failing
+someone — I could not tell you who.
+Nobody set this standard out loud.
+I have simply never tested
+what happens if I turn up ordinary.
+It is not about being admired.
+It is about never being a disappointment.
+Those are not the same. I know it.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
@@ -306,7 +360,7 @@ So I keep knocking.`,
           image: "assets/photo-family-three.jpg",
           aspect: 1.333, width: 191,
           alt: "A young family of three.",
-          back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
+          back: { date: "1997", place: "Kuwait", note: "[Half a sentence.]" }
         },
 
         { kind: "book", invented: true, faceOut: true,
@@ -350,82 +404,90 @@ Nothing here is behind glass. Pull anything down.`
       id: "wrote-2",
       label: null,
       items: [
-        { kind: "book", invented: true,
+                { kind: "book", invented: true,
           id: "inv-15",
-          title: "[SPINE TITLE FIFTEEN]",
-          author: "[Your name]",
+          title: "The Next Trip",
+          author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
+          /* Travel. */
+          poem: `Japan. Korea. Morocco. Italy.
+France. Spain. Dubai.
+I work so that I can leave,
+and I am always already planning
+the leaving after this one.
+It is not escape. I like my life.
+It is that I am most awake
+in a city that does not know me,
+holding a map, deciding.
+There is always a next one.
+That is the part I need.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-        { kind: "book", invented: true,
+                { kind: "book", invented: true,
           id: "inv-16",
-          title: "[SPINE TITLE SIXTEEN]",
-          author: "[Your name]",
+          title: "Alone on Purpose",
+          author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
+          /* Independence, introversion, my own space. */
+          poem: `I like my own house best.
+I like a drive with nowhere to be,
+one album the whole way, no talking.
+I like a book and an afternoon
+nobody else has a claim on.
+I feel guilty about it, which is silly.
+Needing less is not caring less.
+I love people. I go back to them.
+But the door closing behind me
+at the end of a long day
+is the best sound I know.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-        { kind: "book", invented: true,
+                { kind: "book", invented: true,
           id: "inv-17",
-          title: "[SPINE TITLE SEVENTEEN]",
-          author: "[Your name]",
+          title: "The One I Haven't Met",
+          author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
+          /* Wanting a real partner. */
+          poem: `I would like to be known all the way down.
+Not managed. Not admired. Known.
+Someone who sees the whole apparatus —
+the ambition, the tiredness, the guard —
+and does not flinch or try to fix it.
+I do not know how you find that.
+There is no application for it,
+no curve, no admissions committee.
+I have been good at everything
+a person can be good at on purpose.
+This one I cannot work out how to earn.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-        { kind: "book", invented: true,
+                { kind: "book", invented: true,
           id: "inv-18",
-          title: "[SPINE TITLE EIGHTEEN]",
-          author: "[Your name]",
+          title: "Trash",
+          author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
+          /* My best friends, since high school. */
+          poem: `That is what we call ourselves.
+Fifteen years of it now.
+They knew me before I was presentable,
+which makes them the only people
+I do not have to be excellent for.
+Nobody has to explain anything.
+The group chat is mostly nonsense
+and I would defend it with my life.
+I have met a great many people since.
+I have never once been tempted
+to promote anyone into that room.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
@@ -435,82 +497,90 @@ Nothing here is behind glass. Pull anything down.`
            openable — there is nothing inside them to read yet. */
         /* The plant stands on the journals, and its vines fall down over
            them. `plant` is optional; drop it and the stack is just a stack. */
-                        { kind: "book", invented: true,
+                                { kind: "book", invented: true,
           id: "inv-29",
-          title: "[SPINE TITLE THIRTY-TWO]",
-          author: "[Your name]",
+          title: "Every Single Day",
+          author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
+          /* Arthi. */
+          poem: `She gets the bullet journal spreads,
+the kpop, the flight deals at 1 a.m.
+We have talked every day for years
+about nothing worth recording,
+which is how I know that it is real.
+There is no occasion. There is no news.
+There is the running conversation
+I have kept since middle school
+with the person who gets the whole file:
+the trip, the obsession, the bad day.
+Everything, daily. That is the friendship.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-        { kind: "book", invented: true,
+                { kind: "book", invented: true,
           id: "inv-30",
-          title: "[SPINE TITLE THIRTY-THREE]",
-          author: "[Your name]",
+          title: "The One Who Didn't Want It",
+          author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
+          /* Kavi. */
+          poem: `She had all of it. The ease, the face,
+the doors that open without knocking.
+Everything I was breaking myself for
+she was handed, and she set it down.
+She wanted a small life and her own say.
+For years I could not understand it.
+I thought she was wasting something.
+Now I think she is the only one of us
+who ever knew what it was for.
+My first sister. My oldest friend.
+Still the person I cannot argue with.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-        { kind: "book", invented: true,
+                { kind: "book", invented: true,
           id: "inv-31",
-          title: "[SPINE TITLE THIRTY-FOUR]",
-          author: "[Your name]",
+          title: "Lapsed",
+          author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
+          /* Faith, and where it went. */
+          poem: `I was a good Catholic. I knew the words,
+the kneeling, the order of the year.
+I do not go now, and I do not miss it
+the way I was told that I would.
+The faith did not leave. It relocated.
+I believe in people who show up.
+I believe in fifteen years of friendship.
+I believe in Tuesday, and in the small
+repeated things that hold a life up.
+That is a creed. It has no building.
+I still say grace, most nights, to nobody.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
 
-        { kind: "book", invented: true,
+                { kind: "book", invented: true,
           id: "inv-32",
-          title: "[SPINE TITLE THIRTY-FIVE]",
-          author: "[Your name]",
+          title: "A Secret Third Thing",
+          author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
-          poem: `[Line 1.]
-[Line 2.]
-[Line 3.]
-[Line 4.]
-[Line 5.]
-[Line 6.]
-[Line 7.]
-[Line 8.]
-[Line 9.]
-[Line 10.]`,
+          /* Indian, American, or something else. */
+          poem: `Indian, they ask, or American?
+I have never had an answer ready.
+Not both — both is too tidy.
+Something built out of the two
+that neither side would recognise.
+I am the wrong amount of everything
+in every room I walk into.
+For a long time that felt like failing.
+Now I think it is the shape I am:
+a third thing, made here,
+out of a name from somewhere else.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
@@ -521,7 +591,7 @@ Nothing here is behind glass. Pull anything down.`
           image: "assets/photo-family-five.jpg",
           aspect: 1.507, width: 205,
           alt: "A family of five, dressed for a celebration.",
-          back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
+          back: { date: "2011", place: "Fremont", note: "[Half a sentence.]" }
         },
 
         { kind: "journals", years: ["2027", "2028", "2029"],
@@ -559,7 +629,7 @@ Nothing here is behind glass. Pull anything down.`
           image: "assets/photo-turban.jpg",
           aspect: 0.754, width: 140,
           alt: "A small child in a red turban, tongue out, with a drawn-on moustache.",
-          back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
+          back: { date: "1998", place: "Pennsylvania", note: "[Half a sentence.]" }
         },
 
         { kind: "book", invented: false,
@@ -710,7 +780,7 @@ Nothing here is behind glass. Pull anything down.`
           image: "assets/photo-dog.jpg",
           aspect: 0.989, width: 162,
           alt: "A black dog on grass, looking straight at the camera.",
-          back: { date: "[Month, year]", place: "[Place]", note: "[Half a sentence.]" }
+          back: { date: "2025", place: "Tchalla", note: "[Half a sentence.]" }
         }
       ]
     }
