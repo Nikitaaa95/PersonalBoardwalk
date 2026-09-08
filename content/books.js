@@ -663,9 +663,12 @@ And the love does not go anywhere. It outlasts the people and the houses and the
           /* Photographed spine: the Viking jacket, navy with the gilt script. */
           spineImage: "assets/spine-midnight-library.jpg",
           spineAspect: 0.111, height: 0.93,
-          quote: "[Your pull quote.]",
+          quote: "If you aim to be something you are not, you will always fail. Aim to be you. Aim to look and act and think like you. Aim to be the truest version of you. Embrace that you-ness. Endorse it. Love it. Work hard at it. And don't give a second thought when people mock it or ridicule it. Most gossip is envy in disguise.",
           source: "Matt Haig, The Midnight Library",
-          scene: `[Where you were. What you were deciding at the time.]`
+          sceneHead: "On choosing",
+          scene: `Every life in that library is one she did not choose, and not one of them fits. The point is not that she picks the right one in the end. The point is that the only life that holds is the one you are actually in, lived as yourself.
+
+I have spent a great deal of time being whichever version of me the room wanted. This is the argument against that. Not that you should stop trying to be better — only that you cannot get better at being someone else.`
         },
 
         { kind: "book", invented: false,
