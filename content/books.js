@@ -781,9 +781,12 @@ This is the book that argued me out of it. Not by making childhood precious, but
              picture of the three together — only this one is shelved. */
           spineImage: "assets/spine-return-of-the-king.jpg",
           spineAspect: 0.105, height: 0.95,
-          quote: "I will not say: do not weep; for not all tears are an evil.",
-          source: "J. R. R. Tolkien, The Return of the King",
-          scene: `[Where you were standing when it ended.]`
+          quote: "It is not our part to master all the tides of the world, but to do what is in us for the succour of those years wherein we are set, uprooting the evil in the fields that we know, so that those who live after may have clean earth to till. What weather they shall have is not ours to rule.",
+          source: "J. R. R. Tolkien, The Return of the King — Gandalf",
+          sceneHead: "On the field you know",
+          scene: `You do not get to fix the age you were born into. That is the whole of it. Gandalf is not promising them they will win. He is saying the size of the task is not the measure of whether to do it.
+
+The field you know is small. It is also the only one you can actually reach. I find this easier to hold than optimism — it does not ask me to believe the weather will improve, only that clean earth is worth leaving behind whether or not it does.`
         },
 
         { kind: "book", invented: false,
