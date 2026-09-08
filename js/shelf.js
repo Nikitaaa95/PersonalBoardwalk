@@ -54,9 +54,18 @@
     }
 
     if (item.invented) {
-      /* The standard. Nothing per-book is allowed to vary here — that
-         uniformity is the tell, and it is what lets later volumes match. */
+      /* The format is the standard — bands, author line, colophon, typeface.
+         The binding is not: cloth and dimensions may vary volume to volume,
+         the way a shelf of one author's books actually looks. */
       btn.classList.add("spine--invented");
+      if (item.cloth) {
+        btn.style.background =
+          "linear-gradient(90deg," + shade(item.cloth, -18) + "," + item.cloth +
+          " 45%," + shade(item.cloth, -14) + ")";
+        btn.style.color = item.ink || "var(--inv-ink)";
+      }
+      if (item.width)  btn._baseW = item.width;
+      if (item.height) btn.style.height = (item.height * 100) + "%";
     } else {
       var p = palette(item.palette);
       btn._baseW = item.width || 40;
@@ -75,11 +84,8 @@
     /* A long name will not fit a spine; real ones shorten it too. */
     var author  = el("span", "spine__author", item.spineAuthor || item.author || "");
 
-    if (!item.invented) {
-      var pr = palette(item.palette).rule;
-      bandTop.style.color = pr;
-      bandBot.style.color = pr;
-    }
+    var rule = item.invented ? item.rule : palette(item.palette).rule;
+    if (rule) { bandTop.style.color = rule; bandBot.style.color = rule; }
 
     wrap.appendChild(title);
     btn.appendChild(bandTop);
@@ -592,7 +598,8 @@
 
      Fixed chrome — gaps, photo margins, case padding — does not scale with the
      books, so one pass overshoots; a few iterations converge. */
-  var BASE_INV     = 44;
+  var BASE_INV     = parseFloat(
+        window.getComputedStyle(mount).getPropertyValue("--inv-width")) || 44;
   var BASE_SHELF_H = 232;   /* a plank's height on a laptop, at scale 1 */
   var ONE_ROW_MIN  = 0.66;  /* below this, spines stop reading — wrap instead */
   var WRAP_SCALE   = 1;     /* wrapped, books return to their designed size */

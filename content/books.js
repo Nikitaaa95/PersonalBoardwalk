@@ -70,6 +70,8 @@ window.SHELF = {
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
+          cloth: "#3c4f4a", ink: "#e9e2cf", rule: "#9db3a4",
+          width: 38, height: 0.94,
           /* Mission San Jose. */
           poem: `Everyone there was somebody's genius.
 The rank was published. We all read it.
@@ -92,6 +94,8 @@ That school is the voice I argue with.`,
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
+          cloth: "#2f3236", ink: "#e2e0da", rule: "#8f9298",
+          width: 52, height: 0.88,
           /* The Chathanatt side: ten of them, out of very little. */
           poem: `My grandfather's house had one good room.
 Ten of them came out of it
@@ -114,6 +118,8 @@ and was handed one instruction: keep it up.`,
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
+          cloth: "#4a4238", ink: "#ece4d4", rule: "#a99c86",
+          width: 44, height: 1.0,
           /* Independence, introversion, my own space. */
           poem: `I like my own house best.
 I like a drive with nowhere to be,
@@ -136,6 +142,8 @@ is the best sound I know.`,
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
+          cloth: "#3c4650", ink: "#e4e7ea", rule: "#94a1ae",
+          width: 34, height: 0.92,
           /* The marriage, and the divorce. */
           poem: `I was twenty-four and certain.
 He agreed with everyone, including me,
@@ -158,6 +166,8 @@ to people who could already see.`,
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
+          cloth: "#c9c0ad", ink: "#2b271f", rule: "#6b6353",
+          width: 48, height: 0.96,
           /* My best friends, since high school. */
           poem: `That is what we call ourselves.
 Fifteen years of it now.
@@ -180,6 +190,8 @@ to promote anyone into that room.`,
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
+          cloth: "#3f4436", ink: "#e6e6d6", rule: "#9aa286",
+          width: 40, height: 0.9,
           /* The first job I loved, and where I found out I was ambitious. */
           poem: `They gave me a desk and I loved it.
 Not the desk. The wanting.
@@ -202,6 +214,8 @@ at something I had actually chosen.`,
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
+          cloth: "#4b4743", ink: "#eae5dd", rule: "#a49d94",
+          width: 56, height: 0.98,
           /* Indian, American, or something else. */
           poem: `Indian, they ask, or American?
 I have never had an answer ready.
@@ -224,6 +238,8 @@ out of a name from somewhere else.`,
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
+          cloth: "#3a302a", ink: "#e8ddc9", rule: "#9c8a72",
+          width: 42, height: 0.93,
           /* Being the eldest — my brother, and my sister. */
           poem: `Nobody promoted me. I was first,
 and then there were two more,
@@ -247,6 +263,8 @@ I have never once wanted one.`,
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
+          cloth: "#3c4f4a", ink: "#e9e2cf", rule: "#9db3a4",
+          width: 46, height: 0.87,
           /* Travel. */
           poem: `Japan. Korea. Morocco. Italy.
 France. Spain. Dubai.
@@ -269,6 +287,8 @@ That is the part I need.`,
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
+          cloth: "#2f3236", ink: "#e2e0da", rule: "#8f9298",
+          width: 36, height: 0.99,
           /* Faith, and where it went. */
           poem: `I was a good Catholic. I knew the words,
 the kneeling, the order of the year.
@@ -291,6 +311,8 @@ I still say grace, most nights, to nobody.`,
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
+          cloth: "#4a4238", ink: "#ece4d4", rule: "#a99c86",
+          width: 50, height: 0.91,
           /* Berkeley — rejected at seventeen, admitted at twenty-five. */
           poem: `I could see it from the freeway.
 I applied at seventeen and they said no,
@@ -313,6 +335,8 @@ I am still standing in the doorway.`,
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
+          cloth: "#3c4650", ink: "#e4e7ea", rule: "#94a1ae",
+          width: 44, height: 0.95,
           /* Arthi. */
           poem: `She gets the bullet journal spreads,
 the kpop, the flight deals at 1 a.m.
@@ -390,6 +414,8 @@ Nothing here is behind glass. Pull anything down.`
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
+          cloth: "#c9c0ad", ink: "#2b271f", rule: "#6b6353",
+          width: 38, height: 0.89,
           /* Vanity. */
           poem: `Successful. Intelligent. Presentable.
 I have never let anyone see me
@@ -412,6 +438,8 @@ Those are not the same. I know it.`,
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
+          cloth: "#3f4436", ink: "#e6e6d6", rule: "#9aa286",
+          width: 54, height: 0.97,
           /* The careers I talked myself out of. */
           poem: `First I wanted to teach.
 They said: not that, not for you.
@@ -434,6 +462,8 @@ and I visit.`,
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
+          cloth: "#4b4743", ink: "#eae5dd", rule: "#a49d94",
+          width: 42, height: 0.92,
           /* My mother's parents, and the standard they set. */
           poem: `They were people who knew which fork.
 Not for show — it was how they spoke,
@@ -456,6 +486,8 @@ That is the part I cannot put down.`,
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
+          cloth: "#3a302a", ink: "#e8ddc9", rule: "#9c8a72",
+          width: 48, height: 1.0,
           /* Politics. */
           poem: `I have argued at tables I was a guest at.
 I have knocked on doors that opened an inch.
@@ -479,6 +511,8 @@ So I keep knocking.`,
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
+          cloth: "#3c4f4a", ink: "#e9e2cf", rule: "#9db3a4",
+          width: 34, height: 0.88,
           /* Kavi. */
           poem: `She had all of it. The ease, the face,
 the doors that open without knocking.
@@ -501,6 +535,8 @@ Still the person I cannot argue with.`,
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
+          cloth: "#2f3236", ink: "#e2e0da", rule: "#8f9298",
+          width: 46, height: 0.94,
           /* The acquisition, and what it taught me I need. */
           poem: `One morning it was ours. By spring
 it belonged to the largest bank alive.
@@ -523,6 +559,8 @@ I know what I want now. Smaller.`,
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
+          cloth: "#4a4238", ink: "#ece4d4", rule: "#a99c86",
+          width: 40, height: 0.96,
           /* City life. */
           poem: `Everything I need is fifteen minutes on foot
 and I still take the long way.
@@ -546,6 +584,8 @@ where to turn.`,
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
+          cloth: "#3c4650", ink: "#e4e7ea", rule: "#94a1ae",
+          width: 52, height: 0.9,
           /* Wanting a real partner. */
           poem: `I would like to be known all the way down.
 Not managed. Not admired. Known.
@@ -568,6 +608,8 @@ This one I cannot work out how to earn.`,
           author: "Nikita Thomas",
           press: "[Invented Press]",
           year: "[20—]",
+          cloth: "#c9c0ad", ink: "#2b271f", rule: "#6b6353",
+          width: 44, height: 0.98,
           /* My sister-in-law. */
           poem: `I did not grow up with her.
 She arrived the way weather does —
