@@ -520,23 +520,23 @@ I know what I want now. Smaller.`,
 
         { kind: "book", invented: true,
           id: "inv-21",
-          title: "Walking Distance",
+          title: "Homesick Either Way",
           author: "Nikita Thomas",
           cloth: "#7b6446", ink: "#f4e8d4", rule: "#c8ae86",
           width: 40, height: 0.96,
-          /* City life. */
-          poem: `Everything I need is fifteen minutes on foot
-and I still take the long way.
-The city does not care that I live here,
-which is the kindest thing about it.
-I know the corner that smells of bread,
-which train runs late,
-which window keeps its lamp on late.
-Nobody on this street knows my family.
-I am nobody's eldest daughter here —
-only a person walking,
-deciding, for once,
-where to turn.`,
+          /* Homesick in both directions — New York, and here. */
+          poem: `The martini here is never quite right.
+Neither is the pizza, and I have tried.
+It will be fall soon in the other place —
+the foliage doing it properly,
+corn and apple cider in the air.
+I would like to stand in that again.
+But the food here is better. It is.
+And I am not missing my family
+every day, the way I used to.
+My friends are all somewhere else.
+My dog is asleep in the next room.
+I am homesick in both directions.`,
           image: "assets/placeholder-plate.svg",
           imageAlt: "[Describe the picture facing this poem.]"
         },
