@@ -108,8 +108,8 @@ only for whoever made it next.
 I built none of this.
 I inherited the finished building
 and was handed one instruction: keep it up.`,
-          image: "assets/placeholder-plate.svg",
-          imageAlt: "[Describe the picture facing this poem.]"
+          image: "assets/plate-eleven-out-of-one-room.jpg",
+          imageAlt: "My parents' wedding, with all eleven of them in the frame."
         },
 
         { kind: "book", invented: true,
