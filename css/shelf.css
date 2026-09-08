@@ -512,6 +512,9 @@ body {
   text-align: left;
 }
 .photo__meta { font-size: 10px; opacity: .75; letter-spacing: .03em; }
+/* With no half-sentence under it, the date carries the back on its own and
+   takes the size the note would have had. */
+.photo__backing > .photo__meta:only-child { font-size: 13px; opacity: .9; }
 .photo__note { font-size: 13px; line-height: 1.35; }
 
 /* --- The journals: the volumes not written yet. -------------------------- */

@@ -259,7 +259,8 @@
     var backing = el("div", "photo__backing");
     var b = item.back || {};
     backing.appendChild(el("span", "photo__meta", [b.date, b.place].filter(Boolean).join(" · ")));
-    backing.appendChild(el("span", "photo__note", b.note || ""));
+    /* The note is optional: an empty one would leave a gap on the backing. */
+    if (b.note) backing.appendChild(el("span", "photo__note", b.note));
     back.appendChild(backing);
 
     inner.appendChild(front);

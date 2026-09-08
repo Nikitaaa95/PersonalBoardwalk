@@ -335,7 +335,7 @@ Everything, daily. That is the friendship.`,
           image: "assets/photo-family-three.jpg",
           aspect: 1.333, width: 191,
           alt: "A young family of three.",
-          back: { date: "1997", place: "Kuwait", note: "[Half a sentence.]" }
+          back: { date: "1997", place: "Kuwait" }
         },
 
         { kind: "book", invented: true, faceOut: true,
@@ -591,7 +591,7 @@ I keep making it.`,
           image: "assets/photo-family-five.jpg",
           aspect: 1.507, width: 205,
           alt: "A family of five, dressed for a celebration.",
-          back: { date: "2011", place: "Fremont", note: "[Half a sentence.]" }
+          back: { date: "2011", place: "Fremont" }
         },
 
         { kind: "journals", years: ["2027", "2028", "2029"],
@@ -629,7 +629,7 @@ I keep making it.`,
           image: "assets/photo-turban.jpg",
           aspect: 0.754, width: 140,
           alt: "A small child in a red turban, tongue out, with a drawn-on moustache.",
-          back: { date: "1998", place: "Pennsylvania", note: "[Half a sentence.]" }
+          back: { date: "1998", place: "Pennsylvania" }
         },
 
         { kind: "book", invented: false,
@@ -780,7 +780,7 @@ I keep making it.`,
           image: "assets/photo-dog.jpg",
           aspect: 0.989, width: 162,
           alt: "A black dog on grass, looking straight at the camera.",
-          back: { date: "2025", place: "Tchalla", note: "[Half a sentence.]" }
+          back: { date: "2025", place: "Tchalla" }
         }
       ]
     }

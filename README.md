@@ -33,7 +33,7 @@ Three object types, matching the brief:
 | `book` with `invented: false` | quote + scene | `title, author, palette, face, height, width, quote, source, scene`; optional `imprint` (publisher at the foot) and `spineAuthor` (a shorter name for the spine) |
 | …with `spineImage` | quote + scene | a photograph of the real spine: `spineImage, spineAspect, height` — replaces the cloth and lettering entirely |
 | either, plus `faceOut: true` | as above | stands face out; add `faceWidth`, `cover` for a real cover image, or `portrait` for a plated photograph |
-| `photo` | flips in place | `image, aspect, width, alt, tilt, back: {date, place, note}` |
+| `photo` | flips in place | `image, aspect, width, alt, tilt, back: {date, place}`; `note` is optional and currently unused |
 | `journals` | not openable | `years` — e.g. `["2027", "2028", "2029"]`; optional `plant` |
 | `plant` | not openable | `width`, `drape` — how far the vines hang past the pot |
 | `end` | — | `volumes` — how many volumes of room to leave |
