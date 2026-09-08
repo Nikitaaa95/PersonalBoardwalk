@@ -506,9 +506,13 @@
          half. Quote left, memory right. */
       var q = el("blockquote", "quote");
       var parts = splitProse(item.quote);
+      /* A passage that is already dialogue carries its own quotation marks;
+         wrapping it in another pair doubles them up. */
+      var spoken = /^["“]/.test(parts[0] || "");
       parts.forEach(function (t, i) {
         q.appendChild(el("p", "quote__para",
-          (i === 0 ? "“" : "") + t + (i === parts.length - 1 ? "”" : "")));
+          (i === 0 && !spoken ? "“" : "") + t +
+          (i === parts.length - 1 && !spoken ? "”" : "")));
       });
       q.appendChild(el("cite", "quote__source", item.source || ""));
       verso.appendChild(el("p", "page-head", "From the book"));

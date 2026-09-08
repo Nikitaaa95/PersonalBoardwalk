@@ -757,9 +757,18 @@ I was raised Catholic, and for a long time I thought that leaving meant giving u
           /* Photographed spine: the Folio edition, blue cloth blocked in silver. */
           spineImage: "assets/spine-peter-pan.jpg",
           spineAspect: 0.110, height: 0.97,
-          quote: "All children, except one, grow up.",
-          source: "J. M. Barrie, Peter and Wendy, opening line",
-          scene: `[Where you were. How old. Who handed it to you. Not "this taught me about childhood" — the actual room.]`
+          quote: `“Why can’t you fly now, mother?”
+
+“Because I am grown up, dearest. When people grow up they forget the way.”
+
+“Why do they forget the way?”
+
+“Because they are no longer gay and innocent and heartless. It is only the gay and innocent and heartless who can fly.”`,
+          source: "J. M. Barrie, Peter and Wendy — Wendy and Mrs Darling",
+          sceneHead: "On being in a hurry",
+          scene: `I was always in a hurry to be grown. I liked children and had no patience for the sentimentality about childhood — all that mourning for a state I could not wait to get out of.
+
+This is the book that argued me out of it. Not by making childhood precious, but by making it load-bearing: it is where thinking gets its shape, and that only happens if an adult holds the room steady while it does. The forgetting is not the tragedy. The tragedy would be nobody leaving the window open.`
         },
 
         /* The three volumes stand together and are lettered alike, which is
