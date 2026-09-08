@@ -679,9 +679,12 @@ I have spent a great deal of time being whichever version of me the room wanted.
              running the length of the board. */
           spineImage: "assets/spine-go-set-a-watchman.jpg",
           spineAspect: 0.127, height: 0.93,
-          quote: "[Your pull quote.]",
-          source: "Harper Lee, Go Set a Watchman",
-          scene: `[Where you were. Whether you read it after Mockingbird, and what it did to that book.]`
+          quote: "Remember this also: it's always easy to look back and see what we were, yesterday, ten years ago. It is hard to see what we are. If you can master that trick, you'll get along.",
+          source: "Harper Lee, Go Set a Watchman — Uncle Jack to Jean Louise",
+          sceneHead: "On seeing people plainly",
+          scene: `The life you remember is not necessarily the life that happened. This book is about finding that out at the worst possible moment, from the person you trusted most.
+
+You cannot hold anyone to the version of them you built when you were young. That version was always partly yours — assembled out of what you needed them to be. The work is to let people be what they actually are, in all their honest existence, and to stay anyway.`
         },
 
         { kind: "book", invented: false,
