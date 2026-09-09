@@ -131,28 +131,6 @@ is the best sound I know.`,
         },
 
         { kind: "book", invented: true,
-          id: "inv-33",
-          title: "Married at Twenty-Four",
-          author: "Nikita Thomas",
-          cloth: "#c4ad86", ink: "#2c2216", rule: "#7a613c",
-          width: 34, height: 0.92,
-          /* The marriage, and the divorce. */
-          poem: `I was twenty-four and certain.
-He agreed with everyone, including me,
-which I mistook for kindness.
-It takes a while to learn that a man
-who never disagrees is not being gentle.
-He was not honest. I was not listening.
-We ended it, and the ending was
-the truest thing between us.
-I do not regret the marriage.
-I regret how long I defended it
-to people who could already see.`,
-          image: "assets/plate-married-at-24.jpg",
-          imageAlt: "The beading and lace of the dress, close up."
-        },
-
-        { kind: "book", invented: true,
           id: "inv-18",
           title: "Trash",
           author: "Nikita Thomas",
